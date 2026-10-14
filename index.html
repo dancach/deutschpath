@@ -161,6 +161,15 @@
             animation: fire-glow 2s infinite ease-in-out;
             display: inline-block;
         }
+
+        /* Ocultar scrollbar pero permitir scroll táctil horizontal suave */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
@@ -168,162 +177,320 @@
 
     <div id="app" v-cloak class="min-h-screen flex flex-col">
 
-        <!-- TOP BAR / HUD: MEZCLA DUOLINGO (Gamificación táctil) + BABBEL (Nivel y Rigor) -->
+        <!-- TOP BAR / HUD: RESPONSIVE NAV BAR (MOBILE-OPTIMIZED + DESKTOP POWER) -->
         <header class="sticky top-0 z-50 bg-[#0d1733]/95 backdrop-blur-md border-b-2 border-slate-800 shadow-xl">
-            <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5">
 
-                <!-- Logo & Selector de Nivel A1 / A2 -->
-                <div class="flex items-center gap-3">
-                    <div class="flex items-center gap-2.5 cursor-pointer" @click="jumpToNextPendingStep">
-                        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-duo-green via-emerald-500 to-babbel-teal flex items-center justify-center text-white text-2xl font-black shadow-[0_4px_0_0_#3d8c02] transform hover:rotate-3 transition">
-                            🇩🇪
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-2">
-                                <h1 class="font-black text-xl tracking-tight text-white flex items-center gap-1.5">
-                                    Deutsch<span class="text-duo-green">Path</span>
-                                </h1>
-                                <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-                                    {{ dataSourceLabel }}
-                                </span>
+                <!-- FILA PRINCIPAL SUPERIOR -->
+                <div class="flex items-center justify-between gap-2 sm:gap-4">
+
+                    <!-- Logo & Selector de Nivel A1 / A2 / B1 -->
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <div class="flex items-center gap-2 cursor-pointer shrink-0" @click="jumpToNextPendingStep">
+                            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-duo-green via-emerald-500 to-babbel-teal flex items-center justify-center text-white text-xl sm:text-2xl font-black shadow-[0_3px_0_0_#3d8c02] transform hover:rotate-3 transition">
+                                🇩🇪
                             </div>
-                            <p class="text-[11px] font-bold text-slate-400 hidden sm:block">
-                                Gamificación Duolingo + Rigor Gramatical Babbel
-                            </p>
+                            <div>
+                                <div class="flex items-center gap-1.5">
+                                    <h1 class="font-black text-base sm:text-xl tracking-tight text-white flex items-center">
+                                        Deutsch<span class="text-duo-green">Path</span>
+                                    </h1>
+                                    <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline-block">
+                                        {{ dataSourceLabel }}
+                                    </span>
+                                </div>
+                                <p class="text-[10px] font-bold text-slate-400 hidden md:block">
+                                    Gamificación Duolingo + Rigor Gramatical Babbel
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Selector A1 / A2 / B1 estilo cápsulas 3D -->
+                        <div class="flex items-center bg-slate-900/90 p-0.5 sm:p-1 rounded-2xl border-2 border-slate-800 shrink-0">
+                            <button @click="switchLevel('A1')"
+                                :class="currentLevel === 'A1' 
+                                    ? 'bg-duo-green text-slate-950 font-black shadow-[0_2px_0_0_#46a302]' 
+                                    : 'text-slate-400 hover:text-white font-bold'"
+                                class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl text-xs transition-all flex items-center gap-1 cursor-pointer">
+                                <span>🟢 A1</span>
+                                <span class="text-[10px] opacity-80 font-bold hidden lg:inline">Básico</span>
+                            </button>
+                            <button @click="switchLevel('A2')"
+                                :class="currentLevel === 'A2' 
+                                    ? 'bg-duo-blue text-white font-black shadow-[0_2px_0_0_#1899d6]' 
+                                    : 'text-slate-400 hover:text-white font-bold'"
+                                class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl text-xs transition-all flex items-center gap-1 cursor-pointer">
+                                <span>🔵 A2</span>
+                                <span class="text-[10px] opacity-80 font-bold hidden lg:inline">Intermedio</span>
+                            </button>
+                            <button @click="switchLevel('B1')"
+                                :class="currentLevel === 'B1' 
+                                    ? 'bg-purple-600 text-white font-black shadow-[0_2px_0_0_#581c87]' 
+                                    : 'text-slate-400 hover:text-white font-bold'"
+                                class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl text-xs transition-all flex items-center gap-1 cursor-pointer">
+                                <span>🟣 B1</span>
+                                <span class="text-[10px] opacity-80 font-bold hidden lg:inline">Avanzado</span>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Selector A1 / A2 / B1 estilo cápsulas 3D -->
-                    <div class="ml-1 flex items-center bg-slate-900/90 p-1 rounded-2xl border-2 border-slate-800">
-                        <button @click="switchLevel('A1')"
-                            :class="currentLevel === 'A1' 
-                                ? 'bg-duo-green text-slate-950 font-black shadow-[0_3px_0_0_#46a302]' 
-                                : 'text-slate-400 hover:text-white font-bold'"
-                            class="px-3.5 py-1.5 rounded-xl text-xs transition-all flex items-center gap-1.5">
-                            <span>🟢 A1</span>
-                            <span class="text-[10px] opacity-80 font-bold hidden md:inline">Básico</span>
-                        </button>
-                        <button @click="switchLevel('A2')"
-                            :class="currentLevel === 'A2' 
-                                ? 'bg-duo-blue text-white font-black shadow-[0_3px_0_0_#1899d6]' 
-                                : 'text-slate-400 hover:text-white font-bold'"
-                            class="px-3.5 py-1.5 rounded-xl text-xs transition-all flex items-center gap-1.5">
-                            <span>🔵 A2</span>
-                            <span class="text-[10px] opacity-80 font-bold hidden md:inline">Intermedio</span>
-                        </button>
-                        <button @click="switchLevel('B1')"
-                            :class="currentLevel === 'B1' 
-                                ? 'bg-purple-600 text-white font-black shadow-[0_3px_0_0_#581c87]' 
-                                : 'text-slate-400 hover:text-white font-bold'"
-                            class="px-3.5 py-1.5 rounded-xl text-xs transition-all flex items-center gap-1.5">
-                            <span>🟣 B1</span>
-                            <span class="text-[10px] opacity-80 font-bold hidden md:inline">Avanzado</span>
+                    <!-- Barra de Progreso Global (Visible en pantallas extra grandes) -->
+                    <div class="flex-1 max-w-xs xl:max-w-sm hidden 2xl:block bg-slate-900/80 border-2 border-slate-800 rounded-2xl px-3 py-1.5">
+                        <div class="flex justify-between items-center text-xs mb-1">
+                            <span class="font-black text-slate-300 flex items-center gap-1.5 text-[11px]">
+                                <i class="fa-solid fa-flag-checkered text-duo-yellow"></i>
+                                Nivel {{ currentLevel }}
+                            </span>
+                            <span class="font-black text-duo-green text-xs">{{ levelStats.percent }}%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-950 rounded-full overflow-hidden border border-slate-800 p-0.5">
+                            <div class="h-full bg-gradient-to-r from-duo-yellow via-duo-green to-emerald-400 rounded-full transition-all duration-500 shadow-inner"
+                                :style="{ width: levelStats.percent + '%' }"></div>
+                        </div>
+                    </div>
+
+                    <!-- Controles Derecha: Badges + Botones Desktop + Menú Móvil -->
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+
+                        <!-- Racha de Días (Streak Duolingo) -->
+                        <div class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-slate-900 border-2 border-amber-500/40 flex items-center gap-1 sm:gap-1.5 text-xs font-black text-amber-400 shadow-[0_2px_0_0_#b45309] shrink-0"
+                            title="Racha de práctica diaria">
+                            <span class="fire-anim text-sm sm:text-base">🔥</span>
+                            <span>{{ streakDays }}</span>
+                        </div>
+
+                        <!-- Puntos XP Gamificados -->
+                        <div class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-slate-900 border-2 border-yellow-500/40 flex items-center gap-1 sm:gap-1.5 text-xs font-black text-yellow-300 shadow-[0_2px_0_0_#ca8a04] shrink-0"
+                            title="Puntos de Experiencia acumulados">
+                            <i class="fa-solid fa-bolt text-yellow-400 text-xs"></i>
+                            <span>{{ xp }}<span class="hidden sm:inline"> XP</span></span>
+                        </div>
+
+                        <!-- GRUPO DESKTOP (Visible en xl y superiores) -->
+                        <div class="hidden xl:flex items-center gap-1.5">
+                            <!-- Conmutador de Sonido FX -->
+                            <button @click="soundEnabled = !soundEnabled"
+                                :class="soundEnabled ? 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' : 'text-slate-500 border-slate-800 bg-slate-900'"
+                                class="w-8 h-8 rounded-xl border-2 flex items-center justify-center text-xs transition cursor-pointer"
+                                :title="soundEnabled ? 'Efectos de sonido activados' : 'Sonido silenciado'">
+                                <i class="fa-solid" :class="soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
+                            </button>
+
+                            <!-- Modo Libre vs Secuencial -->
+                            <button @click="freeMode = !freeMode"
+                                :class="freeMode ? 'bg-purple-950/60 border-purple-500/50 text-purple-300' : 'bg-slate-900 border-slate-800 text-slate-400'"
+                                class="px-2.5 py-1.5 rounded-xl border-2 text-xs font-black transition flex items-center gap-1 cursor-pointer"
+                                :title="freeMode ? 'Modo libre activo' : 'Ruta secuencial'">
+                                <i class="fa-solid" :class="freeMode ? 'fa-lock-open text-purple-400' : 'fa-lock text-amber-400'"></i>
+                                <span>{{ freeMode ? 'Libre' : 'Ruta' }}</span>
+                            </button>
+
+                            <!-- Botón Acceso Rápido ADUSO -->
+                            <button @click="openCheatSheetTab('aduso')"
+                                class="btn-3d px-3 py-1.5 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-xs font-black shadow-[0_3px_0_0_#ca8a04] flex items-center gap-1.5 cursor-pointer"
+                                title="Regla de oro de conectores ADUSO">
+                                <i class="fa-solid fa-bolt"></i>
+                                <span>ADUSO</span>
+                            </button>
+
+                            <!-- Botón Chunks de Supervivencia -->
+                            <button @click="openCheatSheetTab('chunks')"
+                                class="btn-3d px-3 py-1.5 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 text-xs font-black shadow-[0_3px_0_0_#46a302] flex items-center gap-1.5 cursor-pointer"
+                                title="Expresiones idiomáticas y frases hechas">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>Diálogos</span>
+                            </button>
+
+                            <!-- Cuaderno de Gramática & Deklinations-Trainer -->
+                            <button @click="openCheatSheetTab('cases')"
+                                class="btn-3d px-3 py-1.5 rounded-xl bg-duo-blue hover:bg-duo-blueDark text-white text-xs font-black shadow-[0_3px_0_0_#1899d6] flex items-center gap-1.5 cursor-pointer"
+                                title="Gimnasio interactivo de declinaciones">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Declinaciones</span>
+                            </button>
+
+                            <!-- Botón Verbos Fundamentales -->
+                            <button @click="openCheatSheetTab('verbs')"
+                                class="btn-3d px-3 py-1.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-black shadow-[0_3px_0_0_#0f766e] flex items-center gap-1.5 cursor-pointer"
+                                title="Diccionario y conjugaciones de verbos">
+                                <i class="fa-solid fa-bolt-lightning text-teal-200"></i>
+                                <span>Verbos</span>
+                            </button>
+
+                            <!-- Botón Constructor de Frases (Word Tiles) -->
+                            <button @click="openCheatSheetTab('builder')"
+                                class="btn-3d px-3 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-black shadow-[0_3px_0_0_#581c87] flex items-center gap-1.5 cursor-pointer"
+                                title="Constructor de Frases">
+                                <i class="fa-solid fa-puzzle-piece text-purple-200"></i>
+                                <span>Constructor</span>
+                            </button>
+
+                            <!-- Reiniciar Progreso Local -->
+                            <button @click="resetAllProgress"
+                                class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-rose-950/40 border-2 border-slate-800 hover:border-rose-500/40 text-xs font-bold text-slate-400 hover:text-rose-300 transition flex items-center gap-1 cursor-pointer"
+                                title="Reiniciar progreso guardado">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                            </button>
+                        </div>
+
+                        <!-- BOTÓN MENÚ MÓVIL (Visible en pantallas < xl) -->
+                        <button @click="mobileMenuOpen = !mobileMenuOpen"
+                            class="xl:hidden btn-3d px-3 py-1 sm:py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-white font-black text-xs flex items-center gap-1.5 cursor-pointer"
+                            :class="mobileMenuOpen ? 'border-teal-400 text-teal-300' : ''"
+                            title="Abrir menú de herramientas y configuración">
+                            <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-sm' : 'fa-bars text-sm'"></i>
+                            <span class="text-[11px] font-black uppercase">Menú</span>
                         </button>
                     </div>
+
                 </div>
 
-                <!-- Barra de Progreso Global con estética Duolingo -->
-                <div class="flex-1 max-w-sm min-w-[210px] hidden md:block bg-slate-900/80 border-2 border-slate-800 rounded-2xl px-3.5 py-2">
-                    <div class="flex justify-between items-center text-xs mb-1.5">
-                        <span class="font-black text-slate-300 flex items-center gap-1.5">
-                            <i class="fa-solid fa-flag-checkered text-duo-yellow"></i>
-                            Progreso Nivel {{ currentLevel }}
-                        </span>
-                        <span class="font-black text-duo-green text-xs">{{ levelStats.percent }}%</span>
-                    </div>
-                    <div class="w-full h-3 bg-slate-950 rounded-full overflow-hidden border border-slate-800 p-0.5">
-                        <div class="h-full bg-gradient-to-r from-duo-yellow via-duo-green to-emerald-400 rounded-full transition-all duration-500 shadow-inner"
-                            :style="{ width: levelStats.percent + '%' }"></div>
-                    </div>
-                    <div class="flex justify-between items-center text-[10px] text-slate-400 mt-1 font-bold">
-                        <span>{{ levelStats.doneSteps }} / {{ levelStats.totalSteps }} pasos superados</span>
-                        <span v-if="activeUnit" class="text-sky-300 font-extrabold">Estación {{ activeUnit.number }}/{{ units.length }}</span>
-                    </div>
-                </div>
-
-                <!-- Insignias de Gamificación (Racha 🔥, XP ⚡, Sonido 🔊, Cuaderno Babbel 📖) -->
-                <div class="flex items-center gap-2">
-
-                    <!-- Racha de Días (Streak Duolingo) -->
-                    <div class="px-3 py-1.5 rounded-xl bg-slate-900 border-2 border-amber-500/40 flex items-center gap-1.5 text-xs font-black text-amber-400 shadow-[0_2px_0_0_#b45309]"
-                        title="Racha de práctica diaria">
-                        <span class="fire-anim text-base">🔥</span>
-                        <span>{{ streakDays }}</span>
-                    </div>
-
-                    <!-- Puntos XP Gamificados -->
-                    <div class="px-3 py-1.5 rounded-xl bg-slate-900 border-2 border-yellow-500/40 flex items-center gap-1.5 text-xs font-black text-yellow-300 shadow-[0_2px_0_0_#ca8a04]"
-                        title="Puntos de Experiencia acumulados">
-                        <i class="fa-solid fa-bolt text-yellow-400"></i>
-                        <span>{{ xp }} XP</span>
-                    </div>
-
-                    <!-- Conmutador de Sonido FX -->
-                    <button @click="soundEnabled = !soundEnabled"
-                        :class="soundEnabled ? 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' : 'text-slate-500 border-slate-800 bg-slate-900'"
-                        class="w-9 h-9 rounded-xl border-2 flex items-center justify-center text-xs transition"
-                        :title="soundEnabled ? 'Efectos de sonido activados' : 'Sonido silenciado'">
-                        <i class="fa-solid" :class="soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
-                    </button>
-
-                    <!-- Modo Libre vs Secuencial -->
-                    <button @click="freeMode = !freeMode"
-                        :class="freeMode ? 'bg-purple-950/60 border-purple-500/50 text-purple-300' : 'bg-slate-900 border-slate-800 text-slate-400'"
-                        class="px-2.5 py-1.5 rounded-xl border-2 text-xs font-black transition flex items-center gap-1.5"
-                        :title="freeMode ? 'Modo libre activo (todas las estaciones desbloqueadas)' : 'Ruta secuencial estricta'">
-                        <i class="fa-solid" :class="freeMode ? 'fa-lock-open text-purple-400' : 'fa-lock text-amber-400'"></i>
-                        <span class="hidden sm:inline">{{ freeMode ? 'Libre' : 'Ruta' }}</span>
-                    </button>
-
-                    <!-- Botón Acceso Rápido ADUSO -->
+                <!-- SUB-BARRA HORIZONTAL TÁCTIL EN MÓVIL Y TABLET (Swipeable Quick Actions) -->
+                <div class="xl:hidden flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-2 mt-1.5 border-t border-slate-800/80 scroll-smooth">
                     <button @click="openCheatSheetTab('aduso')"
-                        class="btn-3d px-3 py-1.5 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-xs font-black shadow-[0_3px_0_0_#ca8a04] flex items-center gap-1.5"
-                        title="Regla de oro de conectores ADUSO">
-                        <i class="fa-solid fa-bolt"></i>
+                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
+                        <i class="fa-solid fa-bolt text-[10px]"></i>
                         <span>ADUSO</span>
                     </button>
-
-                    <!-- Botón Chunks de Supervivencia -->
                     <button @click="openCheatSheetTab('chunks')"
-                        class="btn-3d px-3 py-1.5 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 text-xs font-black shadow-[0_3px_0_0_#46a302] flex items-center gap-1.5"
-                        title="Expresiones idiomáticas y frases hechas para la vida diaria en Alemania">
-                        <i class="fa-solid fa-comments"></i>
-                        <span class="hidden sm:inline">Diálogos</span>
+                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#46a302] cursor-pointer">
+                        <i class="fa-solid fa-comments text-[10px]"></i>
+                        <span>Diálogos</span>
                     </button>
-
-                    <!-- Cuaderno de Gramática Babbel -->
                     <button @click="openCheatSheetTab('cases')"
-                        class="btn-3d px-3 py-1.5 rounded-xl bg-babbel-orange hover:bg-babbel-orangeDeep text-white text-xs font-black shadow-[0_3px_0_0_#b84d00] flex items-center gap-1.5">
-                        <i class="fa-solid fa-book-open"></i>
-                        <span class="hidden sm:inline">Gramática</span>
+                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-blue hover:bg-duo-blueDark text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#1899d6] cursor-pointer">
+                        <i class="fa-solid fa-graduation-cap text-[10px]"></i>
+                        <span>Declinaciones</span>
                     </button>
-
-                    <!-- Botón Verbos Fundamentales -->
                     <button @click="openCheatSheetTab('verbs')"
-                        class="btn-3d px-3 py-1.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-black shadow-[0_3px_0_0_#0f766e] flex items-center gap-1.5"
-                        title="Diccionario y conjugaciones de los verbos alemanes más importantes">
-                        <i class="fa-solid fa-bolt-lightning text-teal-200"></i>
-                        <span class="hidden md:inline">Verbos</span>
+                        class="btn-3d px-2.5 py-1 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#0f766e] cursor-pointer">
+                        <i class="fa-solid fa-bolt-lightning text-[10px] text-teal-200"></i>
+                        <span>Verbos</span>
                     </button>
-
-                    <!-- Botón Constructor de Frases (Word Tiles) -->
                     <button @click="openCheatSheetTab('builder')"
-                        class="btn-3d px-3 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-black shadow-[0_3px_0_0_#581c87] flex items-center gap-1.5"
-                        title="Constructor de Frases: Entrena el orden sintáctico de las palabras estilo Duolingo">
-                        <i class="fa-solid fa-puzzle-piece text-purple-200"></i>
-                        <span class="hidden md:inline">Constructor</span>
+                        class="btn-3d px-2.5 py-1 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#581c87] cursor-pointer">
+                        <i class="fa-solid fa-puzzle-piece text-[10px] text-purple-200"></i>
+                        <span>Constructor</span>
                     </button>
+                    
+                    <div class="h-4 w-px bg-slate-800 shrink-0 mx-0.5"></div>
 
-                    <!-- Reiniciar Progreso Local -->
-                    <button @click="resetAllProgress"
-                        class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-rose-950/40 border-2 border-slate-800 hover:border-rose-500/40 text-xs font-bold text-slate-400 hover:text-rose-300 transition flex items-center gap-1"
-                        title="Reiniciar progreso guardado en este navegador">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                        <span class="hidden lg:inline text-[11px]">Reiniciar</span>
+                    <!-- Botones de utilidad rápidos en el carrusel -->
+                    <button @click="soundEnabled = !soundEnabled"
+                        :class="soundEnabled ? 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' : 'text-slate-500 border-slate-800 bg-slate-900'"
+                        class="px-2 py-1 rounded-xl border-2 text-[11px] font-black shrink-0 flex items-center gap-1 cursor-pointer"
+                        :title="soundEnabled ? 'Sonido activado' : 'Sonido silenciado'">
+                        <i class="fa-solid" :class="soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
+                    </button>
+                    <button @click="freeMode = !freeMode"
+                        :class="freeMode ? 'bg-purple-950/60 border-purple-500/50 text-purple-300' : 'bg-slate-900 border-slate-800 text-slate-400'"
+                        class="px-2 py-1 rounded-xl border-2 text-[11px] font-black shrink-0 flex items-center gap-1 cursor-pointer"
+                        :title="freeMode ? 'Modo Libre activo' : 'Ruta Guiada'">
+                        <i class="fa-solid" :class="freeMode ? 'fa-lock-open text-purple-400' : 'fa-lock text-amber-400'"></i>
+                        <span>{{ freeMode ? 'Libre' : 'Ruta' }}</span>
                     </button>
                 </div>
 
             </div>
+
+            <!-- MODAL / DRAWER DESPLEGABLE MÓVIL (CUANDO SE PULSA "MENÚ") -->
+            <transition name="fade-slide">
+                <div v-if="mobileMenuOpen" class="xl:hidden bg-[#070d1e] border-t-2 border-slate-800 p-4 shadow-2xl space-y-4">
+                    
+                    <!-- Progreso en Móvil -->
+                    <div class="p-3 rounded-2xl bg-slate-900/90 border border-slate-800">
+                        <div class="flex justify-between items-center text-xs font-black text-slate-300 mb-1.5">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-flag-checkered text-duo-yellow"></i>
+                                Progreso Nivel {{ currentLevel }}
+                            </span>
+                            <span class="text-duo-green">{{ levelStats.percent }}% ({{ levelStats.doneSteps }}/{{ levelStats.totalSteps }})</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-slate-950 rounded-full overflow-hidden border border-slate-800 p-0.5">
+                            <div class="h-full bg-gradient-to-r from-duo-yellow via-duo-green to-emerald-400 rounded-full transition-all duration-500"
+                                :style="{ width: levelStats.percent + '%' }"></div>
+                        </div>
+                    </div>
+
+                    <!-- Grid de Herramientas Didácticas -->
+                    <div>
+                        <div class="text-[10px] font-black uppercase text-slate-400 mb-2 tracking-wider">Herramientas Didácticas</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button @click="openCheatSheetTab('aduso'); mobileMenuOpen = false"
+                                class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-amber-500/40 text-left flex items-start gap-2.5 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
+                                <i class="fa-solid fa-bolt text-amber-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-xs font-black text-white">ADUSO</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Posición 0</div>
+                                </div>
+                            </button>
+                            <button @click="openCheatSheetTab('chunks'); mobileMenuOpen = false"
+                                class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-emerald-500/40 text-left flex items-start gap-2.5 shadow-[0_2px_0_0_#46a302] cursor-pointer">
+                                <i class="fa-solid fa-comments text-emerald-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-xs font-black text-white">Diálogos</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Supervivencia</div>
+                                </div>
+                            </button>
+                            <button @click="openCheatSheetTab('cases'); mobileMenuOpen = false"
+                                class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-sky-500/40 text-left flex items-start gap-2.5 shadow-[0_2px_0_0_#1899d6] cursor-pointer">
+                                <i class="fa-solid fa-graduation-cap text-sky-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-xs font-black text-white">Declinaciones</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Gym Casos</div>
+                                </div>
+                            </button>
+                            <button @click="openCheatSheetTab('verbs'); mobileMenuOpen = false"
+                                class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-teal-500/40 text-left flex items-start gap-2.5 shadow-[0_2px_0_0_#0f766e] cursor-pointer">
+                                <i class="fa-solid fa-bolt-lightning text-teal-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-xs font-black text-white">Verbos</div>
+                                    <div class="text-[10px] font-medium text-slate-400">65 Fundamentales</div>
+                                </div>
+                            </button>
+                            <button @click="openCheatSheetTab('builder'); mobileMenuOpen = false"
+                                class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-purple-500/40 text-left flex items-start gap-2.5 col-span-2 shadow-[0_2px_0_0_#581c87] cursor-pointer">
+                                <i class="fa-solid fa-puzzle-piece text-purple-400 text-lg mt-0.5"></i>
+                                <div>
+                                    <div class="text-xs font-black text-white">Constructor de Frases (Word Tiles)</div>
+                                    <div class="text-[10px] font-medium text-slate-400">Entrena el orden sintáctico V2 y subordinadas</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ajustes y Preferencias Rápidas -->
+                    <div class="pt-2 border-t border-slate-800 flex items-center justify-between gap-2">
+                        <button @click="soundEnabled = !soundEnabled"
+                            class="flex-1 py-2 px-3 rounded-xl border-2 text-xs font-black flex items-center justify-center gap-2 cursor-pointer"
+                            :class="soundEnabled ? 'border-emerald-500/40 bg-emerald-950/40 text-emerald-300' : 'border-slate-800 bg-slate-900 text-slate-400'">
+                            <i class="fa-solid" :class="soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
+                            <span>{{ soundEnabled ? 'Sonido Activado' : 'Silenciado' }}</span>
+                        </button>
+                        <button @click="freeMode = !freeMode"
+                            class="flex-1 py-2 px-3 rounded-xl border-2 text-xs font-black flex items-center justify-center gap-2 cursor-pointer"
+                            :class="freeMode ? 'border-purple-500/50 bg-purple-950/50 text-purple-300' : 'border-slate-800 bg-slate-900 text-slate-400'">
+                            <i class="fa-solid" :class="freeMode ? 'fa-lock-open' : 'fa-lock'"></i>
+                            <span>{{ freeMode ? 'Modo Libre' : 'Ruta Guiada' }}</span>
+                        </button>
+                    </div>
+
+                    <!-- Reiniciar Progreso y Cerrar Menú -->
+                    <div class="flex items-center justify-between gap-2 pt-1">
+                        <button @click="resetAllProgress(); mobileMenuOpen = false"
+                            class="px-3 py-2 rounded-xl bg-rose-950/30 hover:bg-rose-900/50 border border-rose-500/30 text-rose-300 text-xs font-bold flex items-center gap-1.5 cursor-pointer">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                            <span>Reiniciar Progreso</span>
+                        </button>
+                        <button @click="mobileMenuOpen = false"
+                            class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-black flex items-center gap-1 cursor-pointer">
+                            <span>Cerrar Menú</span>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </transition>
         </header>
 
         <!-- CONTENEDOR PRINCIPAL: RUTA GAMIFICADA (Duolingo) + AULA INTERACTIVA (Babbel) -->
@@ -923,42 +1090,44 @@
                             <p class="text-[11px] text-slate-400 font-bold">Fórmulas, sintaxis y reglas de oro explicadas paso a paso</p>
                         </div>
                     </div>
-                    <button @click="showCheatSheet = false" class="text-slate-400 hover:text-white text-2xl px-2">
-                        <i class="fa-solid fa-xmark"></i>
+                    <button @click="showCheatSheet = false" 
+                        class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition cursor-pointer"
+                        title="Cerrar ventana">
+                        <i class="fa-solid fa-xmark text-base"></i>
                     </button>
                 </div>
 
-                <!-- Pestañas Interactivas (ADUSO vs CHUNKS vs CASOS) -->
-                <div class="flex flex-wrap items-center gap-2 bg-slate-950/80 p-1.5 rounded-2xl border-2 border-slate-800">
+                <!-- Pestañas Interactivas (ADUSO vs CHUNKS vs CASOS vs VERBOS vs BUILDER) -->
+                <div class="flex items-center gap-1.5 sm:gap-2 bg-slate-950/80 p-1.5 rounded-2xl border-2 border-slate-800 overflow-x-auto no-scrollbar scroll-smooth">
                     <button @click="cheatSheetTab = 'aduso'"
                         :class="cheatSheetTab === 'aduso' ? 'bg-duo-yellow text-slate-950 font-black shadow-[0_3px_0_0_#ca8a04]' : 'text-slate-400 hover:text-white font-bold'"
-                        class="btn-3d px-3.5 py-2 rounded-xl text-xs flex-1 sm:flex-initial flex items-center justify-center gap-1.5 transition">
+                        class="btn-3d px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs shrink-0 flex items-center justify-center gap-1.5 transition cursor-pointer whitespace-nowrap">
                         <i class="fa-solid fa-bolt text-amber-500"></i>
                         <span>ADUSO</span>
                     </button>
                     <button @click="cheatSheetTab = 'chunks'"
                         :class="cheatSheetTab === 'chunks' ? 'bg-duo-green text-slate-950 font-black shadow-[0_3px_0_0_#46a302]' : 'text-slate-400 hover:text-white font-bold'"
-                        class="btn-3d px-3.5 py-2 rounded-xl text-xs flex-1 sm:flex-initial flex items-center justify-center gap-1.5 transition">
+                        class="btn-3d px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs shrink-0 flex items-center justify-center gap-1.5 transition cursor-pointer whitespace-nowrap">
                         <i class="fa-solid fa-comments text-emerald-800"></i>
-                        <span>Chunks de Supervivencia</span>
+                        <span><span class="hidden sm:inline">Diálogos & </span>Chunks</span>
                     </button>
                     <button @click="cheatSheetTab = 'cases'"
                         :class="cheatSheetTab === 'cases' ? 'bg-duo-blue text-white font-black shadow-[0_3px_0_0_#1899d6]' : 'text-slate-400 hover:text-white font-bold'"
-                        class="btn-3d px-3.5 py-2 rounded-xl text-xs flex-1 sm:flex-initial flex items-center justify-center gap-1.5 transition">
-                        <i class="fa-solid fa-table-cells text-sky-300"></i>
-                        <span>Casos y Artículos</span>
-                    </button>
-                    <button @click="cheatSheetTab = 'builder'"
-                        :class="cheatSheetTab === 'builder' ? 'bg-purple-600 text-white font-black shadow-[0_3px_0_0_#581c87]' : 'text-slate-400 hover:text-white font-bold'"
-                        class="btn-3d px-3.5 py-2 rounded-xl text-xs flex-1 sm:flex-initial flex items-center justify-center gap-1.5 transition">
-                        <i class="fa-solid fa-puzzle-piece text-purple-300"></i>
-                        <span>Constructor de Frases</span>
+                        class="btn-3d px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs shrink-0 flex items-center justify-center gap-1.5 transition cursor-pointer whitespace-nowrap">
+                        <i class="fa-solid fa-graduation-cap text-sky-300"></i>
+                        <span>🥊 <span class="hidden sm:inline">Deklinations-</span>Trainer</span>
                     </button>
                     <button @click="cheatSheetTab = 'verbs'"
                         :class="cheatSheetTab === 'verbs' ? 'bg-teal-400 text-slate-950 font-black shadow-[0_3px_0_0_#0f766e]' : 'text-slate-400 hover:text-white font-bold'"
-                        class="btn-3d px-3.5 py-2 rounded-xl text-xs flex-1 sm:flex-initial flex items-center justify-center gap-1.5 transition">
+                        class="btn-3d px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs shrink-0 flex items-center justify-center gap-1.5 transition cursor-pointer whitespace-nowrap">
                         <i class="fa-solid fa-bolt-lightning text-teal-700"></i>
-                        <span>Verbos Fundamentales</span>
+                        <span>⚡ Verbos<span class="hidden sm:inline"> Fundamentales</span></span>
+                    </button>
+                    <button @click="cheatSheetTab = 'builder'"
+                        :class="cheatSheetTab === 'builder' ? 'bg-purple-600 text-white font-black shadow-[0_3px_0_0_#581c87]' : 'text-slate-400 hover:text-white font-bold'"
+                        class="btn-3d px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs shrink-0 flex items-center justify-center gap-1.5 transition cursor-pointer whitespace-nowrap">
+                        <i class="fa-solid fa-puzzle-piece text-purple-300"></i>
+                        <span>🧩 Constructor<span class="hidden sm:inline"> de Frases</span></span>
                     </button>
                 </div>
 
@@ -1298,74 +1467,294 @@
                 </div>
 
                 <!-- ========================================================================= -->
-                <!-- PESTAÑA 3: CASOS Y ARTÍCULOS (NOMINATIV, AKKUSATIV, DATIV)                 -->
+                <!-- PESTAÑA 3: GIMNASIO DE DECLINACIONES Y TABLAS DE CASOS                    -->
                 <!-- ========================================================================= -->
                 <div v-else-if="cheatSheetTab === 'cases'" class="space-y-4">
-                    <p class="text-xs text-slate-300 leading-relaxed font-bold">
-                        Haz clic en cualquier celda para escuchar la pronunciación alemana nativa.
-                    </p>
+                    
+                    <!-- Sub-Navegación: Entrenador Interactivo vs Tablas de Referencia -->
+                    <div class="flex items-center justify-between flex-wrap gap-2 pb-2 border-b border-slate-800">
+                        <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                            <button @click="casesSubTab = 'trainer'"
+                                :class="casesSubTab === 'trainer' ? 'bg-duo-blue text-white font-black shadow-[0_2px_0_0_#1899d6]' : 'text-slate-400 hover:text-white font-bold'"
+                                class="btn-3d px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1.5 cursor-pointer">
+                                <i class="fa-solid fa-dumbbell text-sky-300"></i>
+                                <span>🥊 Entrenador Interactivo</span>
+                            </button>
+                            <button @click="casesSubTab = 'tables'"
+                                :class="casesSubTab === 'tables' ? 'bg-slate-800 text-white font-black' : 'text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-lg text-xs transition flex items-center gap-1.5 cursor-pointer">
+                                <i class="fa-solid fa-table-cells text-slate-400"></i>
+                                <span>📖 Tablas de Casos</span>
+                            </button>
+                        </div>
 
-                    <!-- Tabla de Casos -->
-                    <div class="overflow-x-auto rounded-2xl border-2 border-slate-800">
-                        <table class="w-full text-left border-collapse text-xs md:text-sm">
-                            <thead class="bg-slate-900 text-slate-200 font-black border-b-2 border-slate-800">
-                                <tr>
-                                    <th class="p-3">Caso</th>
-                                    <th class="p-3 text-sky-400">Masc. (der)</th>
-                                    <th class="p-3 text-rose-400">Fem. (die)</th>
-                                    <th class="p-3 text-emerald-400">Neutro (das)</th>
-                                    <th class="p-3 text-amber-300">Plural (die)</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y-2 divide-slate-800/80 font-bold bg-slate-950/60">
-                                <tr class="hover:bg-slate-900/60 transition">
-                                    <td class="p-3 font-black text-sky-300">Nominativ (Sujeto)</td>
-                                    <td @click="speak('der, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>der</b> / ein / kein 🔊
-                                    </td>
-                                    <td @click="speak('die, eine, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>die</b> / eine / keine 🔊
-                                    </td>
-                                    <td @click="speak('das, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>das</b> / ein / kein 🔊
-                                    </td>
-                                    <td @click="speak('die, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>die</b> / -- / keine 🔊
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-slate-900/60 transition bg-fuchsia-500/5">
-                                    <td class="p-3 font-black text-fuchsia-400">Akkusativ (Obj. Directo)</td>
-                                    <td @click="speak('den, einen, keinen')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-fuchsia-500/20 text-fuchsia-200 font-black">
-                                        <b>den</b> / einen ⚠️ 🔊
-                                    </td>
-                                    <td @click="speak('die, eine, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>die</b> / eine 🔊
-                                    </td>
-                                    <td @click="speak('das, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>das</b> / ein 🔊
-                                    </td>
-                                    <td @click="speak('die, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
-                                        <b>die</b> / keine 🔊
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-slate-900/60 transition bg-amber-500/5">
-                                    <td class="p-3 font-black text-amber-400">Dativ (Obj. Indirecto)</td>
-                                    <td @click="speak('dem, einem, keinem')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
-                                        <b>dem</b> / einem 🔊
-                                    </td>
-                                    <td @click="speak('der, einer, keiner')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
-                                        <b>der</b> / einer 🔊
-                                    </td>
-                                    <td @click="speak('dem, einem, keinem')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
-                                        <b>dem</b> / einem 🔊
-                                    </td>
-                                    <td @click="speak('den, keinen')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/20 text-amber-300 font-black">
-                                        <b>den + -n</b> ⚠️ 🔊
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Marcadores de Gamificación en el Entrenador -->
+                        <div v-if="casesSubTab === 'trainer'" class="flex items-center gap-2 text-xs">
+                            <div class="px-2.5 py-1 rounded-xl bg-slate-950 border border-amber-500/40 text-amber-400 font-black flex items-center gap-1.5 shadow-sm"
+                                title="Racha actual de respuestas correctas consecutivas">
+                                <span class="fire-anim text-sm">🔥</span>
+                                <span>Racha: {{ deklinationStreak }}</span>
+                            </div>
+                            <div class="px-2.5 py-1 rounded-xl bg-slate-950 border border-yellow-500/40 text-yellow-300 font-bold flex items-center gap-1.5"
+                                title="Récord de racha en esta sesión">
+                                <i class="fa-solid fa-trophy text-yellow-400"></i>
+                                <span>Récord: {{ deklinationBestStreak }}</span>
+                            </div>
+                            <div class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-bold hidden sm:flex items-center gap-1.5"
+                                title="Total de ejercicios resueltos correctamente">
+                                <i class="fa-solid fa-bolt text-duo-yellow"></i>
+                                <span>{{ deklinationTotalSolved }} Éxitos</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- VISTA 1: ENTRENADOR INTERACTIVO (DEKLINATIONS-TRAINER) -->
+                    <div v-if="casesSubTab === 'trainer'" class="space-y-4">
+                        
+                        <!-- Filtros por Categoría de Declinación -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                            <button @click="setDeklinationFilter('all')"
+                                :class="deklinationFilter === 'all' ? 'bg-sky-500 text-slate-950 font-black shadow-[0_2px_0_0_#0284c7]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                🌟 Todos ({{ deklinationChallenges.length }})
+                            </button>
+                            <button @click="setDeklinationFilter('akk')"
+                                :class="deklinationFilter === 'akk' ? 'bg-fuchsia-600 text-white font-black shadow-[0_2px_0_0_#a21caf]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                🎯 Nom. vs Akkusativ
+                            </button>
+                            <button @click="setDeklinationFilter('dat')"
+                                :class="deklinationFilter === 'dat' ? 'bg-amber-600 text-white font-black shadow-[0_2px_0_0_#b45309]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                🧲 Verbos & Prep. Dativo
+                            </button>
+                            <button @click="setDeklinationFilter('wechsel')"
+                                :class="deklinationFilter === 'wechsel' ? 'bg-emerald-600 text-white font-black shadow-[0_2px_0_0_#047857]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                📍 Wechselpräpositionen
+                            </button>
+                            <button @click="setDeklinationFilter('gen')"
+                                :class="deklinationFilter === 'gen' ? 'bg-purple-600 text-white font-black shadow-[0_2px_0_0_#6b21a8]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-3 py-1.5 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                👑 Genitiv (B1)
+                            </button>
+                        </div>
+
+                        <!-- Tarjeta del Reto Activo -->
+                        <div v-if="currentDeklinationChallenge" class="p-5 md:p-6 rounded-3xl bg-slate-950 border-2 border-slate-800 space-y-4 shadow-xl">
+                            
+                            <!-- Cabecera de la Frase -->
+                            <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-800/80">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-0.5 rounded-md font-black text-[10px] uppercase tracking-wider"
+                                        :class="currentDeklinationChallenge.level === 'A1' ? 'bg-duo-green/20 text-duo-green border border-duo-green/30' : (currentDeklinationChallenge.level === 'A2' ? 'bg-duo-blue/20 text-sky-400 border border-sky-400/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30')">
+                                        {{ currentDeklinationChallenge.level }}
+                                    </span>
+                                    <span class="font-black text-slate-400">{{ currentDeklinationChallenge.catLabel }}</span>
+                                </div>
+                                <span class="text-slate-500 text-[11px] font-bold">
+                                    Reto {{ (deklinationIndex % (filteredDeklinationChallenges.length || 1)) + 1 }} de {{ filteredDeklinationChallenges.length }}
+                                </span>
+                            </div>
+
+                            <!-- Enunciado en Alemán con Hueco Resaltado -->
+                            <div class="p-4 rounded-2xl bg-[#0e1836] border-2 border-sky-500/30 flex items-center justify-between gap-3">
+                                <div>
+                                    <div class="text-[10px] font-black uppercase text-sky-300 tracking-wider mb-1">
+                                        Completa la frase con el artículo o pronombre correcto:
+                                    </div>
+                                    <div class="text-base md:text-xl font-black text-white tracking-wide">
+                                        {{ currentDeklinationChallenge.promptDe }}
+                                    </div>
+                                    <div class="text-xs text-slate-300 font-medium mt-1">
+                                        🇪🇸 {{ currentDeklinationChallenge.promptEs }}
+                                    </div>
+                                </div>
+                                <button @click="speak(currentDeklinationChallenge.promptDe.replace('___', currentDeklinationChallenge.options[currentDeklinationChallenge.correct]))"
+                                    class="w-10 h-10 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 text-sky-400 border border-sky-500/40 flex items-center justify-center shrink-0 transition cursor-pointer"
+                                    title="Escuchar frase modelo completa">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                            </div>
+
+                            <!-- Pista Sintáctica -->
+                            <div class="text-xs text-amber-300/90 font-bold flex items-center gap-1.5 px-1">
+                                <i class="fa-solid fa-lightbulb text-amber-400"></i>
+                                <span>Pista: {{ currentDeklinationChallenge.clue }}</span>
+                            </div>
+
+                            <!-- Cuadrícula de Opciones 3D -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                                <button v-for="(opt, oIdx) in currentDeklinationChallenge.options" :key="oIdx"
+                                    @click="onSelectDeklinationOption(oIdx)"
+                                    :disabled="deklinationStatus !== null"
+                                    :class="[
+                                        'btn-3d p-3 rounded-2xl border-2 font-black text-sm md:text-base text-center transition flex items-center justify-center gap-2 cursor-pointer',
+                                        deklinationSelected === null 
+                                            ? 'bg-slate-900 hover:bg-slate-800 border-slate-700 text-white shadow-[0_3px_0_0_#334155]'
+                                            : (oIdx === currentDeklinationChallenge.correct 
+                                                ? 'bg-duo-green border-emerald-400 text-slate-950 shadow-[0_3px_0_0_#46a302] scale-[1.02]' 
+                                                : (deklinationSelected === oIdx 
+                                                    ? 'bg-rose-600 border-rose-400 text-white shadow-[0_3px_0_0_#be123c]' 
+                                                    : 'bg-slate-900 border-slate-800 text-slate-500 opacity-40'))
+                                    ]">
+                                    <span>{{ opt }}</span>
+                                    <i v-if="deklinationSelected !== null && oIdx === currentDeklinationChallenge.correct" class="fa-solid fa-circle-check text-slate-950"></i>
+                                    <i v-else-if="deklinationSelected === oIdx && oIdx !== currentDeklinationChallenge.correct" class="fa-solid fa-circle-xmark text-white"></i>
+                                </button>
+                            </div>
+
+                            <!-- Feedback Pedagógico Inmediato -->
+                            <div v-if="deklinationStatus === 'correct'" class="p-4 rounded-2xl bg-emerald-950/60 border-2 border-emerald-500/60 text-emerald-200 text-xs md:text-sm space-y-2">
+                                <div class="font-black text-emerald-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-lg"></i>
+                                    <span>¡Richtig! Respuesta Correcta (+10 XP)</span>
+                                </div>
+                                <p class="leading-relaxed font-medium text-slate-200">{{ currentDeklinationChallenge.why }}</p>
+                                <div class="pt-2 flex justify-end">
+                                    <button @click="nextDeklinationChallenge"
+                                        class="btn-3d px-4 py-2 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 font-black text-xs md:text-sm shadow-[0_3px_0_0_#46a302] flex items-center gap-2 cursor-pointer">
+                                        <span>Siguiente Frase</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div v-else-if="deklinationStatus === 'incorrect'" class="p-4 rounded-2xl bg-rose-950/60 border-2 border-rose-500/60 text-rose-200 text-xs md:text-sm space-y-2">
+                                <div class="font-black text-rose-400 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-xmark text-lg"></i>
+                                    <span>No del todo. ¡Repasemos la regla!</span>
+                                </div>
+                                <p class="leading-relaxed font-medium text-slate-200">{{ currentDeklinationChallenge.why }}</p>
+                                <div class="pt-2 flex justify-end">
+                                    <button @click="nextDeklinationChallenge"
+                                        class="btn-3d px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-black text-xs md:text-sm border border-slate-600 shadow-[0_3px_0_0_#334155] flex items-center gap-2 cursor-pointer">
+                                        <span>Probar Siguiente</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- VISTA 2: TABLAS DE REFERENCIA (LOS 4 CASOS, PRONOMBRES Y WECHSELPRÄPOSITIONEN) -->
+                    <div v-else class="space-y-5">
+                        <p class="text-xs text-slate-300 leading-relaxed font-bold">
+                            Toca cualquier celda para escuchar la pronunciación en alemán nativo.
+                        </p>
+
+                        <!-- Tabla Completa de los 4 Casos (Nominativ, Akkusativ, Dativ, Genitiv) -->
+                        <div class="overflow-x-auto rounded-2xl border-2 border-slate-800 shadow-xl">
+                            <table class="w-full text-left border-collapse text-xs md:text-sm">
+                                <thead class="bg-slate-900 text-slate-200 font-black border-b-2 border-slate-800">
+                                    <tr>
+                                        <th class="p-3">Caso & Función</th>
+                                        <th class="p-3 text-sky-400">Masc. (der)</th>
+                                        <th class="p-3 text-rose-400">Fem. (die)</th>
+                                        <th class="p-3 text-emerald-400">Neutro (das)</th>
+                                        <th class="p-3 text-amber-300">Plural (die)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y-2 divide-slate-800/80 font-bold bg-slate-950/60">
+                                    <tr class="hover:bg-slate-900/60 transition">
+                                        <td class="p-3 font-black text-sky-300">
+                                            Nominativ <span class="text-[10px] text-slate-400 block font-normal">Sujeto (Wer?)</span>
+                                        </td>
+                                        <td @click="speak('der, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>der</b> / ein / kein 🔊
+                                        </td>
+                                        <td @click="speak('die, eine, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>die</b> / eine / keine 🔊
+                                        </td>
+                                        <td @click="speak('das, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>das</b> / ein / kein 🔊
+                                        </td>
+                                        <td @click="speak('die, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>die</b> / -- / keine 🔊
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-900/60 transition bg-fuchsia-500/5">
+                                        <td class="p-3 font-black text-fuchsia-400">
+                                            Akkusativ <span class="text-[10px] text-fuchsia-300/70 block font-normal">Obj. Directo (Wen?)</span>
+                                        </td>
+                                        <td @click="speak('den, einen, keinen')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-fuchsia-500/20 text-fuchsia-200 font-black">
+                                            <b>den</b> / einen ⚠️ 🔊
+                                        </td>
+                                        <td @click="speak('die, eine, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>die</b> / eine 🔊
+                                        </td>
+                                        <td @click="speak('das, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>das</b> / ein 🔊
+                                        </td>
+                                        <td @click="speak('die, keine')" class="p-3 cursor-pointer hover:bg-slate-800/80">
+                                            <b>die</b> / keine 🔊
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-900/60 transition bg-amber-500/5">
+                                        <td class="p-3 font-black text-amber-400">
+                                            Dativ <span class="text-[10px] text-amber-300/70 block font-normal">Obj. Indirecto (Wem?)</span>
+                                        </td>
+                                        <td @click="speak('dem, einem, keinem')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
+                                            <b>dem</b> / einem 🔊
+                                        </td>
+                                        <td @click="speak('der, einer, keiner')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
+                                            <b>der</b> / einer 🔊
+                                        </td>
+                                        <td @click="speak('dem, einem, keinem')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
+                                            <b>dem</b> / einem 🔊
+                                        </td>
+                                        <td @click="speak('den, keinen')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/20 text-amber-300 font-black">
+                                            <b>den + -n</b> ⚠️ 🔊
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-900/60 transition bg-purple-500/5">
+                                        <td class="p-3 font-black text-purple-400">
+                                            Genitiv <span class="text-[10px] text-purple-300/70 block font-normal">Posesión (Wessen?)</span>
+                                        </td>
+                                        <td @click="speak('des, eines, keines')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-purple-500/20 text-purple-200 font-black">
+                                            <b>des + -(e)s</b> ⚠️ 🔊
+                                        </td>
+                                        <td @click="speak('der, einer, keiner')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-purple-500/10 text-purple-200">
+                                            <b>der</b> / einer 🔊
+                                        </td>
+                                        <td @click="speak('des, eines, keines')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-purple-500/20 text-purple-200 font-black">
+                                            <b>des + -(e)s</b> ⚠️ 🔊
+                                        </td>
+                                        <td @click="speak('der, keiner')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-purple-500/10 text-purple-200">
+                                            <b>der</b> / keiner 🔊
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Matriz Rápida de Pronombres Personales -->
+                        <div class="overflow-x-auto rounded-2xl border-2 border-slate-800 shadow-xl">
+                            <table class="w-full text-left border-collapse text-xs md:text-sm">
+                                <thead class="bg-slate-900 text-slate-200 font-black border-b-2 border-slate-800">
+                                    <tr>
+                                        <th class="p-3">Pronombre</th>
+                                        <th class="p-3 text-sky-400">Nominativ</th>
+                                        <th class="p-3 text-fuchsia-400">Akkusativ</th>
+                                        <th class="p-3 text-amber-300">Dativ</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y-2 divide-slate-800/80 font-bold bg-slate-950/60">
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">1ª Sing. (Yo)</td><td class="p-2.5 text-sky-300">ich</td><td class="p-2.5 text-fuchsia-300">mich</td><td class="p-2.5 text-amber-300">mir</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">2ª Sing. (Tú)</td><td class="p-2.5 text-sky-300">du</td><td class="p-2.5 text-fuchsia-300">dich</td><td class="p-2.5 text-amber-300">dir</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">3ª Masc. (Él)</td><td class="p-2.5 text-sky-300">er</td><td class="p-2.5 text-fuchsia-300">ihn ⚠️</td><td class="p-2.5 text-amber-300">ihm</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">3ª Fem. (Ella)</td><td class="p-2.5 text-sky-300">sie</td><td class="p-2.5 text-fuchsia-300">sie</td><td class="p-2.5 text-amber-300">ihr ⚠️</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">3ª Neutro (Ello)</td><td class="p-2.5 text-sky-300">es</td><td class="p-2.5 text-fuchsia-300">es</td><td class="p-2.5 text-amber-300">ihm</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">1ª Plural (Nosotros)</td><td class="p-2.5 text-sky-300">wir</td><td class="p-2.5 text-fuchsia-300">uns</td><td class="p-2.5 text-amber-300">uns</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">2ª Plural (Vosotros)</td><td class="p-2.5 text-sky-300">ihr</td><td class="p-2.5 text-fuchsia-300">euch</td><td class="p-2.5 text-amber-300">euch</td></tr>
+                                    <tr class="hover:bg-slate-900/60 transition"><td class="p-2.5">Usted / Ellos</td><td class="p-2.5 text-sky-300">Sie / sie</td><td class="p-2.5 text-fuchsia-300">Sie / sie</td><td class="p-2.5 text-amber-300">Ihnen / ihnen</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <!-- ========================================================================= -->
@@ -1513,6 +1902,214 @@
                             </p>
                         </div>
 
+                    </div>
+
+                </div>
+
+                <!-- ========================================================================= -->
+                <!-- PESTAÑA 5: DICCIONARIO & CONJUGADOR DE VERBOS FUNDAMENTALES (EP4-01)      -->
+                <!-- ========================================================================= -->
+                <div v-else-if="cheatSheetTab === 'verbs'" class="space-y-4">
+                    
+                    <!-- Banner de Introducción Didáctica -->
+                    <div class="p-4 rounded-2xl bg-gradient-to-r from-teal-950/60 via-slate-900 to-slate-900 border-2 border-teal-500/40 flex items-start justify-between gap-3 shadow-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-500 text-slate-950 flex items-center justify-center font-black shrink-0 shadow-[0_3px_0_0_#0f766e]">
+                                <i class="fa-solid fa-bolt-lightning text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-sm md:text-base text-white flex items-center gap-2">
+                                    <span>Diccionario de Verbos Fundamentales (A1 · A2 · B1)</span>
+                                    <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                                        {{ filteredVerbs.length }} / {{ verbsList.length }} Verbos
+                                    </span>
+                                </h4>
+                                <p class="text-xs text-slate-300 leading-relaxed font-medium mt-0.5">
+                                    Los verbos que cubren el <b>80% del alemán hablado</b>. Consulta su auxiliar en Perfekt (<span class="text-emerald-400 font-bold">ist</span> vs <span class="text-sky-400 font-bold">hat</span>), el caso obligatorio que rigen (<b class="text-amber-300">Dativo / Acusativo</b>), y sus tres formas maestras.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Barra de Búsqueda Rápida en Tiempo Real -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        </div>
+                        <input v-model="verbsSearchQuery" type="text"
+                            placeholder="Buscar por infinitivo (sein, fahren...), traducción (ser, ir...), pretérito (war, fuhr) o participio (gewesen)..."
+                            class="w-full pl-10 pr-10 py-2.5 rounded-2xl bg-slate-950 border-2 border-slate-800 text-white placeholder:text-slate-500 text-xs md:text-sm font-bold focus:border-teal-400 focus:outline-none transition shadow-inner">
+                        <button v-if="verbsSearchQuery" @click="verbsSearchQuery = ''"
+                            class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-white transition cursor-pointer">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Filtros Rápidos Combinados (Nivel & Categoría) -->
+                    <div class="space-y-2">
+                        <!-- Filtro de Nivel -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                            <span class="text-[11px] font-black uppercase text-slate-400 mr-1 shrink-0">Nivel:</span>
+                            <button @click="verbsSelectedLevel = 'all'"
+                                :class="verbsSelectedLevel === 'all' ? 'bg-slate-200 text-slate-950 font-black' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl transition cursor-pointer">
+                                Todos
+                            </button>
+                            <button @click="verbsSelectedLevel = 'A1'"
+                                :class="verbsSelectedLevel === 'A1' ? 'bg-duo-green text-slate-950 font-black shadow-[0_2px_0_0_#46a302]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl transition cursor-pointer flex items-center gap-1">
+                                <span>🟢 A1</span>
+                            </button>
+                            <button @click="verbsSelectedLevel = 'A2'"
+                                :class="verbsSelectedLevel === 'A2' ? 'bg-duo-blue text-white font-black shadow-[0_2px_0_0_#1899d6]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl transition cursor-pointer flex items-center gap-1">
+                                <span>🔵 A2</span>
+                            </button>
+                            <button @click="verbsSelectedLevel = 'B1'"
+                                :class="verbsSelectedLevel === 'B1' ? 'bg-purple-600 text-white font-black shadow-[0_2px_0_0_#581c87]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl transition cursor-pointer flex items-center gap-1">
+                                <span>🟣 B1</span>
+                            </button>
+                        </div>
+
+                        <!-- Filtro de Tipo Gramatical & Régimen -->
+                        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                            <span class="text-[11px] font-black uppercase text-slate-400 mr-1 shrink-0">Tipo:</span>
+                            <button @click="verbsSelectedType = 'all'"
+                                :class="verbsSelectedType === 'all' ? 'bg-teal-500 text-slate-950 font-black' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer">
+                                Todos
+                            </button>
+                            <button @click="verbsSelectedType = 'sein'"
+                                :class="verbsSelectedType === 'sein' ? 'bg-emerald-500 text-slate-950 font-black shadow-[0_2px_0_0_#059669]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>🚀 Auxiliar SEIN (ist)</span>
+                            </button>
+                            <button @click="verbsSelectedType = 'dativ'"
+                                :class="verbsSelectedType === 'dativ' ? 'bg-amber-500 text-slate-950 font-black shadow-[0_2px_0_0_#d97706]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>🧲 Rigen Dativo</span>
+                            </button>
+                            <button @click="verbsSelectedType = 'modal'"
+                                :class="verbsSelectedType === 'modal' ? 'bg-yellow-500 text-slate-950 font-black shadow-[0_2px_0_0_#ca8a04]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>🧱 Modales</span>
+                            </button>
+                            <button @click="verbsSelectedType = 'trennbar'"
+                                :class="verbsSelectedType === 'trennbar' ? 'bg-indigo-500 text-white font-black shadow-[0_2px_0_0_#4338ca]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>✂️ Separables</span>
+                            </button>
+                            <button @click="verbsSelectedType = 'reflexiv'"
+                                :class="verbsSelectedType === 'reflexiv' ? 'bg-pink-500 text-white font-black shadow-[0_2px_0_0_#be185d]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>🪞 Reflexivos</span>
+                            </button>
+                            <button @click="verbsSelectedType = 'position'"
+                                :class="verbsSelectedType === 'position' ? 'bg-sky-500 text-slate-950 font-black shadow-[0_2px_0_0_#0284c7]' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
+                                class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer flex items-center gap-1">
+                                <span>📍 Posición (Wo/Wohin)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Estado Vacío si no hay resultados -->
+                    <div v-if="filteredVerbs.length === 0" class="p-8 text-center rounded-2xl bg-slate-950 border border-slate-800 text-slate-400 space-y-2">
+                        <i class="fa-solid fa-magnifying-glass text-3xl opacity-40"></i>
+                        <p class="text-sm font-bold text-slate-300">No se encontraron verbos para tu búsqueda o filtro.</p>
+                        <button @click="verbsSearchQuery = ''; verbsSelectedLevel = 'all'; verbsSelectedType = 'all'"
+                            class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-bold text-teal-300 transition cursor-pointer">
+                            Restablecer filtros
+                        </button>
+                    </div>
+
+                    <!-- Grid de Tarjetas de Verbos -->
+                    <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[62vh] overflow-y-auto pr-1">
+                        <div v-for="v in filteredVerbs" :key="v.infinitiv"
+                            class="p-4 rounded-2xl bg-slate-950/80 hover:bg-slate-900 border-2 border-slate-800/90 hover:border-teal-500/40 transition-all flex flex-col justify-between gap-3 shadow-md group">
+                            
+                            <!-- Cabecera de la tarjeta: Infinitivo, Audio y Badges -->
+                            <div>
+                                <div class="flex items-start justify-between gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <button @click="speak(v.infinitiv)"
+                                            class="w-9 h-9 rounded-xl bg-teal-500/10 group-hover:bg-teal-500/20 text-teal-400 border border-teal-500/30 flex items-center justify-center shrink-0 transition cursor-pointer"
+                                            :title="'Escuchar ' + v.infinitiv">
+                                            <i class="fa-solid fa-volume-high text-xs"></i>
+                                        </button>
+                                        <div>
+                                            <h5 class="text-base font-black text-white tracking-wide flex items-center gap-1.5">
+                                                <span>{{ v.infinitiv }}</span>
+                                            </h5>
+                                            <div class="text-xs text-slate-400 font-bold">
+                                                {{ v.translation }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Badges de Nivel y Auxiliar -->
+                                    <div class="flex items-center gap-1 shrink-0">
+                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider"
+                                            :class="v.level === 'A1' ? 'bg-duo-green/20 text-duo-green border border-duo-green/30' : (v.level === 'A2' ? 'bg-duo-blue/20 text-sky-400 border border-sky-400/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30')">
+                                            {{ v.level }}
+                                        </span>
+                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider"
+                                            :class="v.auxiliary === 'ist' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-sky-500/20 text-sky-300 border border-sky-500/40'"
+                                            :title="v.auxiliary === 'ist' ? 'Auxiliar Perfekt: SEIN' : 'Auxiliar Perfekt: HABEN'">
+                                            {{ v.auxiliary }}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Formas Verbales Principales (3 Stammformen) -->
+                                <div class="mt-3 grid grid-cols-3 gap-1.5 p-2 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] font-mono">
+                                    <div>
+                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Präsens (er/sie)</div>
+                                        <div class="text-slate-200 font-black truncate">{{ v.praesens }}</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Präteritum</div>
+                                        <div class="text-amber-300 font-black truncate">{{ v.praeteritum }}</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Partizip II</div>
+                                        <div class="text-teal-300 font-black truncate">{{ v.partizip2 }}</div>
+                                    </div>
+                                </div>
+
+                                <!-- Caso que rige & tags -->
+                                <div class="mt-2.5 flex items-center justify-between flex-wrap gap-1 text-[11px]">
+                                    <div class="flex items-center gap-1 font-bold">
+                                        <span class="text-slate-500 text-[10px] uppercase font-black">Régimen:</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-xs font-black"
+                                            :class="v.case && v.case.includes('DATIVO') ? 'text-amber-400 border-amber-500/30' : (v.case && v.case.includes('Akkusativ') ? 'text-fuchsia-300 border-fuchsia-500/30' : 'text-slate-300')">
+                                            {{ v.case }}
+                                        </span>
+                                    </div>
+                                    <div v-if="v.type" class="text-[10px] uppercase font-black text-slate-500">
+                                        {{ v.type }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Frase de Ejemplo Bilingüe con Audio -->
+                            <div class="pt-2 border-t border-slate-800/80 flex items-start justify-between gap-2 text-xs">
+                                <div class="space-y-0.5 flex-1">
+                                    <div class="text-white font-bold">
+                                        „{{ v.example_de }}“
+                                    </div>
+                                    <div class="text-slate-400 text-[11px] font-medium">
+                                        {{ v.example_es }}
+                                    </div>
+                                </div>
+                                <button @click="speak(v.example_de)"
+                                    class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center shrink-0 transition cursor-pointer"
+                                    title="Escuchar frase de ejemplo">
+                                    <i class="fa-solid fa-volume-high text-[10px]"></i>
+                                </button>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -3872,6 +4469,88 @@
                                (v.example_de && v.example_de.toLowerCase().includes(q));
                     });
                 });
+
+                // Deklinations-Trainer (Gimnasio de Casos y Artículos)
+                const casesSubTab = ref('trainer'); // 'trainer' o 'tables'
+                const deklinationChallenges = ref([]);
+                const deklinationFilter = ref('all');
+                const deklinationIndex = ref(0);
+                const deklinationSelected = ref(null);
+                const deklinationStatus = ref(null);
+                const deklinationStreak = ref(0);
+                const deklinationBestStreak = ref(0);
+                const deklinationTotalSolved = ref(0);
+
+                const fetchDeklinationData = async () => {
+                    try {
+                        const res = await fetch('./data/deklination.json');
+                        if (!res.ok) throw new Error('Fallback deklination');
+                        deklinationChallenges.value = await res.json();
+                    } catch (e) {
+                        deklinationChallenges.value = [];
+                    }
+                };
+
+                const filteredDeklinationChallenges = computed(() => {
+                    if (deklinationFilter.value === 'all') return deklinationChallenges.value;
+                    return deklinationChallenges.value.filter(c => c.cat === deklinationFilter.value);
+                });
+
+                const currentDeklinationChallenge = computed(() => {
+                    const list = filteredDeklinationChallenges.value;
+                    if (!list || !list.length) return null;
+                    const safeIdx = deklinationIndex.value % list.length;
+                    return list[safeIdx];
+                });
+
+                const setDeklinationFilter = (cat) => {
+                    if (soundEnabled.value) AudioFX.click();
+                    deklinationFilter.value = cat;
+                    deklinationIndex.value = 0;
+                    deklinationSelected.value = null;
+                    deklinationStatus.value = null;
+                };
+
+                const onSelectDeklinationOption = (optIdx) => {
+                    const ch = currentDeklinationChallenge.value;
+                    if (!ch || deklinationStatus.value !== null) return;
+                    deklinationSelected.value = optIdx;
+                    if (optIdx === ch.correct) {
+                        deklinationStatus.value = 'correct';
+                        deklinationStreak.value++;
+                        if (deklinationStreak.value > deklinationBestStreak.value) {
+                            deklinationBestStreak.value = deklinationStreak.value;
+                        }
+                        deklinationTotalSolved.value++;
+                        xp.value += 10;
+                        if (soundEnabled.value) AudioFX.success();
+                        if (typeof confetti === 'function' && deklinationStreak.value % 5 === 0) {
+                            confetti({ particleCount: 60, spread: 70, origin: { y: 0.7 } });
+                        }
+                    } else {
+                        deklinationStatus.value = 'incorrect';
+                        deklinationStreak.value = 0;
+                        if (soundEnabled.value) AudioFX.error();
+                    }
+                };
+
+                const nextDeklinationChallenge = () => {
+                    if (soundEnabled.value) AudioFX.click();
+                    const list = filteredDeklinationChallenges.value;
+                    if (!list || !list.length) return;
+                    deklinationIndex.value = (deklinationIndex.value + 1) % list.length;
+                    deklinationSelected.value = null;
+                    deklinationStatus.value = null;
+                };
+
+                const resetDeklinationTrainer = () => {
+                    if (soundEnabled.value) AudioFX.click();
+                    deklinationIndex.value = 0;
+                    deklinationSelected.value = null;
+                    deklinationStatus.value = null;
+                    deklinationStreak.value = 0;
+                };
+
                 const jsonCache = {};
 
                 const currentLevel = ref('A1');
@@ -3887,6 +4566,7 @@
                 const soundEnabled = ref(true);
                 const showCheatSheet = ref(false);
                 const cheatSheetTab = ref('aduso');
+                const mobileMenuOpen = ref(false);
                 const adusoAnswers = reactive({});
 
                 const adusoPractice = [
@@ -3913,6 +4593,7 @@
                 const openCheatSheetTab = (tab) => {
                     cheatSheetTab.value = tab;
                     showCheatSheet.value = true;
+                    mobileMenuOpen.value = false;
                     if (soundEnabled.value) AudioFX.click();
                 };
 
@@ -4240,6 +4921,7 @@
                 const switchLevel = async (lvl) => {
                     if (soundEnabled.value) AudioFX.click();
                     currentLevel.value = lvl;
+                    mobileMenuOpen.value = false;
                     await fetchLevelData(lvl);
                     jumpToNextPendingStep();
                 };
@@ -4452,12 +5134,13 @@
                     initUnitTileChallenge();
                     initGymChallenge(0);
                     await fetchVerbsData();
+                    await fetchDeklinationData();
                 });
 
                 return {
                     currentLevel, levelMeta, units, dataSourceLabel,
                     activeUnitIndex, activeStepIndex, freeMode, xp, streakDays, soundEnabled,
-                    showCheatSheet, cheatSheetTab, adusoAnswers, adusoPractice, openCheatSheetTab, onAdusoSelect, resetAllProgress,
+                    showCheatSheet, cheatSheetTab, mobileMenuOpen, adusoAnswers, adusoPractice, openCheatSheetTab, onAdusoSelect, resetAllProgress,
                     selectedChunkCategory, chunkCategories, survivalChunks, filteredChunks, roleplayAnswer, onRoleplaySelect,
                     vocabIndex, practiceAnswers, examAnswers, examSubmitted,
                     activeUnit, currentVocabItem, levelStats, stepDefinitions,
@@ -4476,7 +5159,12 @@
                     gymChallenges, activeGymIndex, currentGymChallenge, gymTileSelected, gymTileAvailable,
                     gymTileStatus, gymTileCompleted, initGymChallenge, addGymTile, removeGymTile,
                     verbsList, verbsSearchQuery, verbsSelectedLevel, verbsSelectedType, filteredVerbs,
-                    checkGymSentence, resetGymTile
+                    checkGymSentence, resetGymTile,
+                    // Deklinations-Trainer (Gimnasio de Casos)
+                    casesSubTab, deklinationChallenges, deklinationFilter, deklinationIndex, deklinationSelected,
+                    deklinationStatus, deklinationStreak, deklinationBestStreak, deklinationTotalSolved,
+                    filteredDeklinationChallenges, currentDeklinationChallenge,
+                    setDeklinationFilter, onSelectDeklinationOption, nextDeklinationChallenge, resetDeklinationTrainer
                 };
             }
         }).mount('#app');

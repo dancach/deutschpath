@@ -60,33 +60,42 @@ graph TD
 
 ---
 
-### [EP4-01] Integración del Buscador y Conjugador de Verbos (`verbs.json`)
+### [EP4-01] Integración del Buscador y Conjugador de Verbos (`verbs.json`) — ✅ COMPLETADA
 - **Área**: Herramientas / UI
 - **Nivel**: Global (A1, A2, B1)
-- **Problema actual**: Existe una excelente base de datos de verbos fundamentales (`data/verbs.json`) con más de 50 verbos conjugados, casos que rigen y auxiliares (*sein* vs *haben*), pero aún no está visible en la interfaz.
-- **Descripción**: Añadir una pestaña o modal **"Diccionario de Verbos"** (📚 *Verbliste*):
-  - Buscador en tiempo real por infinitivo en alemán o traducción en español.
-  - Filtros rápidos por cápsulas: Nivel (A1 / A2 / B1), Auxiliar (*ist* vs *hat*), Tipo (Irregulares / Modales / Separables) y Caso que rigen (Akkusativ / Dativ).
-  - Tarjeta de detalle con: Presente, Präteritum, Partizip II, auxiliar, ejemplo de uso bilingüe y botón de pronunciación con audio nativo.
-- **Criterio de Aceptación (DoD)**:
-  - El usuario puede consultar cualquier verbo en menos de 2 segundos desde cualquier parte de la lección sin perder su progreso.
+- **Estado**: **Completada e Integrada en producción** en `index.html` y `data/verbs.json`.
+- **Implementación realizada**:
+  - Banco de **65 verbos fundamentales** en [data/verbs.json](file:///Users/dancach/Documents/proyectos/antigravity%20-%20deuschtmeinster/data/verbs.json) (con fallback reactivo `FALLBACK_VERBS` integrado en el bundle para total resiliencia offline).
+  - **Buscador predictivo en tiempo real** por infinitivo en alemán, traducción al español, pretérito o participio II.
+  - **Filtros combinados multidimensionales**:
+    * Por Nivel: 🟢 A1, 🔵 A2, 🟣 B1.
+    * Por Tipo gramatical y Régimen: 🚀 Auxiliar *SEIN* (`ist`), 🧲 Rigen Dativo, 🧱 Verbos modales, ✂️ Separables (*trennbare Verben*), 🪞 Reflexivos, 📍 Posición (*Wo/Wohin*).
+  - **Tarjetas 3D Duolingo-style** con:
+    * Botón de pronunciación acústica nativa (`SpeechSynthesisUtterance` con voz `de-DE`).
+    * Matriz de las **3 Stammformen**: Präsens (er/sie), Präteritum y Partizip II con código de colores sintácticos.
+    * Indicador de auxiliar (*ist* vs *hat*) con distintivo visual esmeralda/azul.
+    * Régimen de caso obligatorio (Dativo, Acusativo o Preposicional).
+    * Oración de ejemplo bilingüe de la vida real con botón de audio individual.
+  - **Acceso universal sin fricción**: Disponible en 1 clic desde el botón ⚡ *Verbos* del header y desde la pestaña de la Chuleta Gramatical sin perder el avance de la lección en curso.
 
 ---
 
 ## 🟡 P1 — Alta Prioridad (Siguiente Sprint)
 
-### [EP3-01] Gimnasio de Declinaciones Interactivo (*Deklinations-Trainer*)
+### [EP3-01] Gimnasio de Declinaciones Interactivo (*Deklinations-Trainer*) — ✅ COMPLETADA
 - **Área**: Gramática Interactiva
 - **Nivel**: A1, A2, B1
-- **Problema actual**: La pestaña de casos del cuaderno muestra matrices y tablas estáticas, sin oportunidad de entrenar activamente.
-- **Descripción**: Modo de juego interactivo de respuesta rápida ("El Duelo de Artículos"):
-  - Se presenta una frase con un hueco: *"Ich gebe ___ Kind einen Apfel."*
-  - El alumno ve 4 pastillas 3D: `der`, `die`, `dem`, `den`.
-  - Al pulsar, recibe feedback inmediato con la explicación del porqué (*"geben exige Dativo; das Kind en Dativo se convierte en dem"*).
-  - Contador de aciertos seguidos (*Combo streak*) y bonificación de XP.
-- **Criterio de Aceptación (DoD)**:
-  - Banco de al menos 30 frases distribuidas en Nominativ, Akkusativ, Dativ y Genitiv.
-  - Filtro para practicar: "Solo Acusativo vs Dativo", "Las 9 Wechselpräpositionen" o "Genitivo B1".
+- **Estado**: **Completada e Integrada en producción** en `index.html` y `data/deklination.json`.
+- **Implementación realizada**:
+  - Banco de **30 retos interactivos** en [data/deklination.json](file:///Users/dancach/Documents/proyectos/antigravity%20-%20deuschtmeinster/data/deklination.json) cubriendo:
+    * 🎯 Nominativ vs Akkusativ (El masculino rebelde: *den/einen/keinen/mich*).
+    * 🧲 Verbos & Preposiciones de Dativo (*helfen, danken, gehören, schmecken, mit, bei, nach, zu, mir/dir*).
+    * 📍 Wechselpräpositionen (*¿Wo? Dativ vs ¿Wohin? Akkusativ* con *stellen/stehen, legen/liegen, hängen, in/auf/an*).
+    * 👑 Genitiv y N-Deklination (*des/der, wegen, während, trotz, statt, dem Kollegen*).
+  - Selector de sub-vistas: 🥊 **Entrenador Interactivo** vs 📖 **Tablas de Referencia**.
+  - Gamificación activa: Contador de racha 🔥 `streak` con animación de fuego, récord personal 🏆 y total de éxitos ⚡ (+10 XP por acierto).
+  - Pastillas 3D estilo Duolingo con feedback acústico (`AudioFX.success() / AudioFX.error()`), explicaciones pedagógicas detalladas de la regla y audio nativo de la frase modelo.
+  - Tablas completas actualizadas en la vista de referencia con los 4 casos (Nominativ, Akkusativ, Dativ y Genitiv) y pronombres personales.
 
 ---
 
@@ -179,8 +188,8 @@ graph TD
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **EP1-01** | Schnelltest (Test diagnóstico de nivel) | Global | 🔴 P0 | Bajo | 🔥🔥🔥 Muy Alto |
 | **EP2-01** | Ampliación de Práctica (3-4 micro-retos/unidad) | A1-B1 | 🔴 P0 | Medio | 🔥🔥🔥 Muy Alto |
-| **EP4-01** | Buscador y Conjugador de Verbos (`verbs.json`) | Global | 🔴 P0 | Medio | 🔥🔥🔥 Muy Alto |
-| **EP3-01** | Gimnasio de Declinaciones Interactivo | A1-B1 | 🟡 P1 | Medio | 🔥🔥🔥 Muy Alto |
+| **EP4-01** | Buscador y Conjugador de Verbos (`verbs.json`) | Global | ✅ Hecha | Medio | 🔥🔥🔥 Muy Alto |
+| **EP3-01** | Gimnasio de Declinaciones Interactivo | A1-B1 | ✅ Hecha | Medio | 🔥🔥🔥 Muy Alto |
 | **EP2-02** | Expansión de Vocabulario & Flashcards con color | A1-B1 | 🟡 P1 | Medio | 🔥🔥 Alto |
 | **EP5-01** | Roleplay Trainer (4 diálogos ramificados) | A1-B1 | 🟡 P1 | Alto | 🔥🔥 Alto |
 | **EP6-01** | Entrenador de Fonética y Parejas Mínimas | A1-B1 | 🟢 P2 | Bajo | 🔥🔥 Alto |
