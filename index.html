@@ -339,7 +339,7 @@
                             :class="mobileMenuOpen ? 'border-teal-400 text-teal-300' : ''"
                             title="Abrir menú de herramientas y configuración">
                             <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-sm text-rose-400' : 'fa-bars text-sm text-teal-400'"></i>
-                            <span class="text-[11px] font-black uppercase hidden sm:inline">Menú</span>
+                            <span class="text-xs font-black uppercase hidden sm:inline">Menú</span>
                         </button>
                     </div>
 
@@ -369,28 +369,28 @@
                     <div class="sm:hidden h-4 w-px bg-slate-800 shrink-0 mx-0.5"></div>
 
                     <button @click="openCheatSheetTab('aduso')"
-                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
-                        <i class="fa-solid fa-bolt text-[10px]"></i>
+                        class="btn-3d px-2.5 py-1.5 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-xs font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
+                        <i class="fa-solid fa-bolt text-xs"></i>
                         <span>ADUSO</span>
                     </button>
                     <button @click="openCheatSheetTab('chunks')"
-                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#46a302] cursor-pointer">
-                        <i class="fa-solid fa-comments text-[10px]"></i>
+                        class="btn-3d px-2.5 py-1.5 rounded-xl bg-duo-green hover:bg-duo-greenDark text-slate-950 text-xs font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#46a302] cursor-pointer">
+                        <i class="fa-solid fa-comments text-xs"></i>
                         <span>Diálogos</span>
                     </button>
                     <button @click="openCheatSheetTab('cases')"
-                        class="btn-3d px-2.5 py-1 rounded-xl bg-duo-blue hover:bg-duo-blueDark text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#1899d6] cursor-pointer">
-                        <i class="fa-solid fa-graduation-cap text-[10px]"></i>
+                        class="btn-3d px-2.5 py-1.5 rounded-xl bg-duo-blue hover:bg-duo-blueDark text-white text-xs font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#1899d6] cursor-pointer">
+                        <i class="fa-solid fa-graduation-cap text-xs"></i>
                         <span>Declinaciones</span>
                     </button>
                     <button @click="openCheatSheetTab('verbs')"
-                        class="btn-3d px-2.5 py-1 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#0f766e] cursor-pointer">
-                        <i class="fa-solid fa-bolt-lightning text-[10px] text-teal-200"></i>
+                        class="btn-3d px-2.5 py-1.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#0f766e] cursor-pointer">
+                        <i class="fa-solid fa-bolt-lightning text-xs text-teal-200"></i>
                         <span>Verbos</span>
                     </button>
                     <button @click="openCheatSheetTab('builder')"
-                        class="btn-3d px-2.5 py-1 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#581c87] cursor-pointer">
-                        <i class="fa-solid fa-puzzle-piece text-[10px] text-purple-200"></i>
+                        class="btn-3d px-2.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#581c87] cursor-pointer">
+                        <i class="fa-solid fa-puzzle-piece text-xs text-purple-200"></i>
                         <span>Constructor</span>
                     </button>
                     
@@ -399,13 +399,13 @@
                     <!-- Botones de utilidad rápidos en el carrusel -->
                     <button @click="soundEnabled = !soundEnabled"
                         :class="soundEnabled ? 'text-emerald-400 border-emerald-500/40 bg-emerald-950/40' : 'text-slate-500 border-slate-800 bg-slate-900'"
-                        class="px-2 py-1 rounded-xl border-2 text-[11px] font-black shrink-0 flex items-center gap-1 cursor-pointer"
+                        class="px-2 py-1.5 rounded-xl border-2 text-xs font-black shrink-0 flex items-center gap-1 cursor-pointer"
                         :title="soundEnabled ? 'Sonido activado' : 'Sonido silenciado'">
                         <i class="fa-solid" :class="soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
                     </button>
                     <button @click="freeMode = !freeMode"
                         :class="freeMode ? 'bg-purple-950/60 border-purple-500/50 text-purple-300' : 'bg-slate-900 border-slate-800 text-slate-400'"
-                        class="px-2 py-1 rounded-xl border-2 text-[11px] font-black shrink-0 flex items-center gap-1 cursor-pointer"
+                        class="px-2 py-1.5 rounded-xl border-2 text-xs font-black shrink-0 flex items-center gap-1 cursor-pointer"
                         :title="freeMode ? 'Modo Libre activo' : 'Ruta Guiada'">
                         <i class="fa-solid" :class="freeMode ? 'fa-lock-open text-purple-400' : 'fa-lock text-amber-400'"></i>
                         <span>{{ freeMode ? 'Libre' : 'Ruta' }}</span>
@@ -435,14 +435,14 @@
 
                     <!-- Grid de Herramientas Didácticas -->
                     <div>
-                        <div class="text-[10px] font-black uppercase text-slate-400 mb-2 tracking-wider">Herramientas Didácticas</div>
+                        <div class="text-xs font-black uppercase text-slate-400 mb-2 tracking-wider">Herramientas Didácticas</div>
                         <div class="grid grid-cols-2 gap-2">
                             <button @click="openCheatSheetTab('aduso'); mobileMenuOpen = false"
                                 class="p-3 rounded-2xl bg-slate-900/90 hover:bg-slate-800 border-2 border-amber-500/40 text-left flex items-start gap-2.5 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
                                 <i class="fa-solid fa-bolt text-amber-400 text-lg mt-0.5"></i>
                                 <div>
                                     <div class="text-xs font-black text-white">ADUSO</div>
-                                    <div class="text-[10px] font-medium text-slate-400">Posición 0</div>
+                                    <div class="text-xs font-medium text-slate-400">Posición 0</div>
                                 </div>
                             </button>
                             <button @click="openCheatSheetTab('chunks'); mobileMenuOpen = false"
@@ -450,7 +450,7 @@
                                 <i class="fa-solid fa-comments text-emerald-400 text-lg mt-0.5"></i>
                                 <div>
                                     <div class="text-xs font-black text-white">Diálogos</div>
-                                    <div class="text-[10px] font-medium text-slate-400">Supervivencia</div>
+                                    <div class="text-xs font-medium text-slate-400">Supervivencia</div>
                                 </div>
                             </button>
                             <button @click="openCheatSheetTab('cases'); mobileMenuOpen = false"
@@ -458,7 +458,7 @@
                                 <i class="fa-solid fa-graduation-cap text-sky-400 text-lg mt-0.5"></i>
                                 <div>
                                     <div class="text-xs font-black text-white">Declinaciones</div>
-                                    <div class="text-[10px] font-medium text-slate-400">Gym Casos</div>
+                                    <div class="text-xs font-medium text-slate-400">Gym Casos</div>
                                 </div>
                             </button>
                             <button @click="openCheatSheetTab('verbs'); mobileMenuOpen = false"
@@ -466,7 +466,7 @@
                                 <i class="fa-solid fa-bolt-lightning text-teal-400 text-lg mt-0.5"></i>
                                 <div>
                                     <div class="text-xs font-black text-white">Verbos</div>
-                                    <div class="text-[10px] font-medium text-slate-400">65 Fundamentales</div>
+                                    <div class="text-xs font-medium text-slate-400">65 Fundamentales</div>
                                 </div>
                             </button>
                             <button @click="openCheatSheetTab('builder'); mobileMenuOpen = false"
@@ -474,7 +474,7 @@
                                 <i class="fa-solid fa-puzzle-piece text-purple-400 text-lg mt-0.5"></i>
                                 <div>
                                     <div class="text-xs font-black text-white">Constructor de Frases (Word Tiles)</div>
-                                    <div class="text-[10px] font-medium text-slate-400">Entrena el orden sintáctico V2 y subordinadas</div>
+                                    <div class="text-xs font-medium text-slate-400">Entrena el orden sintáctico V2 y subordinadas</div>
                                 </div>
                             </button>
                         </div>
@@ -524,7 +524,7 @@
                     <!-- Cabecera de la Ruta -->
                     <div class="flex items-center justify-between pb-3 mb-3 border-b-2 border-slate-800/80">
                         <div>
-                            <span class="text-[10px] font-black uppercase tracking-wider text-duo-green px-2 py-0.5 rounded-md bg-duo-green/10 border border-duo-green/20">
+                            <span class="text-xs font-black uppercase tracking-wider text-duo-green px-2.5 py-0.5 rounded-md bg-duo-green/10 border border-duo-green/20">
                                 {{ currentLevel }} · Camino de Aprendizaje
                             </span>
                             <h2 class="font-black text-base text-white mt-1 flex items-center gap-2">
@@ -537,7 +537,7 @@
                             title="Continuar con el paso pendiente de la lección">
                             <i class="fa-solid fa-play"></i>
                             <span>Continuar</span>
-                            <i class="fa-solid fa-arrow-down text-[10px] lg:hidden animate-bounce"></i>
+                            <i class="fa-solid fa-arrow-down text-xs lg:hidden animate-bounce"></i>
                         </button>
                     </div>
 
@@ -560,25 +560,25 @@
 
                                 <div class="flex-1 min-w-0">
                                     <div class="flex items-center justify-between gap-1 mb-0.5">
-                                        <span class="text-[11px] font-black uppercase tracking-wider text-slate-400">
+                                        <span class="text-xs font-black uppercase tracking-wider text-slate-400">
                                             Estación {{ u.number }}
                                         </span>
 
                                         <span v-if="getUnitDoneCount(u.id) === 4"
-                                            class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-black border border-emerald-500/30">
+                                            class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-black border border-emerald-500/30">
                                             <i class="fa-solid fa-check mr-1"></i>¡100%!
                                         </span>
                                         <span v-else-if="isUnitUnlocked(idx)"
-                                            class="text-[10px] px-2 py-0.5 rounded-full bg-duo-blue/20 text-duo-blue font-black border border-duo-blue/30">
+                                            class="text-xs px-2.5 py-0.5 rounded-full bg-duo-blue/20 text-duo-blue font-black border border-duo-blue/30">
                                             {{ getUnitDoneCount(u.id) }}/4 pasos
                                         </span>
-                                        <span v-else class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-500 font-bold">
+                                        <span v-else class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-500 font-bold">
                                             Bloqueada
                                         </span>
                                     </div>
 
                                     <h3 class="font-black text-sm text-white leading-tight truncate">{{ u.title }}</h3>
-                                    <p class="text-[11px] text-slate-400 truncate mt-0.5">{{ u.subtitle }}</p>
+                                    <p class="text-xs text-slate-400 truncate mt-0.5">{{ u.subtitle }}</p>
 
                                     <!-- 4 Cápsulas de Progreso (los 4 pasos pedagógicos) -->
                                     <div class="flex gap-1.5 mt-2.5">
@@ -612,7 +612,7 @@
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
                         <div>
                             <div class="flex items-center gap-2">
-                                <span class="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg bg-babbel-orange/20 text-babbel-orange border border-babbel-orange/30">
+                                <span class="text-xs font-black uppercase tracking-wider px-2.5 py-1 rounded-lg bg-babbel-orange/20 text-babbel-orange border border-babbel-orange/30">
                                     {{ currentLevel }} · ESTACIÓN {{ activeUnit.number }} DE {{ units.length }}
                                 </span>
                                 <span v-if="getUnitDoneCount(activeUnit.id) === 4" class="text-xs font-black text-duo-yellow flex items-center gap-1">
@@ -623,7 +623,7 @@
                             <p class="text-xs md:text-sm text-slate-300 font-medium">{{ activeUnit.subtitle }}</p>
                         </div>
                         <div class="text-right">
-                            <div class="text-[11px] font-bold text-slate-400">Dominio de Estación</div>
+                            <div class="text-xs font-bold text-slate-400">Dominio de Estación</div>
                             <div class="text-lg font-black text-duo-green flex items-center justify-end gap-1.5">
                                 <span>{{ Math.round((getUnitDoneCount(activeUnit.id)/4)*100) }}%</span>
                                 <span class="text-xs text-slate-400 font-bold">({{ getUnitDoneCount(activeUnit.id) }}/4)</span>
@@ -643,7 +643,7 @@
                                 <i v-else-if="isStepUnlocked(sIdx)" class="fa-regular fa-circle text-slate-400 text-sm"></i>
                                 <i v-else class="fa-solid fa-lock text-slate-600 text-xs"></i>
                             </div>
-                            <div class="text-[10px] font-bold opacity-80 mt-1 truncate">{{ stepMeta.sub }}</div>
+                            <div class="text-xs font-medium opacity-90 mt-1 truncate">{{ stepMeta.sub }}</div>
                         </button>
                     </div>
                 </div>
@@ -802,14 +802,14 @@
                                         :class="vIdx === vocabIndex ? 'border-duo-blue bg-duo-blue/15 shadow-sm' : 'border-slate-800 bg-slate-950/60 hover:bg-slate-800/50'"
                                         class="p-3 rounded-2xl border-2 cursor-pointer flex items-center justify-between text-xs transition">
                                         <div>
-                                            <span class="font-black text-white text-sm">{{ v.de }}</span>
-                                            <span class="text-slate-400 font-bold block text-[11px]">{{ v.es }}</span>
+                                            <span class="font-black text-white text-sm sm:text-base">{{ v.de }}</span>
+                                            <span class="text-slate-400 font-semibold block text-xs mt-0.5">{{ v.es }}</span>
                                         </div>
                                         <div class="flex items-center gap-2">
-                                            <span :class="getGenderBadgeClass(v.gender)" class="text-[9px] font-black uppercase px-2 py-0.5 rounded-md border">
+                                            <span :class="getGenderBadgeClass(v.gender)" class="text-xs font-black uppercase px-2 py-0.5 rounded-md border">
                                                 {{ v.gender }}
                                             </span>
-                                            <i class="fa-solid fa-volume-high text-slate-400"></i>
+                                            <i class="fa-solid fa-volume-high text-slate-400 text-xs"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -895,7 +895,7 @@
                                                 <i class="fa-solid fa-puzzle-piece text-sm"></i>
                                             </div>
                                             <div>
-                                                <span class="text-[10px] font-black uppercase text-purple-400 tracking-wider">Desafío Duolingo · Orden Sintáctico</span>
+                                                <span class="text-xs font-black uppercase text-purple-400 tracking-wider">Desafío Duolingo · Orden Sintáctico</span>
                                                 <h4 class="text-sm md:text-base font-black text-white">Constructor de Frases</h4>
                                             </div>
                                         </div>
@@ -914,7 +914,7 @@
                                     <div class="p-3.5 rounded-2xl bg-purple-950/30 border border-purple-500/30 flex items-start gap-3">
                                         <i class="fa-solid fa-language text-purple-400 text-lg mt-0.5 shrink-0"></i>
                                         <div>
-                                            <div class="text-[10px] font-black uppercase text-purple-300 tracking-wider">Construye en alemán:</div>
+                                            <div class="text-xs font-black uppercase text-purple-300 tracking-wider">Construye en alemán:</div>
                                             <div class="text-base md:text-lg font-black text-white tracking-wide">„{{ currentUnitChallenge.prompt }}“</div>
                                             <div v-if="currentUnitChallenge.hint" class="text-xs text-purple-200/80 font-medium mt-1">
                                                 <i class="fa-solid fa-lightbulb text-amber-400 mr-1"></i> {{ currentUnitChallenge.hint }}
@@ -924,9 +924,9 @@
 
                                     <!-- Carril de la Frase Asamblada (Drop Zone) -->
                                     <div class="space-y-1.5">
-                                        <div class="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
+                                        <div class="text-xs font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
                                             <span>Tu frase construida:</span>
-                                            <span class="text-slate-500 text-[10px]">Toca una palabra colocada para quitarla</span>
+                                            <span class="text-slate-400 text-xs font-medium normal-case">Toca una palabra para quitarla</span>
                                         </div>
                                         <div class="min-h-[72px] p-3 rounded-2xl bg-slate-900/90 border-2 border-dashed transition-all flex flex-wrap items-center gap-2"
                                             :class="unitTileStatus === 'correct' ? 'border-emerald-500/80 bg-emerald-950/20' : (unitTileStatus === 'incorrect' ? 'border-rose-500/80 bg-rose-950/20' : 'border-slate-700 hover:border-purple-400/50')">
@@ -942,14 +942,14 @@
                                                 @click="removeUnitTile(tile, tIdx)"
                                                 class="btn-3d px-3.5 py-2 rounded-xl bg-duo-blue hover:bg-duo-blueDark border-2 border-sky-400 text-white font-black text-xs md:text-sm shadow-[0_3px_0_0_#0284c7] active:translate-y-1 active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
                                                 <span>{{ tile.text }}</span>
-                                                <i class="fa-solid fa-xmark text-[10px] opacity-60"></i>
+                                                <i class="fa-solid fa-xmark text-xs opacity-75"></i>
                                             </button>
                                         </div>
                                     </div>
 
                                     <!-- Banco de Pastillas Disponibles -->
                                     <div class="space-y-1.5">
-                                        <div class="text-[11px] font-black text-slate-400 uppercase tracking-wider">
+                                        <div class="text-xs font-black text-slate-400 uppercase tracking-wider">
                                             Pastillas disponibles (incluye palabras trampa / distractores):
                                         </div>
                                         <div class="min-h-[60px] p-3 rounded-2xl bg-slate-900/40 border-2 border-slate-800 flex flex-wrap items-center gap-2">
@@ -1117,7 +1117,7 @@
                         </div>
                         <div>
                             <h3 class="font-black text-lg text-white tracking-tight">Cuaderno Gramatical Babbel</h3>
-                            <p class="text-[11px] text-slate-400 font-bold">Fórmulas, sintaxis y reglas de oro explicadas paso a paso</p>
+                            <p class="text-xs text-slate-300 font-medium">Fórmulas, sintaxis y reglas de oro explicadas paso a paso</p>
                         </div>
                     </div>
                     <button @click="showCheatSheet = false" 
@@ -1200,8 +1200,8 @@
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Expresa contraste sin contradecir una negación previa.</p>
-                                    <div class="text-[11px] text-emerald-300 font-bold mt-1 bg-slate-900/80 px-2 py-1 rounded-lg border border-slate-800">
+                                    <p class="text-xs text-slate-300 mt-0.5">Expresa contraste sin contradecir una negación previa.</p>
+                                    <div class="text-xs text-emerald-300 font-bold mt-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800">
                                         „Ich lerne viel, <b>aber</b> ich bin müde.“
                                     </div>
                                 </div>
@@ -1219,8 +1219,8 @@
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Causa coordinada. Verbo en pos. 2 (a diferencia de <i>weil</i>).</p>
-                                    <div class="text-[11px] text-emerald-300 font-bold mt-1 bg-slate-900/80 px-2 py-1 rounded-lg border border-slate-800">
+                                    <p class="text-xs text-slate-300 mt-0.5">Causa coordinada. Verbo en pos. 2 (a diferencia de <i>weil</i>).</p>
+                                    <div class="text-xs text-emerald-300 font-bold mt-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800">
                                         „Ich esse, <b>denn</b> ich <b>habe</b> Hunger.“
                                     </div>
                                 </div>
@@ -1238,8 +1238,8 @@
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Une oraciones sin alterar ningún elemento.</p>
-                                    <div class="text-[11px] text-emerald-300 font-bold mt-1 bg-slate-900/80 px-2 py-1 rounded-lg border border-slate-800">
+                                    <p class="text-xs text-slate-300 mt-0.5">Une oraciones sin alterar ningún elemento.</p>
+                                    <div class="text-xs text-emerald-300 font-bold mt-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800">
                                         „Ich koche <b>und</b> du <b>machst</b> Hausaufgaben.“
                                     </div>
                                 </div>
@@ -1257,8 +1257,8 @@
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">¡OJO! Solo se usa tras una negación (<i>nicht / kein</i>) para corregir.</p>
-                                    <div class="text-[11px] text-rose-200 font-bold mt-1 bg-slate-900/80 px-2 py-1 rounded-lg border border-rose-500/30">
+                                    <p class="text-xs text-slate-300 mt-0.5">¡OJO! Solo se usa tras una negación (<i>nicht / kein</i>) para corregir.</p>
+                                    <div class="text-xs text-rose-200 font-bold mt-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-rose-500/30">
                                         „Das ist <b>kein</b> Kaffee, <b>sondern</b> Tee.“
                                     </div>
                                 </div>
@@ -1276,8 +1276,8 @@
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Introduce una alternativa o disyuntiva.</p>
-                                    <div class="text-[11px] text-emerald-300 font-bold mt-1 bg-slate-900/80 px-2 py-1 rounded-lg border border-slate-800">
+                                    <p class="text-xs text-slate-300 mt-0.5">Introduce una alternativa o disyuntiva.</p>
+                                    <div class="text-xs text-emerald-300 font-bold mt-1.5 bg-slate-900/80 px-2.5 py-1.5 rounded-lg border border-slate-800">
                                         „Kommst du mit <b>oder</b> <b>bleibst</b> du hier?“
                                     </div>
                                 </div>
@@ -1325,7 +1325,7 @@
                             <h4 class="text-xs font-black uppercase tracking-wider text-duo-yellow flex items-center gap-1.5">
                                 <i class="fa-solid fa-gamepad"></i> Mini-Desafío Rápido ADUSO
                             </h4>
-                            <span class="text-[10px] text-slate-400 font-bold">3 Ejercicios</span>
+                            <span class="text-xs text-slate-400 font-bold">3 Ejercicios</span>
                         </div>
 
                         <div class="space-y-3 pt-1">
@@ -1350,7 +1350,7 @@
 
                                 <div v-if="adusoAnswers[qIdx] !== undefined"
                                     :class="adusoAnswers[qIdx] === item.correct ? 'text-emerald-300 bg-emerald-950/30 border-emerald-500/30' : 'text-rose-300 bg-rose-950/30 border-rose-500/30'"
-                                    class="p-2 rounded-lg border text-[11px] font-bold">
+                                    class="p-2 rounded-lg border text-xs font-bold">
                                     {{ item.why }}
                                 </div>
                             </div>
@@ -1394,7 +1394,7 @@
                             class="p-4 rounded-2xl bg-slate-950 border-2 border-slate-800 hover:border-slate-700 transition flex flex-col justify-between space-y-2.5">
                             
                             <div class="flex items-start justify-between gap-2">
-                                <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                <span class="text-xs font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
                                     {{ c.tag }}
                                 </span>
                                 <button @click="speak(c.de)"
@@ -1409,7 +1409,7 @@
                                 <div class="text-xs font-bold text-sky-300 mt-0.5">{{ c.es }}</div>
                             </div>
 
-                            <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 text-[11px] text-slate-300 font-medium flex items-start gap-1.5">
+                            <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 text-xs text-slate-300 font-medium flex items-start gap-1.5">
                                 <i class="fa-solid fa-lightbulb text-amber-400 shrink-0 mt-0.5"></i>
                                 <span>{{ c.tip }}</span>
                             </div>
@@ -1422,7 +1422,7 @@
                             <h4 class="text-xs font-black uppercase tracking-wider text-duo-yellow flex items-center gap-1.5">
                                 <i class="fa-solid fa-masks-theater"></i> Mini-Simulación: Pagando en un restaurante en Múnich
                             </h4>
-                            <span class="text-[10px] text-slate-400 font-bold">Roleplay</span>
+                            <span class="text-xs text-slate-400 font-bold">Roleplay</span>
                         </div>
 
                         <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
@@ -1432,20 +1432,20 @@
                                     👨‍🍳
                                 </div>
                                 <div class="flex-1">
-                                    <div class="text-[11px] text-slate-400 font-bold">Camarero alemán:</div>
+                                    <div class="text-xs text-slate-400 font-bold">Camarero alemán:</div>
                                     <div class="text-sm font-black text-white mt-0.5 flex items-center gap-2">
                                         <span>„Das macht zusammen 23 Euro 40. Zusammen oder getrennt?“</span>
                                         <button @click="speak('Das macht zusammen 23 Euro 40. Zusammen oder getrennt?')" class="text-slate-400 hover:text-white text-xs">
                                             <i class="fa-solid fa-volume-high"></i>
                                         </button>
                                     </div>
-                                    <div class="text-[11px] text-slate-400">(Son en total 23,40€. ¿Juntos o por separado?)</div>
+                                    <div class="text-xs text-slate-400">(Son en total 23,40€. ¿Juntos o por separado?)</div>
                                 </div>
                             </div>
 
                             <!-- Opciones de respuesta para el usuario -->
                             <div class="pt-1 space-y-2">
-                                <div class="text-[11px] font-black text-slate-300">¿Qué respondes si quieres pagar tu parte y dejar propina redondeando a 26€?</div>
+                                <div class="text-xs sm:text-sm font-black text-slate-200">¿Qué respondes si quieres pagar tu parte y dejar propina redondeando a 26€?</div>
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                     <button @click="onRoleplaySelect(0)"
                                         :class="roleplayAnswer === null 
@@ -1576,13 +1576,13 @@
                             <!-- Cabecera de la Frase -->
                             <div class="flex items-center justify-between text-xs pb-2 border-b border-slate-800/80">
                                 <div class="flex items-center gap-2">
-                                    <span class="px-2 py-0.5 rounded-md font-black text-[10px] uppercase tracking-wider"
+                                    <span class="px-2 py-0.5 rounded-md font-black text-xs uppercase tracking-wider"
                                         :class="currentDeklinationChallenge.level === 'A1' ? 'bg-duo-green/20 text-duo-green border border-duo-green/30' : (currentDeklinationChallenge.level === 'A2' ? 'bg-duo-blue/20 text-sky-400 border border-sky-400/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30')">
                                         {{ currentDeklinationChallenge.level }}
                                     </span>
                                     <span class="font-black text-slate-400">{{ currentDeklinationChallenge.catLabel }}</span>
                                 </div>
-                                <span class="text-slate-500 text-[11px] font-bold">
+                                <span class="text-slate-400 text-xs font-bold">
                                     Reto {{ (deklinationIndex % (filteredDeklinationChallenges.length || 1)) + 1 }} de {{ filteredDeklinationChallenges.length }}
                                 </span>
                             </div>
@@ -1590,7 +1590,7 @@
                             <!-- Enunciado en Alemán con Hueco Resaltado -->
                             <div class="p-4 rounded-2xl bg-[#0e1836] border-2 border-sky-500/30 flex items-center justify-between gap-3">
                                 <div>
-                                    <div class="text-[10px] font-black uppercase text-sky-300 tracking-wider mb-1">
+                                    <div class="text-xs font-black uppercase text-sky-300 tracking-wider mb-1">
                                         Completa la frase con el artículo o pronombre correcto:
                                     </div>
                                     <div class="text-base md:text-xl font-black text-white tracking-wide">
@@ -1689,7 +1689,7 @@
                                 <tbody class="divide-y-2 divide-slate-800/80 font-bold bg-slate-950/60">
                                     <tr class="hover:bg-slate-900/60 transition">
                                         <td class="p-3 font-black text-sky-300">
-                                            Nominativ <span class="text-[10px] text-slate-400 block font-normal">Sujeto (Wer?)</span>
+                                            Nominativ <span class="text-xs text-slate-400 block font-normal">Sujeto (Wer?)</span>
                                         </td>
                                         <td @click="speak('der, ein, kein')" class="p-3 cursor-pointer hover:bg-slate-800/80">
                                             <b>der</b> / ein / kein 🔊
@@ -1706,7 +1706,7 @@
                                     </tr>
                                     <tr class="hover:bg-slate-900/60 transition bg-fuchsia-500/5">
                                         <td class="p-3 font-black text-fuchsia-400">
-                                            Akkusativ <span class="text-[10px] text-fuchsia-300/70 block font-normal">Obj. Directo (Wen?)</span>
+                                            Akkusativ <span class="text-xs text-fuchsia-300/80 block font-normal">Obj. Directo (Wen?)</span>
                                         </td>
                                         <td @click="speak('den, einen, keinen')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-fuchsia-500/20 text-fuchsia-200 font-black">
                                             <b>den</b> / einen ⚠️ 🔊
@@ -1723,7 +1723,7 @@
                                     </tr>
                                     <tr class="hover:bg-slate-900/60 transition bg-amber-500/5">
                                         <td class="p-3 font-black text-amber-400">
-                                            Dativ <span class="text-[10px] text-amber-300/70 block font-normal">Obj. Indirecto (Wem?)</span>
+                                            Dativ <span class="text-xs text-amber-300/80 block font-normal">Obj. Indirecto (Wem?)</span>
                                         </td>
                                         <td @click="speak('dem, einem, keinem')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-amber-500/10 text-amber-200">
                                             <b>dem</b> / einem 🔊
@@ -1740,7 +1740,7 @@
                                     </tr>
                                     <tr class="hover:bg-slate-900/60 transition bg-purple-500/5">
                                         <td class="p-3 font-black text-purple-400">
-                                            Genitiv <span class="text-[10px] text-purple-300/70 block font-normal">Posesión (Wessen?)</span>
+                                            Genitiv <span class="text-xs text-purple-300/80 block font-normal">Posesión (Wessen?)</span>
                                         </td>
                                         <td @click="speak('des, eines, keines')" class="p-3 cursor-pointer hover:bg-slate-800/80 bg-purple-500/20 text-purple-200 font-black">
                                             <b>des + -(e)s</b> ⚠️ 🔊
@@ -1807,7 +1807,7 @@
 
                     <!-- Selector de Desafíos Sintácticos -->
                     <div class="space-y-1.5">
-                        <div class="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
+                        <div class="text-xs font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
                             <span>Elige una Estructura Gramatical Clave:</span>
                             <span class="text-xs font-bold text-duo-yellow">
                                 <i class="fa-solid fa-trophy mr-1"></i> {{ Object.keys(gymTileCompleted).length }} / {{ gymChallenges.length }} Superados
@@ -1823,7 +1823,7 @@
                                         : 'bg-slate-900 border-slate-800 text-slate-300 hover:text-white font-bold')"
                                 class="btn-3d p-2.5 rounded-xl border text-xs text-left transition flex items-center justify-between gap-1 cursor-pointer">
                                 <div class="truncate">
-                                    <div class="text-[10px] uppercase opacity-75 font-black">{{ ch.cat }}</div>
+                                    <div class="text-xs uppercase opacity-85 font-black">{{ ch.cat }}</div>
                                     <div class="font-black truncate">{{ ch.title }}</div>
                                 </div>
                                 <i v-if="gymTileCompleted[ch.id]" class="fa-solid fa-circle-check text-duo-green shrink-0"></i>
@@ -1838,7 +1838,7 @@
                         <div class="p-3.5 rounded-2xl bg-purple-950/30 border border-purple-500/30 flex items-start gap-3">
                             <i class="fa-solid fa-bullseye text-purple-400 text-lg mt-0.5 shrink-0"></i>
                             <div class="flex-1">
-                                <div class="text-[10px] font-black uppercase text-purple-300 tracking-wider">Traduce y ordena en alemán:</div>
+                                <div class="text-xs font-black uppercase text-purple-300 tracking-wider">Traduce y ordena en alemán:</div>
                                 <div class="text-base md:text-lg font-black text-white">„{{ currentGymChallenge.prompt }}“</div>
                             </div>
                             <button @click="resetGymTile" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold transition flex items-center gap-1 cursor-pointer" title="Reiniciar ejercicio">
@@ -1849,9 +1849,9 @@
 
                         <!-- Carril de la Frase Asamblada (Drop Zone) -->
                         <div class="space-y-1.5">
-                            <div class="text-[11px] font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
+                            <div class="text-xs font-black text-slate-400 uppercase tracking-wider flex items-center justify-between">
                                 <span>Tu Frase:</span>
-                                <span class="text-slate-500 text-[10px]">Toca una palabra para quitarla</span>
+                                <span class="text-slate-400 text-xs font-medium normal-case">Toca una palabra para quitarla</span>
                             </div>
                             <div class="min-h-[72px] p-3 rounded-2xl bg-slate-900/90 border-2 border-dashed transition-all flex flex-wrap items-center gap-2"
                                 :class="gymTileStatus === 'correct' ? 'border-emerald-500/80 bg-emerald-950/20' : (gymTileStatus === 'incorrect' ? 'border-rose-500/80 bg-rose-950/20' : 'border-slate-700 hover:border-purple-400/50')">
@@ -1865,14 +1865,14 @@
                                     @click="removeGymTile(tile, tIdx)"
                                     class="btn-3d px-3.5 py-2 rounded-xl bg-duo-blue hover:bg-duo-blueDark border-2 border-sky-400 text-white font-black text-xs md:text-sm shadow-[0_3px_0_0_#0284c7] active:translate-y-1 active:shadow-none transition-all flex items-center gap-1.5 cursor-pointer">
                                     <span>{{ tile.text }}</span>
-                                    <i class="fa-solid fa-xmark text-[10px] opacity-60"></i>
+                                    <i class="fa-solid fa-xmark text-xs opacity-75"></i>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Banco de Pastillas Disponibles -->
                         <div class="space-y-1.5">
-                            <div class="text-[11px] font-black text-slate-400 uppercase tracking-wider">
+                            <div class="text-xs font-black text-slate-400 uppercase tracking-wider">
                                 Banco de Palabras (incluye distractores):
                             </div>
                             <div class="min-h-[60px] p-3 rounded-2xl bg-slate-900/40 border-2 border-slate-800 flex flex-wrap items-center gap-2">
@@ -1950,7 +1950,7 @@
                             <div>
                                 <h4 class="font-black text-sm md:text-base text-white flex items-center gap-2">
                                     <span>Diccionario de Verbos Fundamentales (A1 · A2 · B1)</span>
-                                    <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
+                                    <span class="text-xs font-black uppercase px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30">
                                         {{ filteredVerbs.length }} / {{ verbsList.length }} Verbos
                                     </span>
                                 </h4>
@@ -1979,7 +1979,7 @@
                     <div class="space-y-2">
                         <!-- Filtro de Nivel -->
                         <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-                            <span class="text-[11px] font-black uppercase text-slate-400 mr-1 shrink-0">Nivel:</span>
+                            <span class="text-xs font-black uppercase text-slate-400 mr-1 shrink-0">Nivel:</span>
                             <button @click="verbsSelectedLevel = 'all'"
                                 :class="verbsSelectedLevel === 'all' ? 'bg-slate-200 text-slate-950 font-black' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
                                 class="px-2.5 py-1 rounded-xl transition cursor-pointer">
@@ -2004,7 +2004,7 @@
 
                         <!-- Filtro de Tipo Gramatical & Régimen -->
                         <div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-                            <span class="text-[11px] font-black uppercase text-slate-400 mr-1 shrink-0">Tipo:</span>
+                            <span class="text-xs font-black uppercase text-slate-400 mr-1 shrink-0">Tipo:</span>
                             <button @click="verbsSelectedType = 'all'"
                                 :class="verbsSelectedType === 'all' ? 'bg-teal-500 text-slate-950 font-black' : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-bold'"
                                 class="px-2.5 py-1 rounded-xl whitespace-nowrap transition cursor-pointer">
@@ -2079,11 +2079,11 @@
 
                                     <!-- Badges de Nivel y Auxiliar -->
                                     <div class="flex items-center gap-1 shrink-0">
-                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider"
+                                        <span class="px-2 py-0.5 rounded-md text-xs font-black uppercase tracking-wider"
                                             :class="v.level === 'A1' ? 'bg-duo-green/20 text-duo-green border border-duo-green/30' : (v.level === 'A2' ? 'bg-duo-blue/20 text-sky-400 border border-sky-400/30' : 'bg-purple-500/20 text-purple-300 border border-purple-500/30')">
                                             {{ v.level }}
                                         </span>
-                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider"
+                                        <span class="px-2 py-0.5 rounded-md text-xs font-black uppercase tracking-wider"
                                             :class="v.auxiliary === 'ist' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-sky-500/20 text-sky-300 border border-sky-500/40'"
                                             :title="v.auxiliary === 'ist' ? 'Auxiliar Perfekt: SEIN' : 'Auxiliar Perfekt: HABEN'">
                                             {{ v.auxiliary }}
@@ -2092,31 +2092,31 @@
                                 </div>
 
                                 <!-- Formas Verbales Principales (3 Stammformen) -->
-                                <div class="mt-3 grid grid-cols-3 gap-1.5 p-2 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] font-mono">
+                                <div class="mt-3 grid grid-cols-3 gap-1.5 p-2 rounded-xl bg-slate-900/90 border border-slate-800 text-xs font-mono">
                                     <div>
-                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Präsens (er/sie)</div>
+                                        <div class="text-[10px] sm:text-xs uppercase font-sans text-slate-400 font-black">Präsens (er/sie)</div>
                                         <div class="text-slate-200 font-black truncate">{{ v.praesens }}</div>
                                     </div>
                                     <div>
-                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Präteritum</div>
+                                        <div class="text-[10px] sm:text-xs uppercase font-sans text-slate-400 font-black">Präteritum</div>
                                         <div class="text-amber-300 font-black truncate">{{ v.praeteritum }}</div>
                                     </div>
                                     <div>
-                                        <div class="text-[9px] uppercase font-sans text-slate-500 font-black">Partizip II</div>
+                                        <div class="text-[10px] sm:text-xs uppercase font-sans text-slate-400 font-black">Partizip II</div>
                                         <div class="text-teal-300 font-black truncate">{{ v.partizip2 }}</div>
                                     </div>
                                 </div>
 
                                 <!-- Caso que rige & tags -->
-                                <div class="mt-2.5 flex items-center justify-between flex-wrap gap-1 text-[11px]">
+                                <div class="mt-2.5 flex items-center justify-between flex-wrap gap-1 text-xs">
                                     <div class="flex items-center gap-1 font-bold">
-                                        <span class="text-slate-500 text-[10px] uppercase font-black">Régimen:</span>
+                                        <span class="text-slate-400 text-xs uppercase font-black">Régimen:</span>
                                         <span class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-xs font-black"
                                             :class="v.case && v.case.includes('DATIVO') ? 'text-amber-400 border-amber-500/30' : (v.case && v.case.includes('Akkusativ') ? 'text-fuchsia-300 border-fuchsia-500/30' : 'text-slate-300')">
                                             {{ v.case }}
                                         </span>
                                     </div>
-                                    <div v-if="v.type" class="text-[10px] uppercase font-black text-slate-500">
+                                    <div v-if="v.type" class="text-xs uppercase font-black text-slate-400">
                                         {{ v.type }}
                                     </div>
                                 </div>
@@ -2128,14 +2128,14 @@
                                     <div class="text-white font-bold">
                                         „{{ v.example_de }}“
                                     </div>
-                                    <div class="text-slate-400 text-[11px] font-medium">
+                                    <div class="text-slate-300 text-xs font-medium">
                                         {{ v.example_es }}
                                     </div>
                                 </div>
                                 <button @click="speak(v.example_de)"
                                     class="w-7 h-7 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center shrink-0 transition cursor-pointer"
                                     title="Escuchar frase de ejemplo">
-                                    <i class="fa-solid fa-volume-high text-[10px]"></i>
+                                    <i class="fa-solid fa-volume-high text-xs"></i>
                                 </button>
                             </div>
 
