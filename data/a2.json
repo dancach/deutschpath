@@ -1,0 +1,1007 @@
+{
+  "level": "A2",
+  "title": "Ruta Oficial Nivel A2 (10 Estaciones)",
+  "description": "Dominio paso a paso hacia el Goethe-Zertifikat A2",
+  "units": [
+    {
+      "id": "a2_u1",
+      "number": 1,
+      "title": "Subordinadas (weil, dass) — El Verbo al Final",
+      "subtitle": "Conectar causas y opiniones enviando el verbo conjugado al final.",
+      "grammar": {
+        "formula": "Hauptsatz, + [weil / dass] + Sujeto + Complementos + VERBO CONJUGADO AL FINAL",
+        "explanation": "Las conjunciones subordinantes 'weil' (porque) y 'dass' (que) obligan a enviar el verbo conjugado a la última posición de la oración subordinada. Si hay un verbo modal o un tiempo compuesto (como Perfekt), el verbo auxiliar/conjugado va al final absoluto.",
+        "keyPoints": [
+          {
+            "de": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte.",
+            "es": "El verbo modal conjugado 'möchte' cierra la subordinada."
+          },
+          {
+            "de": "Ich glaube, dass dieser Kurs sehr nützlich ist.",
+            "es": "Con 'dass', el verbo 'ist' va a la última posición."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "weil (+ Verbo al final)",
+          "es": "porque (motivo/causa)",
+          "gender": "other",
+          "ex": "Er kommt nicht, weil er krank ist."
+        },
+        {
+          "de": "dass (+ Verbo al final)",
+          "es": "que (conjunción completiva)",
+          "gender": "other",
+          "ex": "Ich weiß, dass du Recht hast."
+        },
+        {
+          "de": "die Verspätung, -en",
+          "es": "el retraso",
+          "gender": "die",
+          "ex": "Der Zug hat leider 20 Minuten Verspätung."
+        },
+        {
+          "de": "hoffen",
+          "es": "esperar / tener esperanza",
+          "gender": "verb",
+          "ex": "Ich hoffe, dass alles gut klappt."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Une las dos frases con 'weil': 'Ich gehe ins Bett. Ich bin müde.'",
+          "options": [
+            "Ich gehe ins Bett, weil ich bin müde.",
+            "Ich gehe ins Bett, weil ich müde bin.",
+            "Ich gehe ins Bett, weil bin ich müde."
+          ],
+          "correct": 1,
+          "why": "La conjunción subordinante 'weil' traslada el verbo conjugado 'bin' a la última posición de la cláusula subordinada."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Er hat gesagt, dass er gestern lange ___ ___.",
+          "options": [
+            "hat gearbeitet",
+            "gearbeitet hat",
+            "arbeitet hat"
+          ],
+          "a": 1,
+          "exp": "En oraciones subordinadas compuestas, el auxiliar conjugado ('hat') va al final absoluto, detrás del participio."
+        },
+        {
+          "q": "Warum lernst du Deutsch? - ___ ich eine Stelle in Wien gefunden habe.",
+          "options": [
+            "Denn",
+            "Weil",
+            "Dass"
+          ],
+          "a": 1,
+          "exp": "Al estar el verbo conjugado 'habe' al final de la frase, debe usarse 'Weil' (denn mantendría posición 2)."
+        },
+        {
+          "q": "Ich finde es toll, dass du mich ___ . (besuchen)",
+          "options": [
+            "besuchst",
+            "besuchen",
+            "hast besucht"
+          ],
+          "a": 0,
+          "exp": "Sujeto 'du' -> verbo conjugado en 2ª persona 'besuchst' situado al final tras 'dass'."
+        },
+        {
+          "q": "¿Qué diferencia sintáctica existe entre 'weil' y 'denn'?",
+          "options": [
+            "'weil' envía el verbo al final; 'denn' mantiene el orden normal (posición 0)",
+            "Significan cosas completamente distintas",
+            "'denn' requiere siempre Dativo"
+          ],
+          "a": 0,
+          "exp": "Ambos significan 'porque', pero 'denn' es un conector coordinante (Posición 0) y 'weil' es subordinante (verbo al final)."
+        }
+      ]
+    },
+    {
+      "id": "a2_u2",
+      "number": 2,
+      "title": "Wechselpräpositionen: ¿Wo (Dativ) o Wohin (Akkusativ)?",
+      "subtitle": "Dominar in, an, auf, neben, unter, über, vor, hinter, zwischen.",
+      "grammar": {
+        "formula": "🚀 WOHIN? (Dirección/Movimiento) = AKKUSATIV | 📍 WO? (Ubicación/Estático) = DATIV",
+        "explanation": "Las 9 preposiciones de cambio de caso toman Akkusativ si responden a '¿Adónde?' (desplazamiento a un destino: stellen, legen, setzen, hängen). Toman Dativ si responden a '¿Dónde?' (posición fija o estática: stehen, liegen, sitzen, hängen).",
+        "keyPoints": [
+          {
+            "de": "Ich lege das Buch auf den Tisch (Wohin? -> Akkusativ).",
+            "es": "Acción de colocar en una superficie (movimiento hacia el destino)."
+          },
+          {
+            "de": "Das Buch liegt auf dem Tisch (Wo? -> Dativ).",
+            "es": "Ubicación fija de reposo (dem Tisch)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "stellen (+ Akk) / stehen (+ Dat)",
+          "es": "poner de pie / estar de pie",
+          "gender": "verb",
+          "ex": "Ich stelle die Vase auf den Tisch. Sie steht dort."
+        },
+        {
+          "de": "legen (+ Akk) / liegen (+ Dat)",
+          "es": "poner tumbado / estar tumbado",
+          "gender": "verb",
+          "ex": "Ich lege mich auf das Sofa."
+        },
+        {
+          "de": "hängen (+ Akk / + Dat)",
+          "es": "colgar / estar colgado",
+          "gender": "verb",
+          "ex": "Ich hänge das Bild an die Wand. Es hängt an der Wand."
+        },
+        {
+          "de": "die Wand, ¨-e",
+          "es": "la pared",
+          "gender": "die",
+          "ex": "Die Uhr hängt an der Wand."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'der Schrank' es masculino. Completa: 'Ich hänge die Jacke in ___ Schrank.' (Wohin?)",
+          "options": [
+            "der",
+            "den",
+            "dem"
+          ],
+          "correct": 1,
+          "why": "Indica movimiento/destino hacia el interior (Wohin? -> Akkusativ masculino: in + den = in den Schrank)."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Heute Abend gehen wir ___ Kino (das Kino).",
+          "options": [
+            "im",
+            "ins",
+            "in der"
+          ],
+          "a": 1,
+          "exp": "¿Adónde vamos? (Wohin? -> Akkusativ). in + das = ins."
+        },
+        {
+          "q": "Die Kinder spielen ___ Garten (der Garten - ¿Dónde?).",
+          "options": [
+            "in den",
+            "im",
+            "ins"
+          ],
+          "a": 1,
+          "exp": "¿Dónde juegan? (Wo? -> Dativ). in + dem = im Garten."
+        },
+        {
+          "q": "Das Auto steht vor ___ Haus (das Haus).",
+          "options": [
+            "das",
+            "dem",
+            "den"
+          ],
+          "a": 1,
+          "exp": "'stehen' indica posición fija (Wo? -> Dativ neutro: dem)."
+        },
+        {
+          "q": "Ich lege das Smartphone auf ___ Tisch (der Tisch).",
+          "options": [
+            "den",
+            "dem",
+            "der"
+          ],
+          "a": 0,
+          "exp": "'legen' implica acción orientada a un destino (Wohin? -> Akkusativ masculino: den Tisch)."
+        }
+      ]
+    },
+    {
+      "id": "a2_u3",
+      "number": 3,
+      "title": "Verbos Reflexivos y Pronombres Reflexivos",
+      "subtitle": "sich freuen, sich ausruhen, sich fühlen con pronombres mich, dich, sich...",
+      "grammar": {
+        "formula": "ich mich | du dich | er/sie/es sich | wir uns | ihr euch | sie/Sie sich",
+        "explanation": "Muchos verbos expresan acciones que recaen sobre el propio sujeto o estados emocionales. La gran mayoría de verbos reflexivos rigen el pronombre en Acusativo. ¡Atención: solo cambia a Dativo (mir, dir) si ya existe otro objeto directo en la frase! (ej. Ich wasche mir die Hände).",
+        "keyPoints": [
+          {
+            "de": "Ich freue mich sehr über deinen Besuch.",
+            "es": "Alegrarse por algo (sich freuen über + Akk)."
+          },
+          {
+            "de": "Wir müssen uns jetzt beeilen.",
+            "es": "Darse prisa: sich beeilen (wir uns)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "sich freuen (auf/über)",
+          "es": "alegrarse (por lo que vendrá / por lo ocurrido)",
+          "gender": "verb",
+          "ex": "Ich freue mich auf den Urlaub."
+        },
+        {
+          "de": "sich interessieren für (+ Akk)",
+          "es": "interesarse por",
+          "gender": "verb",
+          "ex": "Interessierst du dich für Kunst?"
+        },
+        {
+          "de": "sich ausruhen",
+          "es": "descansar",
+          "gender": "verb",
+          "ex": "Am Sonntag ruhe ich mich aus."
+        },
+        {
+          "de": "sich fühlen",
+          "es": "sentirse",
+          "gender": "verb",
+          "ex": "Wie fühlst du dich heute?"
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el pronombre reflexivo para 'wir': 'Wir treffen ___ um 20 Uhr.'",
+          "options": [
+            "euch",
+            "uns",
+            "sich"
+          ],
+          "correct": 1,
+          "why": "El pronombre reflexivo de la primera persona plural 'wir' es siempre 'uns'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Wie fühlst du ___ nach dem Training?",
+          "options": [
+            "dir",
+            "dich",
+            "sich"
+          ],
+          "a": 1,
+          "exp": "El pronombre reflexivo de 'du' en acusativo es 'dich'."
+        },
+        {
+          "q": "Die Touristen interessieren ___ für die Geschichte der Stadt.",
+          "options": [
+            "sich",
+            "uns",
+            "euch"
+          ],
+          "a": 0,
+          "exp": "Para la 3ª persona del plural (sie / die Touristen) el pronombre es 'sich'."
+        },
+        {
+          "q": "Ich putze ___ die Zähne.",
+          "options": [
+            "mich",
+            "mir",
+            "meine"
+          ],
+          "a": 1,
+          "exp": "Como 'die Zähne' ya actúa como objeto directo (Akkusativ), el pronombre reflexivo pasa a Dativo: mir."
+        },
+        {
+          "q": "Ihr müsst ___ beeilen, der Zug kommt gleich!",
+          "options": [
+            "uns",
+            "sich",
+            "euch"
+          ],
+          "a": 2,
+          "exp": "El reflexivo correspondiente a 'ihr' (vosotros) es 'euch'."
+        }
+      ]
+    },
+    {
+      "id": "a2_u4",
+      "number": 4,
+      "title": "Oraciones Temporales: 'wenn' vs 'als'",
+      "subtitle": "Diferenciar entre un hecho único en el pasado (als) y condiciones o repetición (wenn).",
+      "grammar": {
+        "formula": "ALS = Pasado + Única vez | WENN = Presente, Futuro o Pasado Repetido (immer wenn)",
+        "explanation": "Tanto 'als' como 'wenn' introducen oraciones subordinadas temporales y envían el verbo conjugado al final. La regla clave del examen Goethe A2: usa 'als' solo para un momento o periodo puntual único en el pasado (ej. 'Als ich ein Kind war'). Si la acción se repetía en el pasado o sucede en presente/futuro, usa 'wenn'.",
+        "keyPoints": [
+          {
+            "de": "Als ich 18 Jahre alt war, habe ich den Führerschein gemacht.",
+            "es": "Hecho único e irrepetible en el pasado -> ALS."
+          },
+          {
+            "de": "Wenn das Wetter schön ist, gehen wir spazieren.",
+            "es": "Presente o condición general -> WENN."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "als (+ Verbo al final)",
+          "es": "cuando (única vez en el pasado)",
+          "gender": "other",
+          "ex": "Als ich nach Berlin kam, konnte ich kein Deutsch."
+        },
+        {
+          "de": "wenn (+ Verbo al final)",
+          "es": "cuando / si (presente, futuro o repetición)",
+          "gender": "other",
+          "ex": "Immer wenn ich Zeit habe, lese ich."
+        },
+        {
+          "de": "die Kindheit",
+          "es": "la infancia",
+          "gender": "die",
+          "ex": "In meiner Kindheit habe ich viel gespielt."
+        },
+        {
+          "de": "der Führerschein, -e",
+          "es": "el carné de conducir",
+          "gender": "der",
+          "ex": "Er hat die Prüfung für den Führerschein bestanden."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "¿'als' o 'wenn'? '___ ich gestern nach Hause kam, schliefen schon alle.'",
+          "options": [
+            "Wenn",
+            "Als",
+            "Wann"
+          ],
+          "correct": 1,
+          "why": "Ocurrió ayer en un momento puntual concreto del pasado, por tanto se debe usar 'Als'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "___ ich klein war, lebte meine Familie auf dem Land.",
+          "options": [
+            "Als",
+            "Wenn",
+            "Weil"
+          ],
+          "a": 0,
+          "exp": "Ser pequeño/niño es un periodo único y cerrado del pasado: se emplea 'Als'."
+        },
+        {
+          "q": "Immer ___ ich Urlaub hatte, bin ich ans Meer gefahren.",
+          "options": [
+            "als",
+            "wenn",
+            "wann"
+          ],
+          "a": 1,
+          "exp": "La palabra 'Immer' indica repetición habitual, por lo que exige 'wenn'."
+        },
+        {
+          "q": "Ruf mich bitte an, ___ du am Bahnhof ankommst.",
+          "options": [
+            "als",
+            "wenn",
+            "denn"
+          ],
+          "a": 1,
+          "exp": "Para acciones presentes o futuras se utiliza 'wenn'."
+        },
+        {
+          "q": "Cuando una oración subordinada empieza por 'Als...', ¿dónde va el verbo de la oración principal?",
+          "options": [
+            "Al final de la frase",
+            "Inmediatamente después de la coma (Verbo, Verbo)",
+            "En la posición 3"
+          ],
+          "a": 1,
+          "exp": "Estructura de inversión: 'Als ich ankam (V), rief (V) ich meine Eltern an'."
+        }
+      ]
+    },
+    {
+      "id": "a2_u5",
+      "number": 5,
+      "title": "Pasado Präteritum de Verbos Auxiliares y Modales",
+      "subtitle": "war, hatte, musste, konnte, wollte, durfte, sollte.",
+      "grammar": {
+        "formula": "sein -> war | haben -> hatte | modal: raíz + -te (ich/er sin terminación)",
+        "explanation": "En el alemán hablado no se usa el Perfekt para 'sein', 'haben' ni para los verbos modales: se utiliza siempre el Präteritum. Los verbos modales pierden su Umlaut (können -> konnte, müssen -> musste, dürfen -> durfte).",
+        "keyPoints": [
+          {
+            "de": "Gestern war ich krank und ich hatte hohes Fieber.",
+            "es": "Präteritum natural: 'war' y 'hatte' en lugar de formas compuestas."
+          },
+          {
+            "de": "Ich konnte gestern nicht kommen, weil ich arbeiten musste.",
+            "es": "können -> konnte | müssen -> musste."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "war (sein)",
+          "es": "era / estaba (fui / estuve)",
+          "gender": "verb",
+          "ex": "Wo warst du am Wochenende?"
+        },
+        {
+          "de": "hatte (haben)",
+          "es": "tenía / tuve",
+          "gender": "verb",
+          "ex": "Ich hatte keine Zeit."
+        },
+        {
+          "de": "musste (müssen)",
+          "es": "tuve que / debía",
+          "gender": "verb",
+          "ex": "Er musste zum Arzt gehen."
+        },
+        {
+          "de": "konnte (können)",
+          "es": "pude / sabía",
+          "gender": "verb",
+          "ex": "Sie konnte sehr schnell schwimmen."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Pon en Präteritum con 'müssen': 'Gestern ___ er lange im Büro bleiben.'",
+          "options": [
+            "muss",
+            "musste",
+            "müsste"
+          ],
+          "correct": 1,
+          "why": "La 3ª persona del singular del Präteritum de 'müssen' es 'musste' (sin Umlaut)."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Letzten Sommer ___ wir zwei Wochen in Italien (sein).",
+          "options": [
+            "waren",
+            "waret",
+            "sind gewesen"
+          ],
+          "a": 0,
+          "exp": "La forma de Präteritum para 'wir' del verbo sein es 'wir waren'."
+        },
+        {
+          "q": "Entschuldigung, ich ___ leider kein Netz (haben).",
+          "options": [
+            "hatte",
+            "habte",
+            "hätte"
+          ],
+          "a": 0,
+          "exp": "Präteritum de haben en primera persona: ich hatte."
+        },
+        {
+          "q": "¿Qué ocurre con el Umlaut (¨) de los verbos modales en Präteritum?",
+          "options": [
+            "Se mantiene en todos",
+            "Lo pierden todos los verbos modales",
+            "Solo lo pierde 'können'"
+          ],
+          "a": 1,
+          "exp": "Todos los modales pierden la diéresis: müssen -> musste, können -> konnte, dürfen -> durfte."
+        },
+        {
+          "q": "Als Kind ___ ich nicht bis spät abends draußen bleiben (dürfen).",
+          "options": [
+            "durfte",
+            "dürfte",
+            "darfte"
+          ],
+          "a": 0,
+          "exp": "Forma correcta de dürfen en Präteritum para ich/er: 'durfte'."
+        }
+      ]
+    },
+    {
+      "id": "a2_u6",
+      "number": 6,
+      "title": "Declinación del Adjetivo con Artículo Determinado",
+      "subtitle": "La regla del 'Club del -e' vs la terminación '-en' para el resto.",
+      "grammar": {
+        "formula": "Nominativ (der, die, das) y Akkusativ (die, das) = -e | TODO LO DEMÁS = -en",
+        "explanation": "Con artículo determinado (der, die, das), el adjetivo solo añade la terminación ligera '-e' en cinco casillas: Nominativo masculino, femenino y neutro, y Acusativo femenino y neutro. En todas las demás combinaciones (Akkusativ masculino, cualquier Dativ o cualquier Plural) la terminación es invariablemente '-en'.",
+        "keyPoints": [
+          {
+            "de": "der neue Tisch | die schöne Stadt | das kleine Haus",
+            "es": "Nominativo singulares terminan en -e."
+          },
+          {
+            "de": "Ich helfe dem alten Mann | Ich sehe den neuen Film.",
+            "es": "Dativo y Acusativo masculino siempre terminan en -en."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "neu",
+          "es": "nuevo",
+          "gender": "other",
+          "ex": "Das neue Auto gefällt mir sehr."
+        },
+        {
+          "de": "alt",
+          "es": "viejo / antiguo",
+          "gender": "other",
+          "ex": "Die alte Stadt hat viel Charme."
+        },
+        {
+          "de": "billig / teuer",
+          "es": "barato / caro",
+          "gender": "other",
+          "ex": "Der teure Anzug ist elegant."
+        },
+        {
+          "de": "gemütlich",
+          "es": "acogedor / cómodo",
+          "gender": "other",
+          "ex": "Das gemütliche Zimmer ist hell."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'der Film' es masculino. Completa: 'Hast du den neu___ Film gesehen?'",
+          "options": [
+            "neue",
+            "neuen",
+            "neuem"
+          ],
+          "correct": 1,
+          "why": "Acusativo masculino con artículo determinado (den) exige la terminación adjetival '-en': den neuen Film."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Das rot___ Auto gehört meinem Nachbarn.",
+          "options": [
+            "rote",
+            "rotes",
+            "roten"
+          ],
+          "a": 0,
+          "exp": "Nominativo neutro con artículo determinado 'das' lleva terminación '-e': das rote Auto."
+        },
+        {
+          "q": "Wir wohnen in der groß___ Wohnung (Dativ fem).",
+          "options": [
+            "große",
+            "großen",
+            "großer"
+          ],
+          "a": 1,
+          "exp": "Cualquier adjetivo en Dativo tras artículo determinado termina siempre en '-en'."
+        },
+        {
+          "q": "Die jung___ Leute hören gern Musik.",
+          "options": [
+            "junge",
+            "jungen",
+            "junger"
+          ],
+          "a": 1,
+          "exp": "En plural con artículo determinado 'die', el adjetivo termina obligatoriamente en '-en'."
+        },
+        {
+          "q": "¿Qué terminación llevan los adjetivos en Dativo con artículo determinado?",
+          "options": [
+            "Siempre -en",
+            "Siempre -em",
+            "Depende del género (-e o -er)"
+          ],
+          "a": 0,
+          "exp": "Sin excepciones: en caso Dativo, todo adjetivo precedido de artículo determinado finaliza en -en."
+        }
+      ]
+    },
+    {
+      "id": "a2_u7",
+      "number": 7,
+      "title": "Declinación del Adjetivo con Artículo Indeterminado y Posesivos",
+      "subtitle": "ein alter Mann, eine schöne Frau, ein kleines Kind (Gemischte Deklination).",
+      "grammar": {
+        "formula": "Masc: ein -er | Fem: eine -e | Neut: ein -es | Akk Masc: einen -en",
+        "explanation": "Como las palabras 'ein', 'mein', 'dein', 'kein' no muestran claramente el género en el Nominativo masculino y neutro, el adjetivo debe rescatar la marca del artículo: masculino toma '-er' (ein guter Mann) y neutro toma '-es' (ein neues Auto). En Dativo y plural siempre terminan en '-en'.",
+        "keyPoints": [
+          {
+            "de": "Das ist ein schöner Tag (der Tag -> ein schöner).",
+            "es": "Masculino Nominativo rescata la marca con -er."
+          },
+          {
+            "de": "Ich habe ein neues Fahrrad gekauft (das Fahrrad -> ein neues).",
+            "es": "Neutro Nominativo/Acusativo rescata la marca con -es."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "lecker",
+          "es": "delicioso / rico",
+          "gender": "other",
+          "ex": "Das ist ein sehr leckeres Gericht."
+        },
+        {
+          "de": "wichtig",
+          "es": "importante",
+          "gender": "other",
+          "ex": "Das ist eine wichtige Nachricht."
+        },
+        {
+          "de": "nett",
+          "es": "simpático / amable",
+          "gender": "other",
+          "ex": "Er ist ein sehr netter Kollege."
+        },
+        {
+          "de": "das Geschenk, -e",
+          "es": "el regalo",
+          "gender": "das",
+          "ex": "Ich suche ein schönes Geschenk."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'der Kaffee' es masculino. Completa: 'Möchtest du einen heiß___ Kaffee?'",
+          "options": [
+            "heißer",
+            "heißen",
+            "heißes"
+          ],
+          "correct": 1,
+          "why": "Acusativo masculino tras 'einen' recibe la terminación '-en': einen heißen Kaffee."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Er hat sich ein schnell___ Motorrad gekauft (das Motorrad).",
+          "options": [
+            "schnelles",
+            "schneller",
+            "schnelle"
+          ],
+          "a": 0,
+          "exp": "Neutro tras 'ein' en Acusativo adopta la terminación '-es': ein schnelles Motorrad."
+        },
+        {
+          "q": "Hier arbeitet ein bekannt___ Architekt (der Architekt - Nominativ).",
+          "options": [
+            "bekannte",
+            "bekannter",
+            "bekanntes"
+          ],
+          "a": 1,
+          "exp": "Nominativo masculino tras 'ein' añade la terminación '-er': ein bekannter Architekt."
+        },
+        {
+          "q": "Das ist keine gut___ Idee (die Idee).",
+          "options": [
+            "gute",
+            "guter",
+            "guten"
+          ],
+          "a": 0,
+          "exp": "Femenino con 'keine' recibe la terminación '-e': keine gute Idee."
+        },
+        {
+          "q": "Ich trinke meinen Kaffee mit warm___ Milch (die Milch - Dativ).",
+          "options": [
+            "warme",
+            "warmer",
+            "warmen"
+          ],
+          "a": 1,
+          "exp": "Sin artículo previo tras preposición con Dativo 'mit', el adjetivo asume la desinencia del artículo femenino (der -> -er): mit warmer Milch."
+        }
+      ]
+    },
+    {
+      "id": "a2_u8",
+      "number": 8,
+      "title": "Comparativo y Superlativo (Komparativ und Superlativ)",
+      "subtitle": "schneller als, am schnellsten y las formas irregulares más usadas.",
+      "grammar": {
+        "formula": "Comparativo: Adjetivo + -er (+ als) | Superlativo: am + Adjetivo + -sten",
+        "explanation": "El comparativo de superioridad se forma añadiendo el sufijo '-er' seguido de la conjunción 'als'. Muchos adjetivos monosílabos añaden Umlaut (alt -> älter, groß -> größer). Las 4 irregularidades clave que debes memorizar: gut (besser, am besten), viel (mehr, am meisten), gern (lieber, am liebsten), hoch (höher, am höchsten).",
+        "keyPoints": [
+          {
+            "de": "Berlin ist größer als München.",
+            "es": "Comparación con 'als' tras adjetivo con -er."
+          },
+          {
+            "de": "Ich trinke gern Tee, aber ich trinke lieber Kaffee.",
+            "es": "gern -> lieber (preferencia)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "gut - besser - am besten",
+          "es": "bueno - mejor - el/lo mejor",
+          "gender": "other",
+          "ex": "Er spricht besser Deutsch als ich."
+        },
+        {
+          "de": "gern - lieber - am liebsten",
+          "es": "con gusto - preferiblemente - lo que más me gusta",
+          "gender": "other",
+          "ex": "Am liebsten esse ich Sushi."
+        },
+        {
+          "de": "viel - mehr - am meisten",
+          "es": "mucho - más - la mayoría / lo máximo",
+          "gender": "other",
+          "ex": "Sie arbeitet mehr als 40 Stunden."
+        },
+        {
+          "de": "schnell / langsam",
+          "es": "rápido / lento",
+          "gender": "other",
+          "ex": "Der Zug ist schneller als der Bus."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa el comparativo de 'alt': 'Mein Bruder ist zwei Jahre ___ als ich.'",
+          "options": [
+            "alter",
+            "älter",
+            "am ältesten"
+          ],
+          "correct": 1,
+          "why": "Los adjetivos cortos con vocal 'a' toman Umlaut en el comparativo: alt -> älter."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Welche Stadt gefällt dir ___ ? (gern)",
+          "options": [
+            "am besten",
+            "am liebsten",
+            "am meisten"
+          ],
+          "a": 1,
+          "exp": "El superlativo de preferencia ('gern') es 'am liebsten'."
+        },
+        {
+          "q": "Ein Flugzeug ist viel schneller ___ ein Auto.",
+          "options": [
+            "wie",
+            "als",
+            "denn"
+          ],
+          "a": 1,
+          "exp": "En las comparaciones de desigualdad se usa 'als' (en igualdad se usa 'so ... wie')."
+        },
+        {
+          "q": "¿Cuál es la forma comparativa correcta del adjetivo 'gut'?",
+          "options": [
+            "guter",
+            "besser",
+            "feiner"
+          ],
+          "a": 1,
+          "exp": "El comparativo de 'gut' es irregular: gut -> besser -> am besten."
+        },
+        {
+          "q": "Im Januar ist es in Deutschland am ___ (kalt).",
+          "options": [
+            "kältesten",
+            "kaltsten",
+            "kälter"
+          ],
+          "a": 0,
+          "exp": "'kalt' adquiere Umlaut en superlativo y agrega -esten por terminar en 't': am kältesten."
+        }
+      ]
+    },
+    {
+      "id": "a2_u9",
+      "number": 9,
+      "title": "Oraciones Relativas en Nominativo y Acusativo",
+      "subtitle": "El pronombre relativo y el verbo conjugado al final de la oración.",
+      "grammar": {
+        "formula": "Hauptsatz, + [der/den, die, das] + Complementos + VERBO AL FINAL",
+        "explanation": "Las oraciones relativas aportan información complementaria sobre un sustantivo. El pronombre relativo adopta el género y número del sustantivo al que se refiere, y el caso de acuerdo a la función que cumple dentro de la subordinada. El verbo conjugado va al final.",
+        "keyPoints": [
+          {
+            "de": "Das ist der Mann, der neben mir wohnt (Nominativ).",
+            "es": "'der' actúa como sujeto de la oración relativa."
+          },
+          {
+            "de": "Das ist der Mann, den ich gestern gesehen habe (Akkusativ).",
+            "es": "'den' actúa como objeto directo de la acción 'sehen'."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "der Nachbar, -n",
+          "es": "el vecino",
+          "gender": "der",
+          "ex": "Mein Nachbar ist sehr freundlich."
+        },
+        {
+          "de": "kennen",
+          "es": "conocer (a alguien o un lugar)",
+          "gender": "verb",
+          "ex": "Kennst du die Frau dort?"
+        },
+        {
+          "de": "gehören (+ Dat)",
+          "es": "pertenecer a",
+          "gender": "verb",
+          "ex": "Wem gehört das Auto, das vor der Tür steht?"
+        },
+        {
+          "de": "die Einladung, -en",
+          "es": "la invitación",
+          "gender": "die",
+          "ex": "Danke für die Einladung!"
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el relativo adecuado: 'Das ist das Buch, ___ ich gerade lese.'",
+          "options": [
+            "das",
+            "den",
+            "dem"
+          ],
+          "correct": 0,
+          "why": "'Buch' es neutro (das Buch) y cumple función de Acusativo (leer el libro): el pronombre es 'das'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Kennst du den Mann, ___ da drüben steht?",
+          "options": [
+            "der",
+            "den",
+            "dem"
+          ],
+          "a": 0,
+          "exp": "El hombre realiza la acción de estar de pie (sujeto de la relativa -> Nominativo masculino: der)."
+        },
+        {
+          "q": "Hier ist der Schlüssel, ___ du gesucht hast.",
+          "options": [
+            "der",
+            "den",
+            "das"
+          ],
+          "a": 1,
+          "exp": "'der Schlüssel' es masculino y tú lo buscas (objeto directo de suchen -> Akkusativ: den)."
+        },
+        {
+          "q": "Die Kollegin, ___ heute Geburtstag hat, hat Kuchen mitgebracht.",
+          "options": [
+            "die",
+            "der",
+            "den"
+          ],
+          "a": 0,
+          "exp": "Referente femenino (die Kollegin) y sujeto en la relativa: 'die'."
+        },
+        {
+          "q": "¿Dónde se coloca el verbo conjugado en una oración relativa?",
+          "options": [
+            "En la posición 2 de la cláusula relativa",
+            "Al final absoluto de la cláusula relativa",
+            "Inmediatamente después del pronombre relativo"
+          ],
+          "a": 1,
+          "exp": "Las oraciones relativas son subordinadas, por lo que su verbo conjugado va al final de la frase."
+        }
+      ]
+    },
+    {
+      "id": "a2_u10",
+      "number": 10,
+      "title": "El Konjunktiv II: Cortesía, Deseos y Consejos",
+      "subtitle": "Könnten Sie...?, Ich hätte gern, Ich würde gern y du solltest.",
+      "grammar": {
+        "formula": "würde + Infinitiv | haben -> hätte | sein -> wäre | können -> könnte",
+        "explanation": "El Konjunktiv II se utiliza en el día a día para peticiones de cortesía en restaurantes o tiendas ('Ich hätte gern...'), solicitudes amables ('Könnten Sie das wiederholen?') y consejos ('Du solltest mehr schlafen'). Se conjuga con 'würde' + infinitivo al final, salvo para haben (hätte) y sein (wäre).",
+        "keyPoints": [
+          {
+            "de": "Ich hätte gern eine Tasse Kaffee mit Milch, bitte.",
+            "es": "Fórmula cortés en restauración: 'Ich hätte gern' (Querría / Me gustaría tener)."
+          },
+          {
+            "de": "Könnten Sie mir bitte helfen? / Würden Sie das Fenster schließen?",
+            "es": "Peticiones amables y respetuosas de ayuda."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "Ich hätte gern...",
+          "es": "Querría / Me gustaría tener...",
+          "gender": "other",
+          "ex": "Ich hätte gern die Speisekarte."
+        },
+        {
+          "de": "Ich würde gern...",
+          "es": "Me gustaría (hacer algo)...",
+          "gender": "other",
+          "ex": "Ich würde gern nach Japan reisen."
+        },
+        {
+          "de": "Könnten Sie...?",
+          "es": "¿Podría usted...?",
+          "gender": "verb",
+          "ex": "Könnten Sie bitte langsamer sprechen?"
+        },
+        {
+          "de": "sollten (Rat)",
+          "es": "deberías (consejo)",
+          "gender": "verb",
+          "ex": "Du solltest zum Arzt gehen."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Pide un café cortésmente en una cafetería alemana:",
+          "options": [
+            "Ich will Kaffee sofort.",
+            "Ich hätte gern einen Kaffee, bitte.",
+            "Gib mir einen Kaffee."
+          ],
+          "correct": 1,
+          "why": "'Ich hätte gern...' es la fórmula estándar de cortesía (Konjunktiv II de haben) para pedir en hostelería y tiendas."
+        }
+      ],
+      "exam": [
+        {
+          "q": "___ Sie mir bitte das Salz reichen? (höfliche Bitte con können)",
+          "options": [
+            "Können",
+            "Könnten",
+            "Konnten"
+          ],
+          "a": 1,
+          "exp": "La fórmula de cortesía en Konjunktiv II es 'Könnten Sie...?' (¿Podría usted...?)."
+        },
+        {
+          "q": "Wenn ich viel Geld hätte, ___ ich eine Weltreise machen.",
+          "options": [
+            "würde",
+            "werde",
+            "wurde"
+          ],
+          "a": 0,
+          "exp": "En situaciones hipotéticas y deseos se combina con 'würde' + infinitivo al final."
+        },
+        {
+          "q": "Du hast hohes Fieber. Du ___ heute im Bett bleiben (dar consejo).",
+          "options": [
+            "solltest",
+            "sollt",
+            "sollst"
+          ],
+          "a": 0,
+          "exp": "Para dar un consejo amable se utiliza el Konjunktiv II de sollen: 'du solltest'."
+        },
+        {
+          "q": "Ich ___ gern reich und berühmt! (sein en Konjunktiv II)",
+          "options": [
+            "wäre",
+            "war",
+            "werde"
+          ],
+          "a": 0,
+          "exp": "El Konjunktiv II del verbo sein para ich es 'ich wäre' (Ojalá fuera / me gustaría ser)."
+        }
+      ]
+    }
+  ]
+}

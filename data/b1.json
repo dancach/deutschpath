@@ -1,0 +1,1115 @@
+{
+  "level": "B1",
+  "title": "Ruta Oficial Nivel B1 (10 Estaciones)",
+  "description": "Autonomía profesional, estructuras complejas y dominio del Zertifikat B1",
+  "units": [
+    {
+      "id": "b1_u1",
+      "number": 1,
+      "title": "La Voz Pasiva de Proceso en Presente (Vorgangspassiv)",
+      "subtitle": "Aprende a formular qué se hace con werden + Partizip II y los agentes von / durch.",
+      "grammar": {
+        "formula": "Sujeto paciente + werden (conjugado en Pos. 2) + Complementos + Partizip II (FINAL)",
+        "explanation": "La voz pasiva de proceso (Vorgangspassiv) describe una acción poniendo el foco en el objeto y en el hecho en sí, en lugar de en quién la realiza. El sujeto paciente recibe la acción. Si se quiere mencionar quién realiza la acción, se usa 'von + Dativo' (personas, instituciones o fuerzas de la naturaleza) o 'durch + Acusativo' (medios, causas o intermediarios).",
+        "keyPoints": [
+          {
+            "de": "Das Auto wird in Deutschland gebaut.",
+            "es": "El coche es fabricado en Alemania (Presente de pasiva: wird + gebaut)."
+          },
+          {
+            "de": "Der Patient wird vom Arzt untersucht.",
+            "es": "El paciente es examinado por el médico (von + dem = vom + Dativo)."
+          },
+          {
+            "de": "Die Straßen werden durch den Sturm beschädigt.",
+            "es": "Las calles son dañadas por la tormenta (durch + Akkusativ)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "reparieren",
+          "es": "reparar / arreglar",
+          "gender": "verb",
+          "ex": "Das Fahrrad wird heute repariert."
+        },
+        {
+          "de": "bauen",
+          "es": "construir / edificar",
+          "gender": "verb",
+          "ex": "Hier wird ein neues Krankenhaus gebaut."
+        },
+        {
+          "de": "der Patient, -en",
+          "es": "el paciente (N-Deklination)",
+          "gender": "der",
+          "ex": "Der Patient wird von der Ärztin betreut."
+        },
+        {
+          "de": "die Maßnahme, -n",
+          "es": "la medida / disposición",
+          "gender": "die",
+          "ex": "Neue Maßnahmen werden getroffen."
+        },
+        {
+          "de": "der Bericht, -e",
+          "es": "el informe / reporte",
+          "gender": "der",
+          "ex": "Der Bericht wird morgen veröffentlicht."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Transforma a pasiva presente: 'Ein Mechaniker repariert das Auto.' -> 'Das Auto ___ von einem Mechaniker ___.'",
+          "options": [
+            "wird / repariert",
+            "ist / reparieren",
+            "hat / repariert"
+          ],
+          "correct": 0,
+          "why": "La pasiva de proceso se construye con el presente de 'werden' (das Auto wird) y el Partizip II al final (repariert)."
+        }
+      ],
+      "exam": [
+        {
+          "q": "In vielen Firmen ___ täglich hunderte E-Mails geschrieben.",
+          "options": [
+            "wird",
+            "werden",
+            "wurden"
+          ],
+          "a": 1,
+          "exp": "El sujeto paciente es plural ('hunderte E-Mails'), por tanto se conjuga 'werden' en 3ª persona del plural: 'werden'."
+        },
+        {
+          "q": "¿Qué preposición introduce al agente personal en pasiva?",
+          "options": [
+            "von (+ Dativo)",
+            "durch (+ Dativo)",
+            "mit (+ Acusativo)"
+          ],
+          "a": 0,
+          "exp": "El agente personal o institucional se introduce con 'von' seguido obligatoriamente de Dativo (vom Arzt, von der Firma)."
+        },
+        {
+          "q": "Das Haus wird ___ einem berühmten Architekten entworfen.",
+          "options": [
+            "von",
+            "durch",
+            "für"
+          ],
+          "a": 0,
+          "exp": "Al ser un agente personal causante directo, se usa 'von' (+ Dativo: einem berühmten Architekten)."
+        },
+        {
+          "q": "¿Dónde se coloca el Partizip II en la oración pasiva principal?",
+          "options": [
+            "En la última posición de la frase (Satzklammer)",
+            "Inmediatamente detrás de werden",
+            "En la posición 1"
+          ],
+          "a": 0,
+          "exp": "Al igual que con los verbos modales y auxiliares, el verbo principal en Partizip II cierra la pinza verbal al final de la oración."
+        }
+      ]
+    },
+    {
+      "id": "b1_u2",
+      "number": 2,
+      "title": "Voz Pasiva en Pasado y Pasiva de Estado (Zustandspassiv)",
+      "subtitle": "Domina el Präteritum (wurde), el Perfekt con 'worden' y el estado con sein.",
+      "grammar": {
+        "formula": "Präteritum: wurde/wurden + Partizip II | Perfekt: sein + Partizip II + worden | Zustand: sein + Partizip II",
+        "explanation": "En el pasado narrativo y periodístico, la pasiva usa 'wurde / wurden' + Partizip II. En el pasado hablado (Perfekt), se usa el auxiliar 'sein' con la forma especial 'worden' (sin prefijo ge-). Por último, la 'Zustandspassiv' describe el resultado estático ya concluido de una acción previa utilizando el verbo 'sein'.",
+        "keyPoints": [
+          {
+            "de": "Die Berliner Mauer wurde 1989 geöffnet.",
+            "es": "El muro de Berlín fue abierto en 1989 (Präteritum de pasiva)."
+          },
+          {
+            "de": "Das Dokument ist gestern gesendet worden.",
+            "es": "El documento ha sido enviado ayer (Perfekt de pasiva con worden)."
+          },
+          {
+            "de": "Das Geschäft ist sonntags geschlossen.",
+            "es": "La tienda está cerrada los domingos (Zustandspassiv: estado resultado con sein)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "eröffnen",
+          "es": "inaugurar / abrir formalmente",
+          "gender": "verb",
+          "ex": "Das neue Museum wurde gestern eröffnet."
+        },
+        {
+          "de": "zerstören",
+          "es": "destruir",
+          "gender": "verb",
+          "ex": "Die Brücke wurde im Krieg zerstört."
+        },
+        {
+          "de": "beschließen",
+          "es": "acordar / decidir oficialmente",
+          "gender": "verb",
+          "ex": "Das Gesetz ist vom Parlament beschlossen worden."
+        },
+        {
+          "de": "das Gesetz, -e",
+          "es": "la ley",
+          "gender": "das",
+          "ex": "Das Gesetz wurde verabschiedet."
+        },
+        {
+          "de": "die Konferenz, -en",
+          "es": "la conferencia",
+          "gender": "die",
+          "ex": "Die Konferenz ist beendet."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa en Perfekt de pasiva: 'Der Brief ist gestern ___ ___.'",
+          "options": [
+            "abgeschickt worden",
+            "abgeschickt geworden",
+            "worden abgeschickt"
+          ],
+          "correct": 0,
+          "why": "En la pasiva en Perfekt se utiliza obligatoriamente 'worden' (sin ge-) colocado al final absoluto tras el Partizip II."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Das Schloss ___ im 18. Jahrhundert gebaut.",
+          "options": [
+            "wurde",
+            "worden",
+            "wäre"
+          ],
+          "a": 0,
+          "exp": "'Das Schloss' (singular) en pasado histórico requiere el Präteritum de pasiva: 'wurde'."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre 'Die Tür wird geschlossen' y 'Die Tür ist geschlossen'?",
+          "options": [
+            "La primera es la acción en curso (se cierra); la segunda es el estado ya concluido (está cerrada)",
+            "Significan exactamente lo mismo",
+            "La primera es pasado y la segunda presente"
+          ],
+          "a": 0,
+          "exp": "'wird geschlossen' es la Vorgangspassiv (el proceso de cierre), mientras que 'ist geschlossen' es la Zustandspassiv (el estado resultante)."
+        },
+        {
+          "q": "Alle Rechnungen sind pünktlich bezahlt ___ .",
+          "options": [
+            "worden",
+            "geworden",
+            "wurden"
+          ],
+          "a": 0,
+          "exp": "En el Perfekt pasivo se utiliza siempre 'worden', nunca 'geworden' (que se reserva para 'llegar a ser')."
+        },
+        {
+          "q": "Gestern ___ die Gewinner des Wettbewerbs bekannt gegeben.",
+          "options": [
+            "wurden",
+            "wurde",
+            "waren"
+          ],
+          "a": 0,
+          "exp": "El sujeto 'die Gewinner' es plural, por lo que el auxiliar en Präteritum es 'wurden'."
+        }
+      ]
+    },
+    {
+      "id": "b1_u3",
+      "number": 3,
+      "title": "Verbos con Preposiciones Fijas (Feste Präpositionen)",
+      "subtitle": "Domina el régimen preposicional y sus casos fijos con Akkusativ y Dativ.",
+      "grammar": {
+        "formula": "Verbo + Preposición innegociable + Caso correspondiente (Akkusativ o Dativ)",
+        "explanation": "Muchos verbos alemanes exigen una preposición específica cuyo significado no coincide palabra por palabra con el español. Con Akkusativ: warten auf (esperar a), sich freuen auf/über (ilusionarse por / alegrarse de), denken an (pensar en), sich interessieren für (interesarse por). Con Dativ: teilnehmen an (participar en), träumen von (soñar con), gehören zu (pertenecer a), gratulieren zu (felicitar por).",
+        "keyPoints": [
+          {
+            "de": "Ich warte seit einer Stunde auf den Bus.",
+            "es": "Espero el autobús desde hace una hora (warten auf + Akkusativ: den Bus)."
+          },
+          {
+            "de": "Wir nehmen an der Konferenz teil.",
+            "es": "Participamos en la conferencia (teilnehmen an + Dativo: der Konferenz)."
+          },
+          {
+            "de": "Ich freue mich auf den Urlaub.",
+            "es": "Me hace mucha ilusión las vacaciones [evento futuro] (sich freuen auf + Akkusativ)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "warten auf (+ Akk)",
+          "es": "esperar a alguien / algo",
+          "gender": "verb",
+          "ex": "Ich warte auf meine Kollegin."
+        },
+        {
+          "de": "teilnehmen an (+ Dat)",
+          "es": "participar en / asistir a",
+          "gender": "verb",
+          "ex": "Nimmst du am Meeting teil?"
+        },
+        {
+          "de": "sich freuen auf (+ Akk)",
+          "es": "hacer ilusión algo futuro",
+          "gender": "verb",
+          "ex": "Wir freuen uns auf das Fest."
+        },
+        {
+          "de": "träumen von (+ Dat)",
+          "es": "soñar con",
+          "gender": "verb",
+          "ex": "Er träumt von einer Weltreise."
+        },
+        {
+          "de": "die Bewerbung, -en",
+          "es": "la solicitud de empleo",
+          "gender": "die",
+          "ex": "Ich habe mich um die Stelle beworben."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con la preposición y caso correctos: 'Er interessiert sich sehr ___ moderne Kunst (die Kunst).'",
+          "options": [
+            "für",
+            "an",
+            "über"
+          ],
+          "correct": 0,
+          "why": "El verbo reflexivo 'sich interessieren' rige siempre la preposición 'für' con caso Acusativo (für moderne Kunst)."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Ich gratuliere dir herzlich ___ Geburtstag (der Geburtstag)!",
+          "options": [
+            "zum",
+            "am",
+            "für den"
+          ],
+          "a": 0,
+          "exp": "'gratulieren' rige 'zu + Dativo': zu + dem Geburtstag = zum Geburtstag."
+        },
+        {
+          "q": "¿Qué diferencia hay entre 'freuen auf' y 'freuen über'?",
+          "options": [
+            "'auf' es para eventos futuros deseados; 'über' es para hechos presentes o pasados",
+            "'auf' pide dativo y 'über' pide acusativo",
+            "No hay diferencia, son 100% intercambiables"
+          ],
+          "a": 0,
+          "exp": "'sich freuen auf (+ Akk)' mira hacia el futuro con ilusión. 'sich freuen über (+ Akk)' reacciona con alegría ante un regalo o noticia ya recibida."
+        },
+        {
+          "q": "Niemand hat an ___ Termin (der Termin) gedacht.",
+          "options": [
+            "den",
+            "dem",
+            "des"
+          ],
+          "a": 0,
+          "exp": "'denken an' rige Acusativo masculino: an + den Termin = an den Termin."
+        },
+        {
+          "q": "Klaus träumt schon lange von ___ eigenen Wohnung (die Wohnung).",
+          "options": [
+            "einer",
+            "eine",
+            "einen"
+          ],
+          "a": 0,
+          "exp": "'träumen von' rige Dativo femenino: von + einer eigenen Wohnung."
+        }
+      ]
+    },
+    {
+      "id": "b1_u4",
+      "number": 4,
+      "title": "Adverbios y Preguntas Pronominales (Worauf? Darauf / Auf wen?)",
+      "subtitle": "Aprende a preguntar y referirte a cosas con wo(r)-/da(r)- y a personas con preposición.",
+      "grammar": {
+        "formula": "Cosas: wo(r)- + Prep (¿Pregunta?) | da(r)- + Prep (Respuesta) || Personas: Prep + Pronombre",
+        "explanation": "En alemán estándar culto de nivel B1 está prohibido decir 'Für was?' o 'Auf was?'. Si nos referimos a cosas o conceptos abstractos, combinamos 'wo(r)-' o 'da(r)-' con la preposición (se intercala una 'r' si la preposición empieza por vocal: worauf, darüber). Si nos referimos a seres humanos, se mantiene la preposición separada con el pronombre interrogativo o personal correspondiente (Auf wen? Auf ihn).",
+        "keyPoints": [
+          {
+            "de": "Worauf wartest du? - Ich warte auf den Zug. -> Ich warte darauf.",
+            "es": "¿A qué esperas? - Espero al tren. -> Espero a eso (Cosa: worauf / darauf)."
+          },
+          {
+            "de": "Auf wen wartest du? - Ich warte auf meine Schwester. -> Auf sie.",
+            "es": "¿A quién esperas? - Espero a mi hermana. -> A ella (Persona: Auf wen / auf sie)."
+          },
+          {
+            "de": "Womit fährst du zur Arbeit? - Mit dem Fahrrad.",
+            "es": "¿Con qué vas al trabajo? - En bicicleta (wo + mit = womit)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "sich erinnern an (+ Akk)",
+          "es": "acordarse de / recordar",
+          "gender": "verb",
+          "ex": "Erinnerst du dich noch daran?"
+        },
+        {
+          "de": "nachdenken über (+ Akk)",
+          "es": "reflexionar / meditar sobre",
+          "gender": "verb",
+          "ex": "Ich muss darüber nachdenken."
+        },
+        {
+          "de": "sich gewöhnen an (+ Akk)",
+          "es": "acostumbrarse a",
+          "gender": "verb",
+          "ex": "Ich habe mich schnell daran gewöhnt."
+        },
+        {
+          "de": "die Einladung, -en",
+          "es": "la invitación",
+          "gender": "die",
+          "ex": "Danke für die Einladung!"
+        },
+        {
+          "de": "das Thema, die Themen",
+          "es": "el tema / asunto",
+          "gender": "das",
+          "ex": "Wir sprechen über dieses Thema."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Quieres preguntar a tu jefe en qué proyecto está trabajando (das Projekt = cosa). ¿Cómo formulas la pregunta?",
+          "options": [
+            "Woran arbeiten Sie gerade?",
+            "An wen arbeiten Sie gerade?",
+            "Was für arbeiten Sie?"
+          ],
+          "correct": 0,
+          "why": "Al tratarse de una cosa con el verbo 'arbeiten an (+ Dat)', se fusiona wo + r + an = 'Woran'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "___ denkst du gerade? - An meine Großmutter.",
+          "options": [
+            "An wen",
+            "Woran",
+            "Worauf"
+          ],
+          "a": 0,
+          "exp": "La respuesta es una persona ('meine Großmutter'), por lo que la pregunta obligatoria es 'An wen'."
+        },
+        {
+          "q": "Hast du dich schon für den Kurs angemeldet? - Ja, ich habe mich gestern ___ angemeldet.",
+          "options": [
+            "dafür",
+            "daran",
+            "für es"
+          ],
+          "a": 0,
+          "exp": "'sich anmelden für (+ Akk)' referido al curso (cosa) se responde con 'dafür'."
+        },
+        {
+          "q": "¿Por qué decimos 'worauf' y no 'woauf'?",
+          "options": [
+            "Porque se inserta una 'r' eufónica cuando la preposición empieza por vocal",
+            "Porque indica movimiento",
+            "Es una forma dialectal del sur"
+          ],
+          "a": 0,
+          "exp": "Tanto 'wo-' como 'da-' añaden una 'r' intermedia antes de vocal (worauf, worüber, daran, darauf) para evitar el hiato."
+        },
+        {
+          "q": "___ ärgerst du dich so sehr? - Über den schlechten Service im Restaurant.",
+          "options": [
+            "Worüber",
+            "Über wen",
+            "Woran"
+          ],
+          "a": 0,
+          "exp": "'sich ärgern über (+ Akk)' aplicado a una situación abstracta o cosa pide el pronominal 'Worüber'."
+        }
+      ]
+    },
+    {
+      "id": "b1_u5",
+      "number": 5,
+      "title": "Oraciones de Infinitivo con 'zu' (Infinitiv mit zu)",
+      "subtitle": "Aprende cuándo usar zu + Infinitivo y cómo incrustarlo en verbos separables.",
+      "grammar": {
+        "formula": "Frase principal + , + Complementos + [zu + Infinitivo (FINAL)] (Separable: prefijo + zu + raíz)",
+        "explanation": "Las oraciones de infinitivo con 'zu' se usan cuando el sujeto de ambas acciones es idéntico y dependen de verbos de intención (hoffen, planen, versuchen, vorhaben, vergessen), adjetivos impersonales (Es ist wichtig/schön/verboten, ... zu...) o sustantivos con haben (Lust/Zeit/die Absicht haben, ... zu...). En los verbos separables, 'zu' se intercala entre el prefijo y la raíz (aufzustehen, einzukaufen). ¡Los verbos modales nunca llevan 'zu'!",
+        "keyPoints": [
+          {
+            "de": "Ich habe vor, dieses Jahr nach München zu reisen.",
+            "es": "Tengo la intención de viajar este año a Múnich (vorhaben ... zu reisen)."
+          },
+          {
+            "de": "Es ist nicht leicht, eine bezahlbare Wohnung zu finden.",
+            "es": "No es fácil encontrar un piso asequible (Es ist nicht leicht ... zu finden)."
+          },
+          {
+            "de": "Vergiss bitte nicht, die Milch einzukaufen!",
+            "es": "¡No olvides por favor comprar la leche! (Verbo separable: ein + zu + kaufen)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "vorhaben",
+          "es": "tener la intención / planear",
+          "gender": "verb",
+          "ex": "Ich habe vor, Deutsch zu lernen."
+        },
+        {
+          "de": "versuchen",
+          "es": "intentar / procurar",
+          "gender": "verb",
+          "ex": "Er versucht, pünktlich zu sein."
+        },
+        {
+          "de": "vorschlagen",
+          "es": "proponer / sugerir",
+          "gender": "verb",
+          "ex": "Ich schlage vor, eine Pause zu machen."
+        },
+        {
+          "de": "die Gelegenheit, -en",
+          "es": "la oportunidad / ocasión",
+          "gender": "die",
+          "ex": "Ich hatte keine Gelegenheit, ihn zu sprechen."
+        },
+        {
+          "de": "die Absicht, -en",
+          "es": "la intención / propósito",
+          "gender": "die",
+          "ex": "Ich habe nicht die Absicht zu kündigen."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el verbo separable 'aufhören' (dejar de / parar): 'Er hat versprochen, mit dem Rauchen ___ .'",
+          "options": [
+            "aufzuhören",
+            "zu aufhören",
+            "aufgehört"
+          ],
+          "correct": 0,
+          "why": "En los verbos separables, 'zu' se incrusta estrictamente entre el prefijo separable y la raíz: auf + zu + hören = aufzuhören."
+        }
+      ],
+      "exam": [
+        {
+          "q": "¿Cuál de las siguientes frases es CORRECTA?",
+          "options": [
+            "Ich hoffe, die B1-Prüfung zu bestehen.",
+            "Ich kann sehr gut Deutsch zu sprechen.",
+            "Es ist verboten hier rauchen."
+          ],
+          "a": 0,
+          "exp": "Los verbos modales como 'können' nunca llevan 'zu'. Las expresiones como 'Es ist verboten' exigen 'zu rauchen'. La única correcta es con 'hoffen ... zu bestehen'."
+        },
+        {
+          "q": "Hast du heute Abend Lust, mit uns ins Kino ___ ?",
+          "options": [
+            "mitzukommen",
+            "mitkommen zu",
+            "zu mitkommen"
+          ],
+          "a": 0,
+          "exp": "El verbo separable 'mitkommen' forma el infinitivo con 'zu' incrustado: 'mitzukommen'."
+        },
+        {
+          "q": "Es ist sehr wichtig, die Regeln genau ___ .",
+          "options": [
+            "zu beachten",
+            "beachten zu",
+            "beachtenzu"
+          ],
+          "a": 0,
+          "exp": "Con verbos inseparables con prefijo inseparable 'be-', 'zu' se escribe separado inmediatamente delante: 'zu beachten'."
+        },
+        {
+          "q": "¿Cuándo NO se puede usar una estructura de infinitivo con 'zu'?",
+          "options": [
+            "Cuando los sujetos de la oración principal y la subordinada son personas completamente diferentes",
+            "Cuando la frase está en pasado",
+            "Cuando se utiliza el verbo haben"
+          ],
+          "a": 0,
+          "exp": "Si los sujetos son distintos, es obligatorio usar una oración subordinada completa con la conjunción 'dass'."
+        }
+      ]
+    },
+    {
+      "id": "b1_u6",
+      "number": 6,
+      "title": "Finalidad e Intención: 'um... zu' vs 'damit'",
+      "subtitle": "Aprende a expresar el propósito según los sujetos coincidan o sean diferentes.",
+      "grammar": {
+        "formula": "Mismo sujeto: um + ... + zu + Infinitivo || Distinto sujeto: damit + Sujeto + ... + Verbo conjugado (FINAL)",
+        "explanation": "Ambas estructuras responden a la pregunta 'Wozu?' o 'Warum?' (¿Para qué? / ¿Con qué finalidad?). Si el sujeto de la acción principal es la misma persona que persigue el objetivo, se usa obligatoriamente 'um... zu'. Si el sujeto que realiza la acción deseada es otra persona o cosa distinta, se utiliza obligatoriamente 'damit' con verbo conjugado al final. Las fórmulas gemelas son 'ohne... zu' (sin hacer algo) y 'statt... zu' (en lugar de hacer algo).",
+        "keyPoints": [
+          {
+            "de": "Ich lerne fleißig Deutsch, um in Berlin als Ingenieur zu arbeiten.",
+            "es": "Estudio alemán con empeño para trabajar de ingeniero en Berlín (Mismo sujeto: ich / ich -> um... zu)."
+          },
+          {
+            "de": "Ich gebe meiner Tochter ein Buch, damit sie mehr liest.",
+            "es": "Le doy un libro a mi hija para que lea más (Distinto sujeto: ich / sie -> damit)."
+          },
+          {
+            "de": "Er ging aus dem Haus, ohne die Tür abzuschließen.",
+            "es": "Salió de casa sin cerrar la puerta con llave (ohne... zu)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "sparen",
+          "es": "ahorrar",
+          "gender": "verb",
+          "ex": "Ich spare Geld, um ein Auto zu kaufen."
+        },
+        {
+          "de": "bestehen",
+          "es": "aprobar / superar (examen)",
+          "gender": "verb",
+          "ex": "Er lernt Tag und Nacht, um die Prüfung zu bestehen."
+        },
+        {
+          "de": "das Ziel, -e",
+          "es": "el objetivo / la meta",
+          "gender": "das",
+          "ex": "Mein Ziel ist es, fließend zu sprechen."
+        },
+        {
+          "de": "das Stipendium, -ien",
+          "es": "la beca de estudios",
+          "gender": "das",
+          "ex": "Sie bewirbt sich um ein Stipendium."
+        },
+        {
+          "de": "die Voraussetzung, -en",
+          "es": "el requisito previo / condición",
+          "gender": "die",
+          "ex": "Gute Deutschkenntnisse sind eine Voraussetzung."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Elige el conector correcto: 'Der Chef erklärt das Projekt noch einmal, ___ alle Mitarbeiter den Plan verstehen.'",
+          "options": [
+            "damit",
+            "um",
+            "weil"
+          ],
+          "correct": 0,
+          "why": "El sujeto de la principal es 'der Chef' y el de la finalidad es 'alle Mitarbeiter' (sujetos distintos). Por tanto, es obligatorio 'damit'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Ich fahre mit dem Fahrrad zur Arbeit, ___ Geld zu sparen.",
+          "options": [
+            "um",
+            "damit",
+            "ohne"
+          ],
+          "a": 0,
+          "exp": "El sujeto es el mismo ('ich') y hay un infinitivo con 'zu' al final ('zu sparen'): 'um... zu'."
+        },
+        {
+          "q": "Die Mutter spricht leise, damit das Baby ruhig ___ .",
+          "options": [
+            "schläft",
+            "schlafen zu",
+            "geschlafen"
+          ],
+          "a": 0,
+          "exp": "'damit' introduce una oración subordinada completa con verbo conjugado situado al final: 'schläft'."
+        },
+        {
+          "q": "Er unterschrieb den Vertrag, ___ die Bedingungen vorher zu lesen.",
+          "options": [
+            "ohne",
+            "statt",
+            "um"
+          ],
+          "a": 0,
+          "exp": "'ohne... zu' expresa que una acción esperada no se realizó ('sin leer previamente las condiciones')."
+        },
+        {
+          "q": "¿Qué estructura significa 'en lugar de hacer algo'?",
+          "options": [
+            "(an)statt... zu + Infinitiv",
+            "ohne... zu + Infinitiv",
+            "um... zu + Infinitiv"
+          ],
+          "a": 0,
+          "exp": "'(an)statt... zu' expresa la sustitución de una acción por otra: 'Statt zu arbeiten, schläft er'."
+        }
+      ]
+    },
+    {
+      "id": "b1_u7",
+      "number": 7,
+      "title": "El Caso Genitivo (Genitiv: Posesión y Pertenencia)",
+      "subtitle": "Domina la posesión formal con des/der y la terminación -(e)s en masculino y neutro.",
+      "grammar": {
+        "formula": "Masculino/Neutro: des + Sustantivo-(e)s | Femenino/Plural: der + Sustantivo",
+        "explanation": "El Genitivo responde a la pregunta 'Wessen?' (¿De quién?) y expresa posesión o pertenencia en un registro formal y cuidado. Los sustantivos masculinos y neutros añaden '-s' (si tienen varias sílabas: des Autos, des Lehrers) o '-es' (si son monosílabos o acaban en -s, -z, -sch: des Buches, des Mannes, des Hauses). Los femeninos y plurales llevan el artículo 'der' y su sustantivo NO cambia.",
+        "keyPoints": [
+          {
+            "de": "Das ist das Büro des neuen Chefs.",
+            "es": "Esa es la oficina del nuevo jefe (Masculino: des Chefs)."
+          },
+          {
+            "de": "Die Farbe des Autos gefällt mir sehr.",
+            "es": "El color del coche me gusta mucho (Neutro: des Autos)."
+          },
+          {
+            "de": "Die Entscheidung der Ministerin war mutig.",
+            "es": "La decisión de la ministra fue valiente (Femenino: der Ministerin)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "die Meinung, -en",
+          "es": "la opinión / criterio",
+          "gender": "die",
+          "ex": "Die Meinung des Experten ist gefragt."
+        },
+        {
+          "de": "der Besitzer, -",
+          "es": "el propietario / dueño",
+          "gender": "der",
+          "ex": "Wo ist der Besitzer dieses Hundes?"
+        },
+        {
+          "de": "die Zukunft (nur Sg.)",
+          "es": "el futuro",
+          "gender": "die",
+          "ex": "Die Zukunft unserer Kinder steht im Mittelpunkt."
+        },
+        {
+          "de": "die Entwicklung, -en",
+          "es": "el desarrollo / evolución",
+          "gender": "die",
+          "ex": "Die Entwicklung der Wirtschaft ist positiv."
+        },
+        {
+          "de": "der Erfolg, -e",
+          "es": "el éxito / triunfo",
+          "gender": "der",
+          "ex": "Der Erfolg des Projekts freut uns alle."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el genitivo correcto de 'das Kind': 'Das Lachen ___ erfüllt den Raum.'",
+          "options": [
+            "des Kindes",
+            "dem Kind",
+            "des Kind"
+          ],
+          "correct": 0,
+          "why": "El neutro en genitivo lleva el artículo 'des' y el sustantivo monosílabo añade '-es': des Kindes."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Die Fenster ___ Hauses (das Haus) sind sehr groß.",
+          "options": [
+            "des",
+            "dem",
+            "den"
+          ],
+          "a": 0,
+          "exp": "'das Haus' es neutro; su artículo en genitivo singular es 'des'."
+        },
+        {
+          "q": "Am Ende ___ langen Tages (der Tag) war ich erschöpft.",
+          "options": [
+            "des",
+            "dem",
+            "den"
+          ],
+          "a": 0,
+          "exp": "Masculino en genitivo singular: 'des' + adjetivo en '-en' + sustantivo con '-es' (des langen Tages)."
+        },
+        {
+          "q": "Die Vorschläge ___ Mitarbeiter (die Mitarbeiter, Plural) wurden diskutiert.",
+          "options": [
+            "der",
+            "des",
+            "den"
+          ],
+          "a": 0,
+          "exp": "En plural, el artículo genitivo para todos los géneros es 'der'."
+        },
+        {
+          "q": "¿Qué pregunta se utiliza en alemán para preguntar por el poseedor en Genitivo?",
+          "options": [
+            "Wessen?",
+            "Wem?",
+            "Wen?"
+          ],
+          "a": 0,
+          "exp": "'Wessen?' significa '¿De quién?' e interroga específicamente por el genitivo."
+        }
+      ]
+    },
+    {
+      "id": "b1_u8",
+      "number": 8,
+      "title": "Preposiciones de Genitivo (Genitivpräpositionen)",
+      "subtitle": "Domina wegen, während, trotz y statt en el registro formal y escrito.",
+      "grammar": {
+        "formula": "wegen / während / trotz / statt + Genitiv (des / der)",
+        "explanation": "Estas cuatro preposiciones rigen obligatoriamente el caso Genitivo en el alemán estándar culto: 'wegen' (a causa de / por motivo de), 'während' (durante el transcurso de), 'trotz' (a pesar de) y 'statt / anstatt' (en lugar de / en vez de). Aunque en el lenguaje de la calle a veces se oye con Dativo, en exámenes oficiales B1 su uso con Genitivo es indispensable.",
+        "keyPoints": [
+          {
+            "de": "Wegen des schlechten Wetters fiel das Konzert aus.",
+            "es": "A causa del mal tiempo se canceló el concierto (wegen + des schlechten Wetters)."
+          },
+          {
+            "de": "Während der Konferenz war das Telefonieren verboten.",
+            "es": "Durante la conferencia estaba prohibido hablar por teléfono (während + der Konferenz)."
+          },
+          {
+            "de": "Trotz des Regens machten wir einen langen Spaziergang.",
+            "es": "A pesar de la lluvia dimos un largo paseo (trotz + des Regens)."
+          },
+          {
+            "de": "Statt eines neuen Autos kaufte er sich ein E-Bike.",
+            "es": "En lugar de un coche nuevo se compró una bicicleta eléctrica (statt + eines Autos)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "absagen",
+          "es": "cancelar / suspender",
+          "gender": "verb",
+          "ex": "Der Flug wurde wegen des Sturms abgesagt."
+        },
+        {
+          "de": "verschieben",
+          "es": "posponer / aplazar",
+          "gender": "verb",
+          "ex": "Wir müssen den Termin leider verschieben."
+        },
+        {
+          "de": "der Streik, -s",
+          "es": "la huelga",
+          "gender": "der",
+          "ex": "Wegen des Streiks fahren keine Züge."
+        },
+        {
+          "de": "die Verspätung, -en",
+          "es": "el retraso / demora",
+          "gender": "die",
+          "ex": "Der Zug hatte 30 Minuten Verspätung."
+        },
+        {
+          "de": "die Panne, -n",
+          "es": "la avería / percance",
+          "gender": "die",
+          "ex": "Trotz der Panne kamen wir rechtzeitig an."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el artículo en Genitivo: '___ des starken Regens (der Regen) gingen wir wandern.' (A pesar de)",
+          "options": [
+            "Trotz",
+            "Wegen",
+            "Während"
+          ],
+          "correct": 0,
+          "why": "'Trotz' significa 'a pesar de' y rige genitivo: Trotz des starken Regens."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Wegen ___ Streiks (der Streik) am Flughafen fliegen heute keine Maschinen.",
+          "options": [
+            "des",
+            "dem",
+            "den"
+          ],
+          "a": 0,
+          "exp": "'wegen' rige Genitivo masculino: 'des Streiks'."
+        },
+        {
+          "q": "Während ___ Sommers (der Sommer) reisen viele Familien ans Meer.",
+          "options": [
+            "des",
+            "dem",
+            "den"
+          ],
+          "a": 0,
+          "exp": "'während' rige Genitivo masculino/neutro con artículo 'des'."
+        },
+        {
+          "q": "Trotz ___ hohen Preises (der Preis) kaufte sie das Kleid.",
+          "options": [
+            "des",
+            "dem",
+            "den"
+          ],
+          "a": 0,
+          "exp": "'trotz' rige Genitivo: 'des hohen Preises'."
+        },
+        {
+          "q": "Statt ___ Taxis (das Taxi) nahmen wir die Straßenbahn.",
+          "options": [
+            "eines",
+            "einem",
+            "einen"
+          ],
+          "a": 0,
+          "exp": "'statt' rige Genitivo neutro: 'eines Taxis'."
+        }
+      ]
+    },
+    {
+      "id": "b1_u9",
+      "number": 9,
+      "title": "La Declinación Débil Masculina (N-Deklination)",
+      "subtitle": "Identifica los sustantivos masculinos especiales que añaden -(e)n en casi todos los casos.",
+      "grammar": {
+        "formula": "Nom: der Name | Akk: den Namen | Dat: dem Namen | Gen: des Namens",
+        "explanation": "Un grupo especial de sustantivos masculinos añade '-(e)n' en todos los casos EXCEPTO en Nominativo singular. Pertenecen a este grupo: masculinos acabados en '-e' referidos a seres vivos (der Kollege, der Kunde, der Junge, der Experte), palabras de origen griego/latino terminadas en '-ent, -ant, -ist' (der Student, der Praktikant, der Polizist, der Tourist) y excepciones importantes como 'der Herr' (den/dem/des Herrn) y 'der Mensch' (den/dem/des Menschen).",
+        "keyPoints": [
+          {
+            "de": "Ich habe gestern den neuen Kollegen kennen gelernt.",
+            "es": "Ayer conocí al nuevo compañero (Akkusativ singular con -n: den Kollegen)."
+          },
+          {
+            "de": "Ich danke dem Herrn für seine Unterstützung.",
+            "es": "Le doy las gracias al señor por su ayuda (Dativ singular: dem Herrn)."
+          },
+          {
+            "de": "Der Name des Polizisten steht auf dem Dienstausweis.",
+            "es": "El nombre del policía figura en la placa (Genitiv singular: des Polizisten)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "der Kollege, -n",
+          "es": "el compañero de trabajo / colega",
+          "gender": "der",
+          "ex": "Ich spreche mit dem Kollegen."
+        },
+        {
+          "de": "der Kunde, -n",
+          "es": "el cliente",
+          "gender": "der",
+          "ex": "Wir beraten den Kunden gerne."
+        },
+        {
+          "de": "der Herr, -en",
+          "es": "el señor / caballero",
+          "gender": "der",
+          "ex": "Kennen Sie diesen Herrn?"
+        },
+        {
+          "de": "der Nachbar, -n",
+          "es": "el vecino",
+          "gender": "der",
+          "ex": "Das Paket ist beim Nachbarn."
+        },
+        {
+          "de": "der Praktikant, -en",
+          "es": "el becario / pasante",
+          "gender": "der",
+          "ex": "Der Chef lobt den Praktikanten."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa en Dativo con 'der Kunde': 'Der Verkäufer hilft ___ bei der Auswahl.'",
+          "options": [
+            "dem Kunden",
+            "dem Kunde",
+            "den Kunden"
+          ],
+          "correct": 0,
+          "why": "'der Kunde' pertenece a la N-Deklination. En Dativo singular recibe el artículo 'dem' y la terminación obligatoria '-n': dem Kunden."
+        }
+      ],
+      "exam": [
+        {
+          "q": "¿Cuál de estos sustantivos NO pertenece a la N-Deklination?",
+          "options": [
+            "der Tisch",
+            "der Kollege",
+            "der Student"
+          ],
+          "a": 0,
+          "exp": "'der Tisch' es un masculino regular (den Tisch, dem Tisch). 'der Kollege' y 'der Student' son N-Deklination."
+        },
+        {
+          "q": "Haben Sie Herrn Schmidt gesehen? Ich muss diesen ___ dringend sprechen.",
+          "options": [
+            "Herrn",
+            "Herr",
+            "Herren"
+          ],
+          "a": 0,
+          "exp": "En Acusativo singular, 'der Herr' recibe la terminación '-n': 'diesen Herrn'."
+        },
+        {
+          "q": "Die Polizei befragte den ___ nach dem Unfall.",
+          "options": [
+            "Zeugen",
+            "Zeuge",
+            "Zeuges"
+          ],
+          "a": 0,
+          "exp": "'der Zeuge' (el testigo) termina en '-e' y se refiere a persona masculina -> en Acusativo añade '-n': 'den Zeugen'."
+        },
+        {
+          "q": "¿En qué único caso singular la N-Deklination NO lleva terminación -(e)n?",
+          "options": [
+            "En Nominativo singular",
+            "En Acusativo singular",
+            "En Dativo singular"
+          ],
+          "a": 0,
+          "exp": "Solo en el Nominativo singular se mantiene la forma base sin terminación (ej. 'Der Student liest ein Buch'). En todos los demás casos añade -(e)n."
+        }
+      ]
+    },
+    {
+      "id": "b1_u10",
+      "number": 10,
+      "title": "Subordinadas Complejas: obwohl, während, seitdem, bis",
+      "subtitle": "Coordina causas, concesiones y tiempos con la sintaxis avanzada de nivel B1.",
+      "grammar": {
+        "formula": "obwohl / während / seitdem / bis + Sujeto + ... + Verbo conjugado (FINAL)",
+        "explanation": "En el nivel B1 debes dominar las oraciones subordinadas que matizan tus ideas: 'obwohl' (aunque / a pesar de que) expresa concesión y envía el verbo al final (frente a 'trotzdem', que es conector con inversión en pos. 1); 'während' expresa simultaneidad (mientras); 'seitdem' marca el punto de inicio de una acción que continúa (desde que); y 'bis' marca el límite temporal (hasta que).",
+        "keyPoints": [
+          {
+            "de": "Ich gehe zur Arbeit, obwohl ich mich nicht wohl fühle.",
+            "es": "Voy al trabajo aunque no me siento bien (obwohl + verbo al final: fühle)."
+          },
+          {
+            "de": "Ich fühle mich nicht wohl, trotzdem gehe ich zur Arbeit.",
+            "es": "No me siento bien, aun así voy al trabajo (trotzdem en Posición 1 con inversión)."
+          },
+          {
+            "de": "Seitdem er in Deutschland lebt, spricht er fließend Deutsch.",
+            "es": "Desde que vive en Alemania habla alemán con fluidez (seitdem ... lebt)."
+          },
+          {
+            "de": "Warte hier bitte, bis ich die Tickets gekauft habe.",
+            "es": "Espera aquí por favor hasta que haya comprado los billetes (bis ... habe)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "kündigen",
+          "es": "dimitir / rescindir / despedir",
+          "gender": "verb",
+          "ex": "Er hat gekündigt, obwohl er keinen neuen Job hatte."
+        },
+        {
+          "de": "verhandeln",
+          "es": "negociar",
+          "gender": "verb",
+          "ex": "Sie verhandeln über das Gehalt."
+        },
+        {
+          "de": "die Bedingung, -en",
+          "es": "la condición / cláusula",
+          "gender": "die",
+          "ex": "Die Arbeitsbedingungen sind ausgezeichnet."
+        },
+        {
+          "de": "der Vertrag, ¨-e",
+          "es": "el contrato",
+          "gender": "der",
+          "ex": "Haben Sie den Vertrag schon unterschrieben?"
+        },
+        {
+          "de": "die Erfahrung, -en",
+          "es": "la experiencia",
+          "gender": "die",
+          "ex": "Sie hat viel Erfahrung im Marketing."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Elige la opción correcta: 'Er kaufte das teure Smartphone, ___ er eigentlich sparen wollte.'",
+          "options": [
+            "obwohl",
+            "trotzdem",
+            "deshalb"
+          ],
+          "correct": 0,
+          "why": "Al estar el verbo 'wollte' en la última posición absoluta de la cláusula, se debe emplear la conjunción subordinante 'obwohl'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "___ ich in der Küche kochte, hörte mein Mitbewohner laut Musik.",
+          "options": [
+            "Während",
+            "Seitdem",
+            "Obwohl"
+          ],
+          "a": 0,
+          "exp": "'Während' expresa dos acciones simultáneas que ocurren al mismo tiempo ('mientras yo cocinaba...')."
+        },
+        {
+          "q": "¿Cuál es la diferencia sintáctica entre 'obwohl' y 'trotzdem'?",
+          "options": [
+            "'obwohl' envía el verbo al final; 'trotzdem' ocupa la posición 1 e invierte el verbo antes del sujeto",
+            "Son exactamente sinónimos y tienen el mismo orden",
+            "'obwohl' solo se usa en pasado"
+          ],
+          "a": 0,
+          "exp": "'obwohl' es conjunción subordinante (verbo al final: 'obwohl es regnet'); 'trotzdem' es adverbio conectivo con inversión (Pos. 1 + Pos. 2 verbo: 'trotzdem gehe ich')."
+        },
+        {
+          "q": "Bleiben Sie bitte sitzen, ___ das Flugzeug vollständig zum Stillstand gekommen ist.",
+          "options": [
+            "bis",
+            "seitdem",
+            "während"
+          ],
+          "a": 0,
+          "exp": "'bis' indica el límite temporal hasta que se complete la acción ('hasta que el avión se haya detenido completamente')."
+        },
+        {
+          "q": "___ sie die neue Stelle angetreten hat, hat sie kaum noch Freizeit.",
+          "options": [
+            "Seitdem",
+            "Bis",
+            "Obwohl"
+          ],
+          "a": 0,
+          "exp": "'Seitdem' ('desde que') expresa el punto de partida en el tiempo para una situación que perdura."
+        }
+      ]
+    }
+  ]
+}

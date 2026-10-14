@@ -1,0 +1,1011 @@
+{
+  "level": "A1",
+  "title": "Ruta Oficial Nivel A1 (10 Estaciones)",
+  "description": "Cimientos del alemán paso a paso hasta el Start Deutsch 1",
+  "units": [
+    {
+      "id": "a1_u1",
+      "number": 1,
+      "title": "Presentarse, Pronombres y Regla V2",
+      "subtitle": "Saludar, verbos sein/heißen/kommen y el verbo siempre en posición 2.",
+      "grammar": {
+        "formula": "Posición 1 (Sujeto o Tiempo) + POSICIÓN 2 (Verbo conjugado) + Resto",
+        "explanation": "En toda oración enunciativa afirmativa en alemán, el verbo conjugado ocupa obligatoriamente la Posición 2. Si la frase empieza por un complemento de tiempo (ej. 'Heute'), se produce inversión: el sujeto pasa inmediatamente detrás del verbo.",
+        "keyPoints": [
+          {
+            "de": "Ich heiße Daniel und ich komme aus Spanien.",
+            "es": "Me llamo Daniel y vengo de España."
+          },
+          {
+            "de": "Heute wohne ich in Madrid.",
+            "es": "Hoy vivo en Madrid (Inversión sujeto-verbo por posición 2)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "heißen",
+          "es": "llamarse",
+          "gender": "verb",
+          "ex": "Ich heiße Thomas."
+        },
+        {
+          "de": "kommen aus",
+          "es": "venir de (origen)",
+          "gender": "verb",
+          "ex": "Woher kommst du? Ich komme aus Spanien."
+        },
+        {
+          "de": "wohnen in",
+          "es": "vivir / residir en",
+          "gender": "verb",
+          "ex": "Ich wohne in Berlin."
+        },
+        {
+          "de": "die Sprache, -n",
+          "es": "el idioma",
+          "gender": "die",
+          "ex": "Welche Sprachen sprichst du?"
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa respetando la regla V2: 'Heute ___ ___ in Berlin.'",
+          "options": [
+            "arbeite ich",
+            "ich arbeite",
+            "arbeiten ich"
+          ],
+          "correct": 0,
+          "why": "'Heute' ocupa la posición 1, por tanto el verbo 'arbeite' debe ir en posición 2 y el pronombre 'ich' en posición 3."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Ich ___ 30 Jahre alt.",
+          "options": [
+            "habe",
+            "bin",
+            "mache"
+          ],
+          "a": 1,
+          "exp": "La edad en alemán se expresa con el verbo 'sein' (ich bin)."
+        },
+        {
+          "q": "Morgen ___ wir nach München.",
+          "options": [
+            "fahren",
+            "wir fahren",
+            "fährt"
+          ],
+          "a": 0,
+          "exp": "Posición 1: Morgen -> Posición 2: fahren (verbo) -> Posición 3: wir."
+        },
+        {
+          "q": "___ heißt du?",
+          "options": [
+            "Was",
+            "Wer",
+            "Wie"
+          ],
+          "a": 2,
+          "exp": "En alemán se pregunta con 'Wie' (¿Cómo te llamas? = Wie heißt du?)."
+        },
+        {
+          "q": "Frau Müller, wo ___ Sie?",
+          "options": [
+            "wohnst",
+            "wohnen",
+            "wohnt"
+          ],
+          "a": 1,
+          "exp": "Con el tratamiento formal 'Sie', la terminación verbal regular es -en."
+        }
+      ]
+    },
+    {
+      "id": "a1_u2",
+      "number": 2,
+      "title": "Géneros (der, die, das) y Negación (kein vs nicht)",
+      "subtitle": "Dominar el Nominativ y saber cuándo negar con kein o con nicht.",
+      "grammar": {
+        "formula": "der = ein/kein | die = eine/keine | das = ein/kein",
+        "explanation": "Usa 'kein/keine' para negar sustantivos acompañados de un artículo indeterminado (ein/eine) o sustantivos sin artículo. Usa 'nicht' para negar verbos, adjetivos, pronombres o sustantivos con artículo determinado (der, die, das).",
+        "keyPoints": [
+          {
+            "de": "Das ist ein Tisch -> Das ist kein Tisch.",
+            "es": "Masculino Nominativ: ein / kein."
+          },
+          {
+            "de": "Das ist eine Lampe -> Das ist keine Lampe.",
+            "es": "Femenino Nominativ: eine / keine."
+          },
+          {
+            "de": "Ich arbeite heute nicht.",
+            "es": "Negación de verbo o adverbio con 'nicht'."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "der Tisch, -e",
+          "es": "la mesa",
+          "gender": "der",
+          "ex": "Der Tisch ist neu."
+        },
+        {
+          "de": "die Rechnung, -en",
+          "es": "la cuenta / factura",
+          "gender": "die",
+          "ex": "Die Rechnung, bitte!"
+        },
+        {
+          "de": "das Buch, ¨-er",
+          "es": "el libro",
+          "gender": "das",
+          "ex": "Das Buch ist sehr interessant."
+        },
+        {
+          "de": "die Lampe, -n",
+          "es": "la lámpara",
+          "gender": "die",
+          "ex": "Die Lampe ist modern."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'die Tasche' es femenino. ¿Cómo dices 'Eso no es un bolso'?",
+          "options": [
+            "Das ist nicht Tasche.",
+            "Das ist kein Tasche.",
+            "Das ist keine Tasche."
+          ],
+          "correct": 2,
+          "why": "Un sustantivo femenino indeterminado se niega con 'keine'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Ist das ___ Auto? (das Auto)",
+          "options": [
+            "eine",
+            "ein",
+            "einen"
+          ],
+          "a": 1,
+          "exp": "El género neutro (das) en caso Nominativ utiliza el artículo 'ein'."
+        },
+        {
+          "q": "Ich habe ___ Zeit (die Zeit).",
+          "options": [
+            "kein",
+            "keine",
+            "nicht"
+          ],
+          "a": 1,
+          "exp": "'Zeit' es femenino (die Zeit), por lo que se niega con 'keine'."
+        },
+        {
+          "q": "Das Hotel ist ___ teuer.",
+          "options": [
+            "kein",
+            "keine",
+            "nicht"
+          ],
+          "a": 2,
+          "exp": "Los adjetivos predicativos (teuer = caro) se niegan siempre con 'nicht'."
+        },
+        {
+          "q": "¿Qué artículo determinado corresponde a 'Wohnung'?",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "a": 1,
+          "exp": "Las palabras alemanas terminadas en '-ung' son siempre de género femenino (die)."
+        }
+      ]
+    },
+    {
+      "id": "a1_u3",
+      "number": 3,
+      "title": "El Plural de los Sustantivos y Números",
+      "subtitle": "Formaciones típicas de plural y números para compras y precios.",
+      "grammar": {
+        "formula": "Plural siempre con artículo 'die' | Terminaciones: -(e)n, -e (¨), -er (¨), -s",
+        "explanation": "En alemán todos los sustantivos en plural llevan el artículo 'die' en Nominativ. No existe una sola regla para formar el plural, pero hay patrones claros: femeninos en -in añaden -nen, masculinos de una sílaba suelen tomar Umlaut + -e (der Mann -> die Männer, der Stuhl -> die Stühle).",
+        "keyPoints": [
+          {
+            "de": "das Kind -> die Kinder | der Apfel -> die Äpfel",
+            "es": "Neutro con -er / Masculino con Umlaut."
+          },
+          {
+            "de": "Das kostet zweiundzwanzig Euro.",
+            "es": "Números: primero unidad (zwei) y luego decena (zwanzig)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "der Apfel, ¨-",
+          "es": "la manzana",
+          "gender": "der",
+          "ex": "Ich esse einen Apfel."
+        },
+        {
+          "de": "das Kind, -er",
+          "es": "el niño / la niña",
+          "gender": "das",
+          "ex": "Die Kinder spielen im Park."
+        },
+        {
+          "de": "das Brot, -e",
+          "es": "el pan",
+          "gender": "das",
+          "ex": "Ein Brot kostet drei Euro."
+        },
+        {
+          "de": "kaufen",
+          "es": "comprar",
+          "gender": "verb",
+          "ex": "Wir kaufen Obst und Gemüse."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "¿Cómo se escribe el número 45 en alemán?",
+          "options": [
+            "vierzigfünf",
+            "fünfundvierzig",
+            "fünfzehnvierzig"
+          ],
+          "correct": 1,
+          "why": "En los números del 21 al 99 se dice primero la unidad, 'und', y luego la decena: fünf + und + vierzig."
+        }
+      ],
+      "exam": [
+        {
+          "q": "¿Cuál es el plural correcto de 'das Bild' (el cuadro/imagen)?",
+          "options": [
+            "die Bilden",
+            "die Bilder",
+            "die Bilde"
+          ],
+          "a": 1,
+          "exp": "El plural de 'das Bild' es 'die Bilder' (terminación en -er)."
+        },
+        {
+          "q": "Wie viel ___ die Tomaten?",
+          "options": [
+            "kostet",
+            "kosten",
+            "kaufst"
+          ],
+          "a": 1,
+          "exp": "'Tomaten' es plural, por lo que el verbo concuerda en plural: kosten."
+        },
+        {
+          "q": "El número 73 se pronuncia:",
+          "options": [
+            "siebenunddreißig",
+            "dreiundsiebzig",
+            "siebzigdrei"
+          ],
+          "a": 1,
+          "exp": "3 (drei) + und + 70 (siebzig) = dreiundsiebzig."
+        },
+        {
+          "q": "¿Cuál es el artículo de cualquier sustantivo plural en Nominativ?",
+          "options": [
+            "der",
+            "das",
+            "die"
+          ],
+          "a": 2,
+          "exp": "En Nominativ, todos los sustantivos en plural llevan el artículo 'die'."
+        }
+      ]
+    },
+    {
+      "id": "a1_u4",
+      "number": 4,
+      "title": "El Caso Acusativo (Akkusativ - Objeto Directo)",
+      "subtitle": "El cambio en el artículo masculino: der -> den, ein -> einen.",
+      "grammar": {
+        "formula": "Masc: den / einen / keinen | Fem: die / eine | Neut: das / ein | Plur: die / keine",
+        "explanation": "El caso Acusativo marca el objeto directo sobre el que recae la acción de verbos transitivos como haben, brauchen, suchen, kaufen, essen, trinken. La regla de oro: ¡Únicamente cambia el masculino! (der pasa a den, ein pasa a einen).",
+        "keyPoints": [
+          {
+            "de": "Ich habe einen Hund (der Hund -> den/einen).",
+            "es": "Masculino en Akkusativ cambia a 'einen'."
+          },
+          {
+            "de": "Ich trinke ein Wasser und eine Cola.",
+            "es": "Neutro y femenino no sufren ningún cambio."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "der Kaffee, -s",
+          "es": "el café",
+          "gender": "der",
+          "ex": "Morgens trinke ich einen Kaffee."
+        },
+        {
+          "de": "der Hund, -e",
+          "es": "el perro",
+          "gender": "der",
+          "ex": "Ich suche meinen Hund."
+        },
+        {
+          "de": "brauchen",
+          "es": "necesitar",
+          "gender": "verb",
+          "ex": "Brauchst du Hilfe?"
+        },
+        {
+          "de": "der Schlüssel, -",
+          "es": "la llave",
+          "gender": "der",
+          "ex": "Hast du den Schlüssel?"
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'der Schlüssel' es masculino. Completa: 'Ich suche ___ Schlüssel.'",
+          "options": [
+            "der",
+            "den",
+            "dem"
+          ],
+          "correct": 1,
+          "why": "El verbo 'suchen' rige objeto directo (Akkusativ). El masculino 'der' cambia a 'den'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Ich möchte bitte ___ Apfel (der Apfel).",
+          "options": [
+            "ein",
+            "eine",
+            "einen"
+          ],
+          "a": 2,
+          "exp": "Masculino en Acusativo indeterminado requiere 'einen'."
+        },
+        {
+          "q": "Hast du ___ Fahrrad dabei? (das Fahrrad)",
+          "options": [
+            "das",
+            "den",
+            "dem"
+          ],
+          "a": 0,
+          "exp": "El género neutro no varía en Acusativo, sigue siendo 'das'."
+        },
+        {
+          "q": "Wir haben heute leider ___ Zeit (die Zeit).",
+          "options": [
+            "kein",
+            "keine",
+            "keinen"
+          ],
+          "a": 1,
+          "exp": "Femenino en Acusativo se niega con 'keine'."
+        },
+        {
+          "q": "¿Qué género es el único que modifica su artículo en Acusativo respecto al Nominativo?",
+          "options": [
+            "Femenino",
+            "Masculino",
+            "Neutro"
+          ],
+          "a": 1,
+          "exp": "Solo el masculino cambia: der -> den, ein -> einen, kein -> keinen."
+        }
+      ]
+    },
+    {
+      "id": "a1_u5",
+      "number": 5,
+      "title": "Verbos con Cambio Vocálico (Vokalwechsel)",
+      "subtitle": "Conjugación de verbos fuertes en presente: e -> i/ie, a -> ä.",
+      "grammar": {
+        "formula": "Cambio SOLO en 2ª (du) y 3ª persona singular (er/sie/es)",
+        "explanation": "Muchos verbos esenciales en alemán cambian su vocal radical únicamente en las formas 'du' y 'er/sie/es'. Las formas 'ich', 'wir', 'ihr' y 'sie/Sie' se conjugan de manera regular.",
+        "keyPoints": [
+          {
+            "de": "sprechen: ich spreche, du sprichst, er spricht.",
+            "es": "Cambio e -> i en 2ª y 3ª persona."
+          },
+          {
+            "de": "fahren: ich fahre, du fährst, er fährt.",
+            "es": "Cambio a -> ä con Umlaut en du y er."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "sprechen",
+          "es": "hablar",
+          "gender": "verb",
+          "ex": "Sprichst du Deutsch?"
+        },
+        {
+          "de": "sehen",
+          "es": "ver",
+          "gender": "verb",
+          "ex": "Er sieht gern Filme."
+        },
+        {
+          "de": "fahren",
+          "es": "ir en vehículo / conducir",
+          "gender": "verb",
+          "ex": "Fährst du mit dem Zug?"
+        },
+        {
+          "de": "schlafen",
+          "es": "dormir",
+          "gender": "verb",
+          "ex": "Das Kind schläft ruhig."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Completa con el verbo 'lesen': 'Was ___ du am Wochenende?'",
+          "options": [
+            "lest",
+            "liest",
+            "lesest"
+          ],
+          "correct": 1,
+          "why": "El verbo 'lesen' tiene cambio vocálico e -> ie en la segunda persona: du liest."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Thomas ___ sehr gut Spanisch (sprechen).",
+          "options": [
+            "spricht",
+            "sprecht",
+            "spreche"
+          ],
+          "a": 0,
+          "exp": "Tercera persona singular de sprechen es 'er spricht' (e -> i)."
+        },
+        {
+          "q": "___ du morgen nach Frankfurt? (fahren)",
+          "options": [
+            "Fahrst",
+            "Fährst",
+            "Fahrt"
+          ],
+          "a": 1,
+          "exp": "En segunda persona de fahren la 'a' cambia a 'ä': du fährst."
+        },
+        {
+          "q": "¿En qué personas se produce el cambio vocálico del presente?",
+          "options": [
+            "Solo en 'ich'",
+            "En 'du' y 'er/sie/es'",
+            "En 'wir' e 'ihr'"
+          ],
+          "a": 1,
+          "exp": "El cambio de vocal solo afecta a 'du' y a la tercera persona del singular."
+        },
+        {
+          "q": "Was ___ du heute zu Mittag? (essen)",
+          "options": [
+            "esst",
+            "isst",
+            "issest"
+          ],
+          "a": 1,
+          "exp": "Para 'essen', la forma de 'du' es 'du isst'."
+        }
+      ]
+    },
+    {
+      "id": "a1_u6",
+      "number": 6,
+      "title": "Verbos Separables (Trennbare Verben)",
+      "subtitle": "El prefijo se desprende y viaja al final absoluto de la frase.",
+      "grammar": {
+        "formula": "Sujeto + VERBO CONJUGADO (Pos. 2) + Complementos + PREFIJO (Final)",
+        "explanation": "Los verbos con prefijos como auf-, an-, ein-, aus-, mit-, ab- se separan en oraciones simples. El núcleo verbal se conjuga en Posición 2 y el prefijo se coloca en la última posición.",
+        "keyPoints": [
+          {
+            "de": "Ich stehe jeden Tag um 7 Uhr auf (aufstehen).",
+            "es": "El prefijo 'auf' viaja al final de la oración."
+          },
+          {
+            "de": "Wir kaufen am Samstag im Supermarkt ein (einkaufen).",
+            "es": "'ein' cierra la frase al final."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "aufstehen",
+          "es": "levantarse",
+          "gender": "verb",
+          "ex": "Wann stehst du morgens auf?"
+        },
+        {
+          "de": "einkaufen",
+          "es": "hacer la compra",
+          "gender": "verb",
+          "ex": "Ich kaufe für das Abendessen ein."
+        },
+        {
+          "de": "anrufen",
+          "es": "llamar por teléfono",
+          "gender": "verb",
+          "ex": "Ich rufe dich morgen an."
+        },
+        {
+          "de": "fernsehen",
+          "es": "ver la televisión",
+          "gender": "verb",
+          "ex": "Abends sieht er oft fern."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Ordena con 'anrufen': 'Ich ___ meine Mutter ___.'",
+          "options": [
+            "anrufe / --",
+            "rufe / an",
+            "rief / an"
+          ],
+          "correct": 1,
+          "why": "El verbo conjugado 'rufe' va en posición 2 y el prefijo 'an' al final."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Der Zug ___ um 18:30 Uhr ___ (abfahren).",
+          "options": [
+            "abfährt / --",
+            "fährt / ab",
+            "abfahrt / --"
+          ],
+          "a": 1,
+          "exp": "El verbo es separable: 'fährt' en posición 2 y 'ab' al final."
+        },
+        {
+          "q": "Wann ___ du morgens ___? (aufstehen)",
+          "options": [
+            "stehst / auf",
+            "aufstehst / --",
+            "steht / auf"
+          ],
+          "a": 0,
+          "exp": "Segunda persona singular con sujeto du: stehst ... auf."
+        },
+        {
+          "q": "¿Cuál de estos prefijos es típicamente separable?",
+          "options": [
+            "ver-",
+            "be-",
+            "mit-"
+          ],
+          "a": 2,
+          "exp": "'mit-' (mitkommen, mitbringen) es siempre separable. 'be-' y 'ver-' son inseparables."
+        },
+        {
+          "q": "Wir ___ dich zur Party ___ (einladen).",
+          "options": [
+            "einladen / --",
+            "laden / ein",
+            "ladet / ein"
+          ],
+          "a": 1,
+          "exp": "Para 'wir' la conjugación es laden, y el prefijo 'ein' va al final."
+        }
+      ]
+    },
+    {
+      "id": "a1_u7",
+      "number": 7,
+      "title": "Verbos Modales y la Estructura de Pinza (Klammer)",
+      "subtitle": "können, müssen, wollen, dürfen con infinitivo al final.",
+      "grammar": {
+        "formula": "Sujeto + VERBO MODAL (Pos. 2) + Complementos + INFINITIVO AL FINAL",
+        "explanation": "Los verbos modales expresan habilidad (können), obligación (müssen), voluntad (wollen) o permiso/prohibición (dürfen). Tienen singular irregular y forman una pinza (Satzklammer): el infinitivo del verbo principal se coloca al final de la frase.",
+        "keyPoints": [
+          {
+            "de": "Ich kann sehr gut Deutsch sprechen.",
+            "es": "Modal 'kann' en Posición 2 + infinitivo 'sprechen' al final."
+          },
+          {
+            "de": "Du musst heute die Hausaufgaben machen.",
+            "es": "Obligación: musst ... machen."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "können",
+          "es": "poder / saber hacer",
+          "gender": "verb",
+          "ex": "Kannst du Klavier spielen?"
+        },
+        {
+          "de": "müssen",
+          "es": "tener que / deber",
+          "gender": "verb",
+          "ex": "Ich muss jetzt zur Arbeit gehen."
+        },
+        {
+          "de": "wollen",
+          "es": "querer",
+          "gender": "verb",
+          "ex": "Wir wollen ein Eis essen."
+        },
+        {
+          "de": "dürfen",
+          "es": "tener permiso / poder",
+          "gender": "verb",
+          "ex": "Hier darf man nicht rauchen."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Construye la frase correcta con 'können':",
+          "options": [
+            "Ich kann schwimmen gut im Sommer.",
+            "Ich kann im Sommer gut schwimmen.",
+            "Ich will im Sommer gut schwimmt."
+          ],
+          "correct": 1,
+          "why": "El verbo modal va en posición 2 (kann) y el infinitivo (schwimmen) al final de la oración."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Hier ___ man nicht parken (prohibición).",
+          "options": [
+            "darf",
+            "will",
+            "kannst"
+          ],
+          "a": 0,
+          "exp": "La prohibición o falta de permiso se expresa con 'nicht dürfen' (darf man nicht)."
+        },
+        {
+          "q": "Er ___ heute lange arbeiten (müssen).",
+          "options": [
+            "muss",
+            "müsst",
+            "musst"
+          ],
+          "a": 0,
+          "exp": "La 1ª y 3ª persona de los modales coinciden y no llevan diéresis: ich muss, er muss."
+        },
+        {
+          "q": "¿Dónde se coloca el verbo principal cuando usamos un modal?",
+          "options": [
+            "Justo después del modal",
+            "Al final de la frase en infinitivo",
+            "En la posición 1"
+          ],
+          "a": 1,
+          "exp": "Estructura de pinza: el verbo principal va en infinitivo al final absoluto de la frase."
+        },
+        {
+          "q": "Wir ___ heute Abend ins Kino gehen (wollen).",
+          "options": [
+            "will",
+            "wollen",
+            "wollt"
+          ],
+          "a": 1,
+          "exp": "Para la persona 'wir', el verbo regulariza su forma: wir wollen."
+        }
+      ]
+    },
+    {
+      "id": "a1_u8",
+      "number": 8,
+      "title": "El Caso Dativo (Dativ - Objeto Indirecto)",
+      "subtitle": "dem, der, dem, den + n: responder a la pregunta ¿A quién? (Wem?).",
+      "grammar": {
+        "formula": "Masc: dem | Fem: der | Neut: dem | Plur: den + -n al sustantivo",
+        "explanation": "El Dativo corresponde al complemento indirecto y se usa también tras verbos específicos como helfen, danken, gefallen, gehören y schmecken. En plural, el sustantivo además añade una terminación '-n' si no la tiene ya.",
+        "keyPoints": [
+          {
+            "de": "Ich helfe dem Mann und der Frau.",
+            "es": "Masculino: dem Mann / Femenino: der Frau."
+          },
+          {
+            "de": "Das Essen schmeckt den Kindern gut.",
+            "es": "Plural Dativo: den + Kinder + n = den Kindern."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "helfen (+ Dat)",
+          "es": "ayudar",
+          "gender": "verb",
+          "ex": "Kann ich Ihnen helfen?"
+        },
+        {
+          "de": "danken (+ Dat)",
+          "es": "agradecer",
+          "gender": "verb",
+          "ex": "Ich danke dir für die Hilfe."
+        },
+        {
+          "de": "gefallen (+ Dat)",
+          "es": "gustar (estéticamente)",
+          "gender": "verb",
+          "ex": "Das Kleid gefällt mir sehr."
+        },
+        {
+          "de": "die Familie, -n",
+          "es": "la familia",
+          "gender": "die",
+          "ex": "Ich wohne bei meiner Familie."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'der Lehrer' es masculino. Completa: 'Ich antworte ___ Lehrer.'",
+          "options": [
+            "den",
+            "dem",
+            "des"
+          ],
+          "correct": 1,
+          "why": "'antworten' exige complemento en Dativo. El masculino 'der' pasa a 'dem'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Wie geht es ___? (du en Dativo)",
+          "options": [
+            "dich",
+            "dir",
+            "du"
+          ],
+          "a": 1,
+          "exp": "La expresión 'Wie geht es...?' exige Dativo: dir (a ti)."
+        },
+        {
+          "q": "Das Buch gehört ___ Kind (das Kind).",
+          "options": [
+            "dem",
+            "das",
+            "den"
+          ],
+          "a": 0,
+          "exp": "El género neutro (das) toma 'dem' en caso Dativo."
+        },
+        {
+          "q": "Ich gratuliere ___ Mutter zum Geburtstag (die Mutter).",
+          "options": [
+            "die",
+            "der",
+            "den"
+          ],
+          "a": 1,
+          "exp": "El género femenino (die) pasa a 'der' en Dativo."
+        },
+        {
+          "q": "¿Qué cambio sufre el plural en Dativo?",
+          "options": [
+            "Lleva 'die' y no cambia el sustantivo",
+            "Lleva 'den' y añade una '-n' al sustantivo",
+            "Lleva 'dem' y añade '-s'"
+          ],
+          "a": 1,
+          "exp": "En Dativo plural el artículo es 'den' y el sustantivo toma sufijo '-n' (den Freunden)."
+        }
+      ]
+    },
+    {
+      "id": "a1_u9",
+      "number": 9,
+      "title": "Preposiciones Fijas de Dativo y Expresiones Temporales",
+      "subtitle": "aus, bei, mit, nach, seit, von, zu y cómo decir fechas y horas.",
+      "grammar": {
+        "formula": "Preposiciones fijas con DATIVO: aus, bei, mit, nach, seit, von, zu",
+        "explanation": "Estas preposiciones NUNCA van con Acusativo ni Nominativo: siempre van acompañadas de Dativo. En el ámbito temporal: 'um' para horas exactas, 'am' para días de la semana y partes del día, e 'im' para meses y estaciones del año.",
+        "keyPoints": [
+          {
+            "de": "Ich fahre mit dem Bus / mit der U-Bahn.",
+            "es": "'mit' siempre exige Dativo (dem Bus, der U-Bahn)."
+          },
+          {
+            "de": "um 8:00 Uhr | am Montag | im Sommer",
+            "es": "um (hora), am (días), im (meses/estaciones)."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "mit (+ Dat)",
+          "es": "con (medio de transporte / compañía)",
+          "gender": "other",
+          "ex": "Ich reise mit dem Zug."
+        },
+        {
+          "de": "zu (+ Dat)",
+          "es": "hacia / a casa de",
+          "gender": "other",
+          "ex": "Ich gehe zum Arzt (zu + dem)."
+        },
+        {
+          "de": "der Bahnhof, ¨-e",
+          "es": "la estación de trenes",
+          "gender": "der",
+          "ex": "Wir treffen uns am Bahnhof."
+        },
+        {
+          "de": "der Monat, -e",
+          "es": "el mes",
+          "gender": "der",
+          "ex": "Im August habe ich Urlaub."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "'die Freundin' es femenino. Completa: 'Ich gehe heute mit ___ Freundin ins Kino.'",
+          "options": [
+            "meine",
+            "meiner",
+            "meinen"
+          ],
+          "correct": 1,
+          "why": "'mit' rige siempre Dativo. El posesivo femenino en Dativo es 'meiner'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Er fährt jeden Morgen mit ___ Fahrrad (das Fahrrad).",
+          "options": [
+            "das",
+            "dem",
+            "den"
+          ],
+          "a": 1,
+          "exp": "'mit' + neutro (das) = mit dem Fahrrad."
+        },
+        {
+          "q": "Der Deutschkurs beginnt ___ 19:00 Uhr.",
+          "options": [
+            "am",
+            "um",
+            "im"
+          ],
+          "a": 1,
+          "exp": "Las horas exactas se indican siempre con 'um'."
+        },
+        {
+          "q": "___ Samstag haben wir keine Schule.",
+          "options": [
+            "Am",
+            "Um",
+            "Im"
+          ],
+          "a": 0,
+          "exp": "Los días de la semana van acompañados de la preposición 'am'."
+        },
+        {
+          "q": "Ich komme gerade von ___ Arzt (der Arzt).",
+          "options": [
+            "dem",
+            "den",
+            "des"
+          ],
+          "a": 0,
+          "exp": "'von' rige Dativo: von + dem = vom (o von dem)."
+        }
+      ]
+    },
+    {
+      "id": "a1_u10",
+      "number": 10,
+      "title": "El Pasado Perfekt (Pasado Hablado)",
+      "subtitle": "Formación con haben / sein + Partizip II al final de la oración.",
+      "grammar": {
+        "formula": "Sujeto + haben/sein (Pos. 2) + Resto + PARTIZIP II (Final)",
+        "explanation": "El Perfekt es el tiempo de pasado más usado en la conversación diaria. Se forma con el presente de 'haben' o 'sein' en Posición 2 y el participio pasado al final de la frase. Se usa 'sein' cuando hay movimiento de un punto A a B (gehen, fahren, fliegen) o cambio de estado (aufstehen, sterben).",
+        "keyPoints": [
+          {
+            "de": "Ich habe Deutsch gelernt.",
+            "es": "Regular: ge- + lern + -t al final de la frase."
+          },
+          {
+            "de": "Er ist nach Berlin gefahren.",
+            "es": "Movimiento con 'sein': ist ... gefahren."
+          }
+        ]
+      },
+      "vocab": [
+        {
+          "de": "machen (hat gemacht)",
+          "es": "hacer",
+          "gender": "verb",
+          "ex": "Was hast du gestern gemacht?"
+        },
+        {
+          "de": "gehen (ist gegangen)",
+          "es": "ir / caminar",
+          "gender": "verb",
+          "ex": "Ich bin nach Hause gegangen."
+        },
+        {
+          "de": "essen (hat gegessen)",
+          "es": "comer",
+          "gender": "verb",
+          "ex": "Wir haben Pizza gegessen."
+        },
+        {
+          "de": "gestern",
+          "es": "ayer",
+          "gender": "other",
+          "ex": "Gestern habe ich gearbeitet."
+        }
+      ],
+      "practice": [
+        {
+          "prompt": "Elige la forma correcta en Perfekt: 'Gestern ___ ich meine Freunde ___.'",
+          "options": [
+            "habe / getroffen",
+            "bin / getroffen",
+            "habe / treffen"
+          ],
+          "correct": 0,
+          "why": "'treffen' (encontrar/quedar con alguien) se conjuga con el auxiliar 'haben' y su participio es 'getroffen'."
+        }
+      ],
+      "exam": [
+        {
+          "q": "Wann bist du heute Morgen ___? (aufstehen)",
+          "options": [
+            "aufgesteht",
+            "aufgestanden",
+            "aufstehen"
+          ],
+          "a": 1,
+          "exp": "El participio de aufstehen es 'aufgestanden' (intercala el 'ge-' tras el prefijo) y va con el auxiliar 'sein'."
+        },
+        {
+          "q": "Wir ___ gestern viel Spaß gehabt.",
+          "options": [
+            "sind",
+            "haben",
+            "hatten"
+          ],
+          "a": 1,
+          "exp": "El verbo haben en Perfekt usa el auxiliar 'haben': wir haben ... gehabt."
+        },
+        {
+          "q": "¿Qué verbos utilizan 'sein' como auxiliar en Perfekt?",
+          "options": [
+            "Verbos de movimiento de A a B o cambio de estado",
+            "Todos los verbos regulares",
+            "Verbos con acusativo"
+          ],
+          "a": 0,
+          "exp": "'sein' se reserva para desplazamiento espacial (gehen, fahren) y cambio de estado (aufstehen, einschlafen, werden)."
+        },
+        {
+          "q": "Wo ___ du letztes Jahr im Urlaub gewesen?",
+          "options": [
+            "hast",
+            "bist",
+            "warst"
+          ],
+          "a": 1,
+          "exp": "El participio 'gewesen' (de sein) utiliza siempre el auxiliar 'sein': du bist gewesen."
+        }
+      ]
+    }
+  ]
+}
