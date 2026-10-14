@@ -173,40 +173,40 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col selection:bg-duo-green selection:text-slate-950">
+<body class="min-h-screen flex flex-col selection:bg-duo-green selection:text-slate-950 overflow-x-hidden">
 
-    <div id="app" v-cloak class="min-h-screen flex flex-col">
+    <div id="app" v-cloak class="min-h-screen flex flex-col overflow-x-hidden">
 
         <!-- TOP BAR / HUD: RESPONSIVE NAV BAR (MOBILE-OPTIMIZED + DESKTOP POWER) -->
         <header class="sticky top-0 z-50 bg-[#0d1733]/95 backdrop-blur-md border-b-2 border-slate-800 shadow-xl">
             <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5">
 
-                <!-- FILA PRINCIPAL SUPERIOR -->
-                <div class="flex items-center justify-between gap-2 sm:gap-4">
+                <!-- FILA PRINCIPAL SUPERIOR (100% ADAPTADA A CUALQUIER PANTALLA) -->
+                <div class="flex items-center justify-between gap-1.5 sm:gap-4 w-full min-w-0">
 
                     <!-- Logo & Selector de Nivel A1 / A2 / B1 -->
-                    <div class="flex items-center gap-2 sm:gap-3">
-                        <div class="flex items-center gap-2 cursor-pointer shrink-0" @click="jumpToNextPendingStep">
-                            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-duo-green via-emerald-500 to-babbel-teal flex items-center justify-center text-white text-xl sm:text-2xl font-black shadow-[0_3px_0_0_#3d8c02] transform hover:rotate-3 transition">
+                    <div class="flex items-center gap-1.5 sm:gap-3 min-w-0 shrink">
+                        <div class="flex items-center gap-1.5 sm:gap-2 cursor-pointer shrink-0" @click="jumpToNextPendingStep">
+                            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-duo-green via-emerald-500 to-babbel-teal flex items-center justify-center text-white text-lg sm:text-2xl font-black shadow-[0_2px_0_0_#3d8c02] sm:shadow-[0_3px_0_0_#3d8c02] transform hover:rotate-3 transition shrink-0">
                                 🇩🇪
                             </div>
-                            <div>
-                                <div class="flex items-center gap-1.5">
-                                    <h1 class="font-black text-base sm:text-xl tracking-tight text-white flex items-center">
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-1">
+                                    <h1 class="font-black text-sm sm:text-xl tracking-tight text-white flex items-center">
                                         Deutsch<span class="text-duo-green">Path</span>
                                     </h1>
-                                    <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline-block">
+                                    <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 hidden md:inline-block">
                                         {{ dataSourceLabel }}
                                     </span>
                                 </div>
-                                <p class="text-[10px] font-bold text-slate-400 hidden md:block">
+                                <p class="text-[10px] font-bold text-slate-400 hidden lg:block truncate">
                                     Gamificación Duolingo + Rigor Gramatical Babbel
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Selector A1 / A2 / B1 estilo cápsulas 3D -->
-                        <div class="flex items-center bg-slate-900/90 p-0.5 sm:p-1 rounded-2xl border-2 border-slate-800 shrink-0">
+                        <!-- Selector A1 / A2 / B1 estilo cápsulas 3D (visible en pantallas sm y superiores) -->
+                        <div class="hidden sm:flex items-center bg-slate-900/90 p-0.5 sm:p-1 rounded-2xl border-2 border-slate-800 shrink-0">
                             <button @click="switchLevel('A1')"
                                 :class="currentLevel === 'A1' 
                                     ? 'bg-duo-green text-slate-950 font-black shadow-[0_2px_0_0_#46a302]' 
@@ -250,7 +250,7 @@
                     </div>
 
                     <!-- Controles Derecha: Badges + Botones Desktop + Menú Móvil -->
-                    <div class="flex items-center gap-1.5 sm:gap-2">
+                    <div class="flex items-center gap-1 sm:gap-2 shrink-0">
 
                         <!-- Racha de Días (Streak Duolingo) -->
                         <div class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-slate-900 border-2 border-amber-500/40 flex items-center gap-1 sm:gap-1.5 text-xs font-black text-amber-400 shadow-[0_2px_0_0_#b45309] shrink-0"
@@ -333,13 +333,13 @@
                             </button>
                         </div>
 
-                        <!-- BOTÓN MENÚ MÓVIL (Visible en pantallas < xl) -->
+                        <!-- BOTÓN MENÚ MÓVIL (Compacto en móvil, con etiqueta en sm) -->
                         <button @click="mobileMenuOpen = !mobileMenuOpen"
-                            class="xl:hidden btn-3d px-3 py-1 sm:py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-white font-black text-xs flex items-center gap-1.5 cursor-pointer"
+                            class="xl:hidden btn-3d w-8 h-8 sm:w-auto sm:px-3 sm:py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border-2 border-slate-700 text-white font-black text-xs flex items-center justify-center gap-1.5 shrink-0 cursor-pointer"
                             :class="mobileMenuOpen ? 'border-teal-400 text-teal-300' : ''"
                             title="Abrir menú de herramientas y configuración">
-                            <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-sm' : 'fa-bars text-sm'"></i>
-                            <span class="text-[11px] font-black uppercase">Menú</span>
+                            <i class="fa-solid" :class="mobileMenuOpen ? 'fa-xmark text-sm text-rose-400' : 'fa-bars text-sm text-teal-400'"></i>
+                            <span class="text-[11px] font-black uppercase hidden sm:inline">Menú</span>
                         </button>
                     </div>
 
@@ -347,6 +347,27 @@
 
                 <!-- SUB-BARRA HORIZONTAL TÁCTIL EN MÓVIL Y TABLET (Swipeable Quick Actions) -->
                 <div class="xl:hidden flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-2 mt-1.5 border-t border-slate-800/80 scroll-smooth">
+                    <!-- Selector de nivel móvil en 1 toque directo -->
+                    <div class="sm:hidden flex items-center bg-slate-950 p-0.5 rounded-xl border border-slate-800 shrink-0">
+                        <button @click="switchLevel('A1')"
+                            :class="currentLevel === 'A1' ? 'bg-duo-green text-slate-950 font-black shadow-[0_2px_0_0_#46a302]' : 'text-slate-400 hover:text-white font-bold'"
+                            class="px-2 py-0.5 rounded-lg text-xs transition cursor-pointer">
+                            🟢 A1
+                        </button>
+                        <button @click="switchLevel('A2')"
+                            :class="currentLevel === 'A2' ? 'bg-duo-blue text-white font-black shadow-[0_2px_0_0_#1899d6]' : 'text-slate-400 hover:text-white font-bold'"
+                            class="px-2 py-0.5 rounded-lg text-xs transition cursor-pointer">
+                            🔵 A2
+                        </button>
+                        <button @click="switchLevel('B1')"
+                            :class="currentLevel === 'B1' ? 'bg-purple-600 text-white font-black shadow-[0_2px_0_0_#581c87]' : 'text-slate-400 hover:text-white font-bold'"
+                            class="px-2 py-0.5 rounded-lg text-xs transition cursor-pointer">
+                            🟣 B1
+                        </button>
+                    </div>
+
+                    <div class="sm:hidden h-4 w-px bg-slate-800 shrink-0 mx-0.5"></div>
+
                     <button @click="openCheatSheetTab('aduso')"
                         class="btn-3d px-2.5 py-1 rounded-xl bg-duo-yellow hover:bg-duo-yellowDark text-slate-950 text-[11px] font-black shrink-0 flex items-center gap-1 shadow-[0_2px_0_0_#ca8a04] cursor-pointer">
                         <i class="fa-solid fa-bolt text-[10px]"></i>
