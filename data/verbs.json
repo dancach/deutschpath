@@ -9,7 +9,11 @@
     "praeteritum": "war",
     "partizip2": "gewesen",
     "case": "Nominativ",
-    "tags": ["sein", "auxiliar", "irregular"],
+    "tags": [
+      "sein",
+      "auxiliar",
+      "irregular"
+    ],
     "example_de": "Ich bin heute sehr müde, aber glücklich.",
     "example_es": "Hoy estoy muy cansado, pero feliz."
   },
@@ -23,7 +27,11 @@
     "praeteritum": "hatte",
     "partizip2": "gehabt",
     "case": "Akkusativ",
-    "tags": ["haben", "auxiliar", "irregular"],
+    "tags": [
+      "haben",
+      "auxiliar",
+      "irregular"
+    ],
     "example_de": "Hast du heute Abend Zeit für mich?",
     "example_es": "¿Tienes tiempo para mí esta tarde/noche?"
   },
@@ -37,7 +45,12 @@
     "praeteritum": "wurde",
     "partizip2": "geworden",
     "case": "Nominativ",
-    "tags": ["sein", "auxiliar", "irregular", "pasiva"],
+    "tags": [
+      "sein",
+      "auxiliar",
+      "irregular",
+      "pasiva"
+    ],
     "example_de": "Im Winter wird es sehr früh dunkel.",
     "example_es": "En invierno oscurece muy temprano."
   },
@@ -51,7 +64,10 @@
     "praeteritum": "konnte",
     "partizip2": "gekonnt",
     "case": "Infinitiv",
-    "tags": ["modal", "klammer"],
+    "tags": [
+      "modal",
+      "klammer"
+    ],
     "example_de": "Kannst du mir bitte kurz helfen?",
     "example_es": "¿Puedes ayudarme brevemente, por favor?"
   },
@@ -65,7 +81,10 @@
     "praeteritum": "musste",
     "partizip2": "gemusst",
     "case": "Infinitiv",
-    "tags": ["modal", "klammer"],
+    "tags": [
+      "modal",
+      "klammer"
+    ],
     "example_de": "Ich muss morgen früh zur Arbeit aufstehen.",
     "example_es": "Mañana tengo que levantarme temprano para trabajar."
   },
@@ -79,7 +98,10 @@
     "praeteritum": "wollte",
     "partizip2": "gewollt",
     "case": "Infinitiv",
-    "tags": ["modal", "klammer"],
+    "tags": [
+      "modal",
+      "klammer"
+    ],
     "example_de": "Wir wollen im Sommer nach Deutschland reisen.",
     "example_es": "Queremos viajar a Alemania en verano."
   },
@@ -93,7 +115,10 @@
     "praeteritum": "durfte",
     "partizip2": "gedurft",
     "case": "Infinitiv",
-    "tags": ["modal", "klammer"],
+    "tags": [
+      "modal",
+      "klammer"
+    ],
     "example_de": "Hier darf man nicht parken.",
     "example_es": "Aquí no se permite aparcar."
   },
@@ -107,7 +132,10 @@
     "praeteritum": "sollte",
     "partizip2": "gesollt",
     "case": "Infinitiv",
-    "tags": ["modal", "klammer"],
+    "tags": [
+      "modal",
+      "klammer"
+    ],
     "example_de": "Der Arzt sagt, ich soll viel Wasser trinken.",
     "example_es": "El médico dice que debo beber mucha agua."
   },
@@ -121,7 +149,10 @@
     "praeteritum": "wollte",
     "partizip2": "gemocht",
     "case": "Akk / Infinitiv",
-    "tags": ["modal", "cortesia"],
+    "tags": [
+      "modal",
+      "cortesia"
+    ],
     "example_de": "Ich möchte bitte einen Kaffee ohne Zucker.",
     "example_es": "Quisiera por favor un café sin azúcar."
   },
@@ -135,7 +166,10 @@
     "praeteritum": "wusste",
     "partizip2": "gewusst",
     "case": "Akkusativ",
-    "tags": ["irregular", "dato"],
+    "tags": [
+      "irregular",
+      "dato"
+    ],
     "example_de": "Weißt du, wann der nächste Zug abfährt?",
     "example_es": "¿Sabes cuándo sale el próximo tren?"
   },
@@ -149,7 +183,11 @@
     "praeteritum": "ging",
     "partizip2": "gegangen",
     "case": "Wohin? (Akk/prep)",
-    "tags": ["sein", "movimiento", "irregular"],
+    "tags": [
+      "sein",
+      "movimiento",
+      "irregular"
+    ],
     "example_de": "Wir gehen heute Abend ins Kino.",
     "example_es": "Vamos al cine esta tarde/noche."
   },
@@ -163,7 +201,12 @@
     "praeteritum": "fuhr",
     "partizip2": "gefahren",
     "case": "Wohin? (Akk/prep)",
-    "tags": ["sein", "movimiento", "vokalwechsel", "irregular"],
+    "tags": [
+      "sein",
+      "movimiento",
+      "vokalwechsel",
+      "irregular"
+    ],
     "example_de": "Fährst du mit dem Zug oder mit dem Auto?",
     "example_es": "¿Vas en tren o en coche?"
   },
@@ -177,7 +220,11 @@
     "praeteritum": "kam",
     "partizip2": "gekommen",
     "case": "Woher? (aus / von)",
-    "tags": ["sein", "movimiento", "irregular"],
+    "tags": [
+      "sein",
+      "movimiento",
+      "irregular"
+    ],
     "example_de": "Woher kommst du? — Ich komme aus Spanien.",
     "example_es": "¿De dónde vienes? — Vengo de España."
   },
@@ -191,7 +238,11 @@
     "praeteritum": "blieb",
     "partizip2": "geblieben",
     "case": "Wo? (Dativ)",
-    "tags": ["sein", "estatico", "irregular"],
+    "tags": [
+      "sein",
+      "estatico",
+      "irregular"
+    ],
     "example_de": "Heute bleibe ich wegen des Regens zu Hause.",
     "example_es": "Hoy me quedo en casa debido a la lluvia."
   },
@@ -205,7 +256,11 @@
     "praeteritum": "sah",
     "partizip2": "gesehen",
     "case": "Akkusativ",
-    "tags": ["vokalwechsel", "irregular", "akkusativ"],
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Siehst du den Mann dort drüben?",
     "example_es": "¿Ves al hombre de ahí enfrente?"
   },
@@ -219,7 +274,11 @@
     "praeteritum": "las",
     "partizip2": "gelesen",
     "case": "Akkusativ",
-    "tags": ["vokalwechsel", "irregular", "akkusativ"],
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Er liest jeden Abend vor dem Schlafen ein Buch.",
     "example_es": "Él lee un libro todas las noches antes de dormir."
   },
@@ -233,7 +292,10 @@
     "praeteritum": "sprach",
     "partizip2": "gesprochen",
     "case": "mit + Dat / über + Akk",
-    "tags": ["vokalwechsel", "irregular"],
+    "tags": [
+      "vokalwechsel",
+      "irregular"
+    ],
     "example_de": "Sprechen Sie bitte etwas langsamer.",
     "example_es": "Hable un poco más despacio, por favor."
   },
@@ -247,7 +309,12 @@
     "praeteritum": "gab",
     "partizip2": "gegeben",
     "case": "Dativ (persona) + Akkusativ (cosa)",
-    "tags": ["vokalwechsel", "irregular", "dativ", "akkusativ"],
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "dativ",
+      "akkusativ"
+    ],
     "example_de": "Es gibt viele schöne Museen in Wien.",
     "example_es": "Hay muchos museos hermosos en Viena."
   },
@@ -261,7 +328,11 @@
     "praeteritum": "nahm",
     "partizip2": "genommen",
     "case": "Akkusativ",
-    "tags": ["vokalwechsel", "irregular", "akkusativ"],
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Ich nehme die U-Bahnlinie 2.",
     "example_es": "Tomo la línea 2 del metro."
   },
@@ -275,7 +346,11 @@
     "praeteritum": "aß",
     "partizip2": "gegessen",
     "case": "Akkusativ",
-    "tags": ["vokalwechsel", "irregular", "akkusativ"],
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Was isst du gern zum Frühstück?",
     "example_es": "¿Qué te gusta comer en el desayuno?"
   },
@@ -289,7 +364,10 @@
     "praeteritum": "trank",
     "partizip2": "getrunken",
     "case": "Akkusativ",
-    "tags": ["irregular", "akkusativ"],
+    "tags": [
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Er trinkt jeden Tag zwei Liter Wasser.",
     "example_es": "Él bebe dos litros de agua todos los días."
   },
@@ -303,7 +381,10 @@
     "praeteritum": "schlief",
     "partizip2": "geschlafen",
     "case": "intransitiv",
-    "tags": ["vokalwechsel", "irregular"],
+    "tags": [
+      "vokalwechsel",
+      "irregular"
+    ],
     "example_de": "Am Wochenende schlafe ich gerne etwas länger.",
     "example_es": "El fin de semana me gusta dormir un poco más."
   },
@@ -317,7 +398,11 @@
     "praeteritum": "half",
     "partizip2": "geholfen",
     "case": "DATIVO OBLIGATORIO",
-    "tags": ["dativ", "vokalwechsel", "irregular"],
+    "tags": [
+      "dativ",
+      "vokalwechsel",
+      "irregular"
+    ],
     "example_de": "Kann ich Ihnen helfen? — Ja, danke!",
     "example_es": "¿Puedo ayudarle? — ¡Sí, gracias!"
   },
@@ -331,7 +416,10 @@
     "praeteritum": "dankte",
     "partizip2": "gedankt",
     "case": "DATIVO OBLIGATORIO",
-    "tags": ["dativ", "regular"],
+    "tags": [
+      "dativ",
+      "regular"
+    ],
     "example_de": "Ich danke dir herzlich für deine Unterstützung.",
     "example_es": "Te agradezco de corazón por tu apoyo."
   },
@@ -345,7 +433,11 @@
     "praeteritum": "gefiel",
     "partizip2": "gefallen",
     "case": "DATIVO (persona)",
-    "tags": ["dativ", "vokalwechsel", "irregular"],
+    "tags": [
+      "dativ",
+      "vokalwechsel",
+      "irregular"
+    ],
     "example_de": "Die Stadt Berlin gefällt mir sehr.",
     "example_es": "La ciudad de Berlín me gusta mucho."
   },
@@ -359,7 +451,10 @@
     "praeteritum": "gehörte",
     "partizip2": "gehört",
     "case": "DATIVO OBLIGATORIO",
-    "tags": ["dativ", "regular"],
+    "tags": [
+      "dativ",
+      "regular"
+    ],
     "example_de": "Wem gehört dieses Buch? — Es gehört mir.",
     "example_es": "¿A quién le pertenece este libro? — Me pertenece a mí."
   },
@@ -373,7 +468,10 @@
     "praeteritum": "schmeckte",
     "partizip2": "geschmeckt",
     "case": "DATIVO (persona)",
-    "tags": ["dativ", "regular"],
+    "tags": [
+      "dativ",
+      "regular"
+    ],
     "example_de": "Schmeckt dir die Suppe? — Ja, ausgezeichnet!",
     "example_es": "¿Te gusta la sopa? — ¡Sí, excelente!"
   },
@@ -387,7 +485,10 @@
     "praeteritum": "passte",
     "partizip2": "gepasst",
     "case": "DATIVO OBLIGATORIO",
-    "tags": ["dativ", "regular"],
+    "tags": [
+      "dativ",
+      "regular"
+    ],
     "example_de": "Passt es dir am Dienstag um 15 Uhr?",
     "example_es": "¿Te viene bien el martes a las 15:00?"
   },
@@ -401,7 +502,11 @@
     "praeteritum": "stand auf",
     "partizip2": "aufgestanden",
     "case": "intransitiv",
-    "tags": ["sein", "trennbar", "irregular"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular"
+    ],
     "example_de": "Ich stehe jeden Tag um sieben Uhr auf.",
     "example_es": "Me levanto todos los días a las siete en punto."
   },
@@ -415,7 +520,11 @@
     "praeteritum": "rief an",
     "partizip2": "angerufen",
     "case": "Akkusativ (persona)",
-    "tags": ["trennbar", "irregular", "akkusativ"],
+    "tags": [
+      "trennbar",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Ich rufe dich heute Nachmittag an.",
     "example_es": "Te llamo esta tarde."
   },
@@ -429,7 +538,10 @@
     "praeteritum": "kaufte ein",
     "partizip2": "eingekauft",
     "case": "Akkusativ",
-    "tags": ["trennbar", "regular"],
+    "tags": [
+      "trennbar",
+      "regular"
+    ],
     "example_de": "Am Samstag kaufen wir im Supermarkt ein.",
     "example_es": "El sábado hacemos las compras en el supermercado."
   },
@@ -443,7 +555,11 @@
     "praeteritum": "kam mit",
     "partizip2": "mitgekommen",
     "case": "intransitiv",
-    "tags": ["sein", "trennbar", "irregular"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular"
+    ],
     "example_de": "Kommst du heute mit ins Restaurant?",
     "example_es": "¿Te vienes hoy con nosotros al restaurante?"
   },
@@ -457,7 +573,12 @@
     "praeteritum": "fuhr ab",
     "partizip2": "abgefahren",
     "case": "intransitiv",
-    "tags": ["sein", "trennbar", "irregular", "vokalwechsel"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular",
+      "vokalwechsel"
+    ],
     "example_de": "Der Zug fährt um Punkt 10:15 Uhr ab.",
     "example_es": "El tren sale en punto a las 10:15."
   },
@@ -471,7 +592,11 @@
     "praeteritum": "kam an",
     "partizip2": "angekommen",
     "case": "Wo? (in + Dat)",
-    "tags": ["sein", "trennbar", "irregular"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular"
+    ],
     "example_de": "Wann kommt der Flug in Frankfurt an?",
     "example_es": "¿Cuándo llega el vuelo a Fráncfort?"
   },
@@ -485,7 +610,11 @@
     "praeteritum": "stieg ein",
     "partizip2": "eingestiegen",
     "case": "in + Akk",
-    "tags": ["sein", "trennbar", "irregular"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular"
+    ],
     "example_de": "Bitte alle schnell einsteigen, die Türen schließen!",
     "example_es": "¡Por favor, suban todos rápido, las puertas se cierran!"
   },
@@ -499,7 +628,11 @@
     "praeteritum": "stieg aus",
     "partizip2": "ausgestiegen",
     "case": "an + Dat",
-    "tags": ["sein", "trennbar", "irregular"],
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular"
+    ],
     "example_de": "An der nächsten Haltestelle müssen wir aussteigen.",
     "example_es": "En la próxima parada tenemos que bajar."
   },
@@ -513,7 +646,12 @@
     "praeteritum": "stand",
     "partizip2": "gestanden",
     "case": "Wo? + DATIVO",
-    "tags": ["wechselpraeposition", "estatico", "dativ", "irregular"],
+    "tags": [
+      "wechselpraeposition",
+      "estatico",
+      "dativ",
+      "irregular"
+    ],
     "example_de": "Die Flasche steht auf dem Küchentisch.",
     "example_es": "La botella está de pie sobre la mesa de la cocina."
   },
@@ -527,7 +665,12 @@
     "praeteritum": "stellte",
     "partizip2": "gestellt",
     "case": "Wohin? + ACUSATIVO",
-    "tags": ["wechselpraeposition", "dinamico", "akkusativ", "regular"],
+    "tags": [
+      "wechselpraeposition",
+      "dinamico",
+      "akkusativ",
+      "regular"
+    ],
     "example_de": "Ich stelle die Flasche auf den Tisch.",
     "example_es": "Pongo la botella (de pie) sobre la mesa."
   },
@@ -541,7 +684,12 @@
     "praeteritum": "lag",
     "partizip2": "gelegen",
     "case": "Wo? + DATIVO",
-    "tags": ["wechselpraeposition", "estatico", "dativ", "irregular"],
+    "tags": [
+      "wechselpraeposition",
+      "estatico",
+      "dativ",
+      "irregular"
+    ],
     "example_de": "Das Buch liegt unter dem Sofa.",
     "example_es": "El libro está (tumbado) debajo del sofá."
   },
@@ -555,7 +703,12 @@
     "praeteritum": "legte",
     "partizip2": "gelegt",
     "case": "Wohin? + ACUSATIVO",
-    "tags": ["wechselpraeposition", "dinamico", "akkusativ", "regular"],
+    "tags": [
+      "wechselpraeposition",
+      "dinamico",
+      "akkusativ",
+      "regular"
+    ],
     "example_de": "Ich lege das Buch auf das Sofa.",
     "example_es": "Coloco el libro (en horizontal) sobre el sofá."
   },
@@ -569,7 +722,12 @@
     "praeteritum": "saß",
     "partizip2": "gesessen",
     "case": "Wo? + DATIVO",
-    "tags": ["wechselpraeposition", "estatico", "dativ", "irregular"],
+    "tags": [
+      "wechselpraeposition",
+      "estatico",
+      "dativ",
+      "irregular"
+    ],
     "example_de": "Der Hund sitzt neben der Tür.",
     "example_es": "El perro está sentado al lado de la puerta."
   },
@@ -583,7 +741,12 @@
     "praeteritum": "setzte",
     "partizip2": "gesetzt",
     "case": "Wohin? + ACUSATIVO",
-    "tags": ["wechselpraeposition", "dinamico", "akkusativ", "reflexiv"],
+    "tags": [
+      "wechselpraeposition",
+      "dinamico",
+      "akkusativ",
+      "reflexiv"
+    ],
     "example_de": "Setz dich bitte auf den Stuhl!",
     "example_es": "¡Siéntate en la silla, por favor!"
   },
@@ -597,7 +760,12 @@
     "praeteritum": "hing",
     "partizip2": "gehangen",
     "case": "Wo? + DATIVO",
-    "tags": ["wechselpraeposition", "estatico", "dativ", "irregular"],
+    "tags": [
+      "wechselpraeposition",
+      "estatico",
+      "dativ",
+      "irregular"
+    ],
     "example_de": "Das Bild hängt an der Wand.",
     "example_es": "El cuadro está colgado en la pared."
   },
@@ -611,7 +779,12 @@
     "praeteritum": "hängte",
     "partizip2": "gehängt",
     "case": "Wohin? + ACUSATIVO",
-    "tags": ["wechselpraeposition", "dinamico", "akkusativ", "regular"],
+    "tags": [
+      "wechselpraeposition",
+      "dinamico",
+      "akkusativ",
+      "regular"
+    ],
     "example_de": "Ich hänge das Bild an die Wand.",
     "example_es": "Cuelgo el cuadro en la pared."
   },
@@ -625,7 +798,11 @@
     "praeteritum": "freute sich",
     "partizip2": "sich gefreut",
     "case": "auf/über + Akkusativ",
-    "tags": ["reflexiv", "praeposition", "regular"],
+    "tags": [
+      "reflexiv",
+      "praeposition",
+      "regular"
+    ],
     "example_de": "Ich freue mich sehr auf meinen Urlaub nächste Woche.",
     "example_es": "Me alegro mucho por mis vacaciones de la próxima semana."
   },
@@ -639,7 +816,11 @@
     "praeteritum": "interessierte sich",
     "partizip2": "sich interessiert",
     "case": "für + Akkusativ",
-    "tags": ["reflexiv", "praeposition", "regular"],
+    "tags": [
+      "reflexiv",
+      "praeposition",
+      "regular"
+    ],
     "example_de": "Interessierst du dich für deutsche Geschichte?",
     "example_es": "¿Te interesas por la historia alemana?"
   },
@@ -653,7 +834,10 @@
     "praeteritum": "fühlte sich",
     "partizip2": "sich gefühlt",
     "case": "Adjektiv",
-    "tags": ["reflexiv", "regular"],
+    "tags": [
+      "reflexiv",
+      "regular"
+    ],
     "example_de": "Wie fühlst du dich heute? — Viel besser!",
     "example_es": "¿Cómo te sientes hoy? — ¡Mucho mejor!"
   },
@@ -667,7 +851,10 @@
     "praeteritum": "beeilte sich",
     "partizip2": "sich beeilt",
     "case": "intransitiv",
-    "tags": ["reflexiv", "regular"],
+    "tags": [
+      "reflexiv",
+      "regular"
+    ],
     "example_de": "Wir müssen uns beeilen, der Bus kommt gleich.",
     "example_es": "Tenemos que darnos prisa, el autobús llega enseguida."
   },
@@ -681,7 +868,11 @@
     "praeteritum": "erinnerte sich",
     "partizip2": "sich erinnert",
     "case": "an + Akkusativ",
-    "tags": ["reflexiv", "praeposition", "regular"],
+    "tags": [
+      "reflexiv",
+      "praeposition",
+      "regular"
+    ],
     "example_de": "Erinnerst du dich an unseren ersten Tag in München?",
     "example_es": "¿Te acuerdas de nuestro primer día en Múnich?"
   },
@@ -695,7 +886,10 @@
     "praeteritum": "wartete",
     "partizip2": "gewartet",
     "case": "auf + Akkusativ",
-    "tags": ["praeposition", "regular"],
+    "tags": [
+      "praeposition",
+      "regular"
+    ],
     "example_de": "Ich warte schon seit 20 Minuten auf den Bus.",
     "example_es": "Llevo ya 20 minutos esperando el autobús."
   },
@@ -709,7 +903,10 @@
     "praeteritum": "dachte",
     "partizip2": "gedacht",
     "case": "an + Akkusativ",
-    "tags": ["praeposition", "irregular"],
+    "tags": [
+      "praeposition",
+      "irregular"
+    ],
     "example_de": "Woran denkst du gerade? — An meine Familie.",
     "example_es": "¿En qué estás pensando ahora mismo? — En mi familia."
   },
@@ -723,7 +920,10 @@
     "praeteritum": "bat",
     "partizip2": "gebeten",
     "case": "Akk (persona) + um + Akk (cosa)",
-    "tags": ["praeposition", "irregular"],
+    "tags": [
+      "praeposition",
+      "irregular"
+    ],
     "example_de": "Darf ich Sie um einen Gefallen bitten?",
     "example_es": "¿Puedo pedirle un favor?"
   },
@@ -737,7 +937,11 @@
     "praeteritum": "träumte",
     "partizip2": "geträumt",
     "case": "von + DATIV",
-    "tags": ["praeposition", "dativ", "regular"],
+    "tags": [
+      "praeposition",
+      "dativ",
+      "regular"
+    ],
     "example_de": "Ich träume von einer Weltreise.",
     "example_es": "Sueño con un viaje alrededor del mundo."
   },
@@ -751,7 +955,12 @@
     "praeteritum": "nahm teil",
     "partizip2": "teilgenommen",
     "case": "an + DATIV",
-    "tags": ["trennbar", "irregular", "dativ", "praeposition"],
+    "tags": [
+      "trennbar",
+      "irregular",
+      "dativ",
+      "praeposition"
+    ],
     "example_de": "Wer möchte am Deutschkurs teilnehmen?",
     "example_es": "¿Quién desea participar en el curso de alemán?"
   },
@@ -765,7 +974,10 @@
     "praeteritum": "suchte",
     "partizip2": "gesucht",
     "case": "Akkusativ / nach + Dat",
-    "tags": ["regular", "akkusativ"],
+    "tags": [
+      "regular",
+      "akkusativ"
+    ],
     "example_de": "Ich suche meine Brille, hast du sie gesehen?",
     "example_es": "Estoy buscando mis gafas, ¿las has visto?"
   },
@@ -779,7 +991,10 @@
     "praeteritum": "fand",
     "partizip2": "gefunden",
     "case": "Akkusativ",
-    "tags": ["irregular", "akkusativ"],
+    "tags": [
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Wie findest du die neue Wohnung? — Sehr schön!",
     "example_es": "¿Qué te parece el nuevo piso? — ¡Muy bonito!"
   },
@@ -793,7 +1008,9 @@
     "praeteritum": "arbeitete",
     "partizip2": "gearbeitet",
     "case": "bei + Dat / als + Nom",
-    "tags": ["regular"],
+    "tags": [
+      "regular"
+    ],
     "example_de": "Er arbeitet als Ingenieur bei Siemens.",
     "example_es": "Trabaja como ingeniero en Siemens."
   },
@@ -807,7 +1024,9 @@
     "praeteritum": "lernte",
     "partizip2": "gelernt",
     "case": "Akkusativ",
-    "tags": ["regular"],
+    "tags": [
+      "regular"
+    ],
     "example_de": "Ich lerne seit drei Monaten fleißig Deutsch.",
     "example_es": "Llevo tres meses aprendiendo alemán aplicadamente."
   },
@@ -821,7 +1040,10 @@
     "praeteritum": "wohnte",
     "partizip2": "gewohnt",
     "case": "in + Dativ",
-    "tags": ["regular", "wo"],
+    "tags": [
+      "regular",
+      "wo"
+    ],
     "example_de": "Meine Eltern wohnen in einem kleinen Haus auf dem Land.",
     "example_es": "Mis padres viven en una casa pequeña en el campo."
   },
@@ -835,7 +1057,10 @@
     "praeteritum": "brauchte",
     "partizip2": "gebraucht",
     "case": "Akkusativ",
-    "tags": ["regular", "akkusativ"],
+    "tags": [
+      "regular",
+      "akkusativ"
+    ],
     "example_de": "Brauchst du noch Hilfe bei den Hausaufgaben?",
     "example_es": "¿Todavía necesitas ayuda con los deberes?"
   },
@@ -849,7 +1074,10 @@
     "praeteritum": "kaufte",
     "partizip2": "gekauft",
     "case": "Akkusativ",
-    "tags": ["regular", "akkusativ"],
+    "tags": [
+      "regular",
+      "akkusativ"
+    ],
     "example_de": "Ich kaufe morgen ein neues Handy.",
     "example_es": "Mañana compro un móvil nuevo."
   },
@@ -863,7 +1091,11 @@
     "praeteritum": "verstand",
     "partizip2": "verstanden",
     "case": "Akkusativ",
-    "tags": ["nicht-trennbar", "irregular", "akkusativ"],
+    "tags": [
+      "nicht-trennbar",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Entschuldigung, ich habe das nicht ganz verstanden.",
     "example_es": "Disculpe, no he entendido eso del todo."
   },
@@ -877,7 +1109,10 @@
     "praeteritum": "begann",
     "partizip2": "begonnen",
     "case": "mit + Dat",
-    "tags": ["nicht-trennbar", "irregular"],
+    "tags": [
+      "nicht-trennbar",
+      "irregular"
+    ],
     "example_de": "Der Kurs beginnt pünktlich um 9 Uhr.",
     "example_es": "El curso empieza puntualmente a las 9:00."
   },
@@ -891,7 +1126,11 @@
     "praeteritum": "verlor",
     "partizip2": "verloren",
     "case": "Akkusativ",
-    "tags": ["nicht-trennbar", "irregular", "akkusativ"],
+    "tags": [
+      "nicht-trennbar",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Ich habe meinen Schlüssel im Park verloren.",
     "example_es": "He perdido mi llave en el parque."
   },
@@ -905,7 +1144,11 @@
     "praeteritum": "gewann",
     "partizip2": "gewonnen",
     "case": "Akkusativ",
-    "tags": ["nicht-trennbar", "irregular", "akkusativ"],
+    "tags": [
+      "nicht-trennbar",
+      "irregular",
+      "akkusativ"
+    ],
     "example_de": "Unsere Mannschaft hat das Finale gewonnen!",
     "example_es": "¡Nuestro equipo ha ganado la final!"
   },
@@ -919,8 +1162,558 @@
     "praeteritum": "bezahlte",
     "partizip2": "bezahlt",
     "case": "Akkusativ",
-    "tags": ["nicht-trennbar", "regular", "akkusativ"],
+    "tags": [
+      "nicht-trennbar",
+      "regular",
+      "akkusativ"
+    ],
     "example_de": "Kann ich hier mit Karte bezahlen?",
     "example_es": "¿Puedo pagar aquí con tarjeta?"
+  },
+  {
+    "infinitiv": "vorhaben",
+    "translation": "tener planeado, tener la intención de (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "hat vor (ich habe vor, du hast vor)",
+    "praeteritum": "hatte vor",
+    "partizip2": "vorgehabt",
+    "case": "+ zu + Infinitiv / Akkusativ",
+    "tags": [
+      "trennbar",
+      "irregular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Maria hat vor, im Juni für eine Woche nach Berlin zu fahren.",
+    "example_es": "Maria tiene pensado ir en junio una semana a Berlín."
+  },
+  {
+    "infinitiv": "vorschlagen",
+    "translation": "proponer, sugerir (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "schlägt vor (du schlägst vor)",
+    "praeteritum": "schlug vor",
+    "partizip2": "vorgeschlagen",
+    "case": "Dativ (persona) + zu + Infinitiv / Akk",
+    "tags": [
+      "trennbar",
+      "vokalwechsel",
+      "irregular",
+      "dativ",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Anna schlägt vor, Museen und Konzerte in Berlin zu besuchen.",
+    "example_es": "Anna propone visitar museos y conciertos en Berlín."
+  },
+  {
+    "infinitiv": "sich entschließen",
+    "translation": "decidirse a, tomar la resolución de (Kap. 1)",
+    "level": "B1",
+    "type": "reflexive",
+    "auxiliary": "hat",
+    "praesens": "entschließt sich",
+    "praeteritum": "entschloss sich",
+    "partizip2": "sich entschlossen",
+    "case": "zu + Dativ / + zu + Infinitiv",
+    "tags": [
+      "reflexiv",
+      "irregular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Ich habe mich zu diesem Aufenthalt auf der Alm entschlossen.",
+    "example_es": "Me he decidido a realizar esta estancia en la pradera alpina."
+  },
+  {
+    "infinitiv": "sich entscheiden",
+    "translation": "decidirse (por algo), tomar una decisión (Kap. 1)",
+    "level": "B1",
+    "type": "reflexive",
+    "auxiliary": "hat",
+    "praesens": "entscheidet sich",
+    "praeteritum": "entschied sich",
+    "partizip2": "sich entschieden",
+    "case": "für + Akk / + zu + Infinitiv",
+    "tags": [
+      "reflexiv",
+      "irregular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Anna und Paula mussten sich entscheiden, weil sie bald Urlaub hatten.",
+    "example_es": "Anna y Paula tenían que decidirse porque pronto tenían vacaciones."
+  },
+  {
+    "infinitiv": "versuchen",
+    "translation": "intentar, tratar de, probar (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "versucht",
+    "praeteritum": "versuchte",
+    "partizip2": "versucht",
+    "case": "+ zu + Infinitiv / Akkusativ",
+    "tags": [
+      "nicht-trennbar",
+      "regular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Ich versuche, heute um 4 Uhr Feierabend zu machen.",
+    "example_es": "Intento salir hoy de trabajar a las 4."
+  },
+  {
+    "infinitiv": "vergessen",
+    "translation": "olvidar (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "vergisst (du vergisst, er vergisst)",
+    "praeteritum": "vergaß",
+    "partizip2": "vergessen",
+    "case": "+ zu + Infinitiv / Akkusativ",
+    "tags": [
+      "nicht-trennbar",
+      "vokalwechsel",
+      "irregular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Hast du vergessen, mich gestern anzurufen?",
+    "example_es": "¿Olvidaste llamarme ayer por teléfono?"
+  },
+  {
+    "infinitiv": "planen",
+    "translation": "planificar, planear (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "plant",
+    "praeteritum": "plante",
+    "partizip2": "geplant",
+    "case": "+ zu + Infinitiv / Akkusativ",
+    "tags": [
+      "regular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Wir planen, im Sommer zusammen an die Ostsee wegzufahren.",
+    "example_es": "Planeamos irnos juntos al Mar Báltico en verano."
+  },
+  {
+    "infinitiv": "anfangen",
+    "translation": "empezar, comenzar (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "fängt an (du fängst an)",
+    "praeteritum": "fing an",
+    "partizip2": "angefangen",
+    "case": "mit + Dativ / + zu + Infinitiv",
+    "tags": [
+      "trennbar",
+      "vokalwechsel",
+      "irregular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Was machen wir? Es fängt gerade an zu regnen!",
+    "example_es": "¿Qué hacemos? ¡Está empezando a llover ahora mismo!"
+  },
+  {
+    "infinitiv": "aufhören",
+    "translation": "dejar de, parar de, terminar (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "hört auf",
+    "praeteritum": "hörte auf",
+    "partizip2": "aufgehört",
+    "case": "mit + Dativ / + zu + Infinitiv",
+    "tags": [
+      "trennbar",
+      "regular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Hoffentlich hört es bald auf zu regnen.",
+    "example_es": "Ojalá deje pronto de llover."
+  },
+  {
+    "infinitiv": "verbieten",
+    "translation": "prohibir (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "verbietet",
+    "praeteritum": "verbot",
+    "partizip2": "verboten",
+    "case": "DATIVO (persona) + zu + Infinitiv / Akk",
+    "tags": [
+      "nicht-trennbar",
+      "irregular",
+      "dativ",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Der Arzt hat mir verboten, diese Woche Sport zu machen.",
+    "example_es": "El médico me ha prohibido hacer deporte esta semana."
+  },
+  {
+    "infinitiv": "hoffen",
+    "translation": "esperar (tener esperanza) (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "hofft",
+    "praeteritum": "hoffte",
+    "partizip2": "gehofft",
+    "case": "auf + Akk / + zu + Infinitiv",
+    "tags": [
+      "regular",
+      "zu-infinitiv",
+      "kapitel1"
+    ],
+    "example_de": "Morgen um 8 ist Training. Ich hoffe, dich dort zu sehen!",
+    "example_es": "Mañana a las 8 hay entrenamiento. ¡Espero verte allí!"
+  },
+  {
+    "infinitiv": "buchen",
+    "translation": "reservar (hotel, vuelo, viaje) (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "bucht",
+    "praeteritum": "buchte",
+    "partizip2": "gebucht",
+    "case": "Akkusativ",
+    "tags": [
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Ein schickes Ferienhaus bekommt man nur, wenn man rechtzeitig bucht.",
+    "example_es": "Una casa vacacional elegante solo se consigue si se reserva a tiempo."
+  },
+  {
+    "infinitiv": "sich erholen",
+    "translation": "descansar, recuperarse, reponerse (Kap. 1)",
+    "level": "B1",
+    "type": "reflexive",
+    "auxiliary": "hat",
+    "praesens": "erholt sich",
+    "praeteritum": "erholte sich",
+    "partizip2": "sich erholt",
+    "case": "von + Dativ",
+    "tags": [
+      "reflexiv",
+      "regular",
+      "kapitel1"
+    ],
+    "example_de": "Zum Erholen bleibe ich im Urlaub lieber am Strand.",
+    "example_es": "Para descansar prefiero quedarme en la playa en vacaciones."
+  },
+  {
+    "infinitiv": "faulenzen",
+    "translation": "holgazanear, no hacer nada, vaguear (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "faulenzt",
+    "praeteritum": "faulenzte",
+    "partizip2": "gefaulenzt",
+    "case": "intransitiv",
+    "tags": [
+      "regular",
+      "kapitel1"
+    ],
+    "example_de": "Es ist schön, am Strand zu liegen und einfach zu faulenzen.",
+    "example_es": "Es agradable tumbarse en la playa y simplemente holgazanear."
+  },
+  {
+    "infinitiv": "unternehmen",
+    "translation": "emprender, hacer actividades (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "unternimmt (du unternimmst)",
+    "praeteritum": "unternahm",
+    "partizip2": "unternommen",
+    "case": "Akkusativ",
+    "tags": [
+      "nicht-trennbar",
+      "vokalwechsel",
+      "irregular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Mir macht es einfach mehr Spaß, im Urlaub viel zu unternehmen.",
+    "example_es": "A mí me divierte más hacer muchas actividades en vacaciones."
+  },
+  {
+    "infinitiv": "zelten",
+    "translation": "acampar, ir de camping (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "zeltet",
+    "praeteritum": "zeltete",
+    "partizip2": "gezeltet",
+    "case": "Wo? (Dativ)",
+    "tags": [
+      "regular",
+      "kapitel1"
+    ],
+    "example_de": "Ich habe so viel Spaß beim Zelten in der Natur!",
+    "example_es": "¡Me lo paso tan bien acampando en la naturaleza!"
+  },
+  {
+    "infinitiv": "aufbauen",
+    "translation": "montar, armar (ej. das Zelt aufbauen) (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "baut auf",
+    "praeteritum": "baute auf",
+    "partizip2": "aufgebaut",
+    "case": "Akkusativ",
+    "tags": [
+      "trennbar",
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Wir mussten unser Zelt im Regen auf einer nassen Wiese aufbauen.",
+    "example_es": "Tuvimos que montar nuestra tienda bajo la lluvia en un prado mojado."
+  },
+  {
+    "infinitiv": "einpacken",
+    "translation": "empacar, hacer la maleta, guardar cosas (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "packt ein",
+    "praeteritum": "packte ein",
+    "partizip2": "eingepackt",
+    "case": "Akkusativ",
+    "tags": [
+      "trennbar",
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Sie packen ihr Zeug ein und tragen das Gepäck zum Auto.",
+    "example_es": "Empacan sus cosas y llevan el equipaje al coche."
+  },
+  {
+    "infinitiv": "auspacken",
+    "translation": "desempacar, deshacer la maleta, abrir un paquete (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "hat",
+    "praesens": "packt aus",
+    "praeteritum": "packte aus",
+    "partizip2": "ausgepackt",
+    "case": "Akkusativ",
+    "tags": [
+      "trennbar",
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Als das Fotobuch endlich da war, habe ich es sofort ausgepackt.",
+    "example_es": "Cuando el álbum de fotos por fin llegó, lo desempaqué de inmediato."
+  },
+  {
+    "infinitiv": "brennen",
+    "translation": "arder, estar en llamas, quemarse (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "brennt",
+    "praeteritum": "brannte",
+    "partizip2": "gebrannt",
+    "case": "intransitiv",
+    "tags": [
+      "irregular",
+      "kapitel1"
+    ],
+    "example_de": "Ein gemütliches Feuer brennt am Abend vor dem Zelt.",
+    "example_es": "Un fuego acogedor arde por la noche frente a la tienda."
+  },
+  {
+    "infinitiv": "erfahren",
+    "translation": "enterarse de, descubrir, saber una noticia (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "erfährt (du erfährst, er erfährt)",
+    "praeteritum": "erfuhr",
+    "partizip2": "erfahren",
+    "case": "Akkusativ / von + Dativ",
+    "tags": [
+      "nicht-trennbar",
+      "vokalwechsel",
+      "irregular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Neuigkeiten erfahre ich auf der Alm nur aus dem Radio.",
+    "example_es": "En la pradera alpina solo me entero de las noticias por la radio."
+  },
+  {
+    "infinitiv": "tragen",
+    "translation": "llevar (en mano o ropa puesta), cargar (Kap. 1)",
+    "level": "B1",
+    "type": "irregular",
+    "auxiliary": "hat",
+    "praesens": "trägt (du trägst, er trägt)",
+    "praeteritum": "trug",
+    "partizip2": "getragen",
+    "case": "Akkusativ",
+    "tags": [
+      "vokalwechsel",
+      "irregular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Ron und Kevin tragen das schwere Gepäck zum Kofferraum.",
+    "example_es": "Ron y Kevin llevan el equipaje pesado hasta el maletero."
+  },
+  {
+    "infinitiv": "sich erkälten",
+    "translation": "resfriarse, acatarrarse (Kap. 1)",
+    "level": "B1",
+    "type": "reflexive",
+    "auxiliary": "hat",
+    "praesens": "erkältet sich",
+    "praeteritum": "erkältete sich",
+    "partizip2": "sich erkältet",
+    "case": "Akkusativ (mich/dich/sich)",
+    "tags": [
+      "reflexiv",
+      "regular",
+      "kapitel1"
+    ],
+    "example_de": "Letzte Woche hat es auf der Alm geschneit und ich habe mich gleich erkältet.",
+    "example_es": "La semana pasada nevó en la pradera alpina y me resfrié enseguida."
+  },
+  {
+    "infinitiv": "sich umziehen",
+    "translation": "cambiarse de ropa (Kap. 1)",
+    "level": "B1",
+    "type": "reflexive",
+    "auxiliary": "hat",
+    "praesens": "zieht sich um",
+    "praeteritum": "zog sich um",
+    "partizip2": "sich umgezogen",
+    "case": "Akkusativ (mich/dich/sich)",
+    "tags": [
+      "reflexiv",
+      "trennbar",
+      "irregular",
+      "kapitel1"
+    ],
+    "example_de": "Nach der Wanderung im Regen mussten wir uns sofort umziehen.",
+    "example_es": "Tras la caminata bajo la lluvia tuvimos que cambiarnos de ropa enseguida."
+  },
+  {
+    "infinitiv": "vorbeikommen",
+    "translation": "pasarse (por casa de alguien o un lugar) (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "ist",
+    "praesens": "kommt vorbei",
+    "praeteritum": "kam vorbei",
+    "partizip2": "vorbeigekommen",
+    "case": "bei + Dativ",
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular",
+      "kapitel1"
+    ],
+    "example_de": "Komm doch heute Abend kurz bei mir vorbei!",
+    "example_es": "¡Pásate esta tarde/noche un momento por mi casa!"
+  },
+  {
+    "infinitiv": "verpassen",
+    "translation": "perder (un tren, autobús, conexión o cita) (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "verpasst",
+    "praeteritum": "verpasste",
+    "partizip2": "verpasst",
+    "case": "Akkusativ (den Zug / den Anschluss)",
+    "tags": [
+      "nicht-trennbar",
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Wegen der Verspätung hat Liz ihren Anschluss in Hamburg verpasst.",
+    "example_es": "Por culpa del retraso, Liz ha perdido su conexión en Hamburgo."
+  },
+  {
+    "infinitiv": "umsteigen",
+    "translation": "hacer transbordo (cambiar de tren/autobús/metro) (Kap. 1)",
+    "level": "B1",
+    "type": "separable",
+    "auxiliary": "ist",
+    "praesens": "steigt um",
+    "praeteritum": "stieg um",
+    "partizip2": "umgestiegen",
+    "case": "in + Akkusativ",
+    "tags": [
+      "sein",
+      "trennbar",
+      "irregular",
+      "kapitel1"
+    ],
+    "example_de": "Es gibt keine direkten Flüge, da müssen wir in Madrid umsteigen.",
+    "example_es": "No hay vuelos directos, así que tenemos que hacer escala/transbordo en Madrid."
+  },
+  {
+    "infinitiv": "übernachten",
+    "translation": "pernoctar, pasar la noche (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "übernachtet",
+    "praeteritum": "übernachtete",
+    "partizip2": "übernachtet",
+    "case": "Wo? (Dativ: im Hotel / im Freien)",
+    "tags": [
+      "nicht-trennbar",
+      "regular",
+      "kapitel1"
+    ],
+    "example_de": "Im Sommer übernachte ich beim Zelten gern im Freien.",
+    "example_es": "En verano, al acampar, me gusta dormir al aire libre."
+  },
+  {
+    "infinitiv": "besichtigen",
+    "translation": "visitar, hacer turismo (ciudad, castillo, monumento) (Kap. 1)",
+    "level": "B1",
+    "type": "regular",
+    "auxiliary": "hat",
+    "praesens": "besichtigt",
+    "praeteritum": "besichtigte",
+    "partizip2": "besichtigt",
+    "case": "Akkusativ",
+    "tags": [
+      "nicht-trennbar",
+      "regular",
+      "akkusativ",
+      "kapitel1"
+    ],
+    "example_de": "Macht es dir Spaß, im Urlaub eine Stadt oder eine Burg zu besichtigen?",
+    "example_es": "¿Te divierte visitar una ciudad o un castillo en vacaciones?"
   }
 ]
